@@ -50,7 +50,9 @@
 		"vitest-browser-svelte": "^0.1.0"
 	},
 	"dependencies": {
+		"@duckdb/node-api": "^1.4.0-r.1",
 		"duckdb": "^1.4.0",
+		"find-up": "^8.0.0",
 		"inflight": "^1.0.6",
 		"npmlog": "^7.0.1"
 	}
