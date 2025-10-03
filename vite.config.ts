@@ -1,16 +1,30 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
-import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
+import type { Plugin } from 'vite';
+import { closeDb } from './src/lib/db';
+
+function duckdbCleanup(): Plugin {
+	return {
+		name: 'duckdb-cleanup',
+		apply: 'build',
+		closeBundle: {
+			sequential: true,
+			async handler() {
+					closeDb();
+			}
+		}
+	}
+}
 
 export default defineConfig({
 	plugins: [
-		tailwindcss(),
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide'
-		})
+		}),
+		duckdbCleanup()
 	],
 	test: {
 		expect: { requireAssertions: true },

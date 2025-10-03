@@ -36,6 +36,10 @@ export default defineConfig(
 				parser: ts.parser,
 				svelteConfig
 			}
+		},
+		rules: {
+			"sveltekit/no-unresolved-routes": "off",
+			"svelte/no-navigation-without-resolve": "off"
 		}
 	}
 );
