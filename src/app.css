@@ -1,4 +1,245 @@
-*, *::before, *::after { box-sizing: border-box; }
-html, body, #svelte { height: 100%; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; line-height: 1.5; text-rendering: optimizeLegibility; }
+/* --- Tron tokens (still pure tags elsewhere) --- */
+:root {
+    --bg: #0A0F2C;
+    --panel: rgba(10, 15, 44, 0.86);
+    --line: #242b5a;
+    --cyan: #00EAFF;
+    --text: #c8d0e0;
+    --text-dim: #8e97b2;
+    --glow: 0 0 .35rem rgba(0, 234, 255, .35), 0 0 1.1rem rgba(0, 234, 255, .18);
+    --tron-font: "Orbitron", "Audiowide", "Rajdhani", "Segoe UI", "Arial", sans-serif;
+    --body-font: "Roboto", "Exo 2", "Rajdhani", "Segoe UI", "Arial", sans-serif;
+    --tron-primary-colour: #0aa;
+    --tron-glow-small: 0 0 8px var(--tron-primary-colour);
+    --tron-glow-medium: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour);
+    --tron-glow-inset: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour) inset;
+    --body-text-colour: #ddd;            /* default body text */
+}
+
+/* BODY: Tron background (tile under everything) */
+body {
+    margin: 0;
+    color: var(--text);
+    font: 16px/1.5 Inter, system-ui, sans-serif;
+    background-color: var(--bg);
+    background-image: url('/img/background.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* HEADER + NAV: fixed to top with a dropdown menu */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(15, 22, 58, .95), rgba(11, 17, 49, .92));
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .35);
+    backdrop-filter: saturate(1.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: var(--tron-primary-colour);
+    text-decoration: none;
+    font-family: var(--tron-font);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #fff;
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* MAIN: bordered panel, fluid width, with generous outer breathing room */
+main {
+    /* leave room for fixed header/footer + show background around */
+    margin: calc(56px + 24px) clamp(16px, 4vw, 48px) calc(36px + 24px);
+    padding: clamp(16px, 3vw, 32px);
+
+    background: var(--panel);
+    color: var(--body-text-colour);
+    border: 1px solid rgba(0, 234, 255, .35);
+    border-radius: .8rem;
+    box-shadow: 0 0 1rem rgba(0, 234, 255, .15);
+
+    /* not fixed width; let it breathe. If you want a soft cap, uncomment: */
+    /* max-width: 1400px; */
+}
+
+/* FOOTER: small, fixed to bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 clamp(12px, 3vw, 32px);
+    color: var(--text-dim);
+    background: linear-gradient(0deg, rgba(11, 17, 49, .92), rgba(15, 22, 58, .95));
+    border-top: 1px solid var(--line);
+    font-size: .9rem;
+}
+
+
+/* Main content */
+
+main {
+    max-width: 1200px;          /* keeps content from stretching full width */
+    margin: 6rem auto 4rem;
+    padding: 3rem;
+    background-color: white;
+    /* neon border */
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #0ff;
+    border-right-width: 3px;
+    border-right-style: solid;
+    border-right-color: #0ff;
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: #0ff;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #0ff;
+    /* translucent panel */
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0ff, 0 0 30px #0ff inset;
+    text-align: center;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: var(--tron-font);
+    color: var(--tron-primary-colour);
+    margin: 2rem 0 1rem;
+    text-shadow: var(--tron-glow-small);
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #0ff;
+    display: inline-block; /* keeps underline tight around text */
+    padding-bottom: 0.3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0ff;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #0ff;
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd; /* softer contrast vs neon */
+    margin: 1rem 0;
+    text-align: center; /* stays consistent with your main layout */
+}
+
+a {
+    color: var(--tron-primary-colour);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px var(--tron-primary-colour); /* subtle glow */
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 6px var(--tron-primary-colour), 0 0 12px var(--tron-primary-colour);
+}
+
+/* Big selector vertical list */
+.big-selector {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center each item */
+    gap: 1.5rem;
+}
+
+.big-selector li {
+    width: 100%;              /* full width inside main */
+    max-width: 500px;         /* but not too wide */
+}
+
+.big-selector a {
+    display: block;
+    font-family: var(--tron-font);
+    font-size: 1.6rem;
+    color: #0ff;
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    border: 2px solid #0ff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.big-selector a:hover {
+    color: #fff;
+    background: rgba(0, 255, 255, 0.15);
+    box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
+    transform: scale(1.03);
+}
+
+/* Accessibility niceties */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 234, 255, .45);
+    border-radius: .2rem;
+}
+
+/* Small screens: keep margins but compress a bit */
+@media (max-width: 720px) {
+    nav summary {
+        padding: .4rem .6rem;
+    }
+
+    main {
+        margin: calc(56px + 16px) 12px calc(36px + 16px);
+    }
+}
