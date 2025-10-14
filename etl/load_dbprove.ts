@@ -76,7 +76,7 @@ async function main() {
 	fs.unlink(dbPath).catch(() => {});
 
 	console.log('Repository root:', repo_root());
-	console.log(`Creating database at ${dbPath}`);
+	console.log(`Creating database at: ${dbPath}`);
 	const db = await DuckDBInstance.create(dbPath);
 	const conn = await db.connect();
 

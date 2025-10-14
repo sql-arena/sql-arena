@@ -10,9 +10,13 @@ CREATE TABLE category
 );
 
 INSERT INTO category (category, description, ordering)
-VALUES ('PLAN', 'Planner', 0);
+VALUES ('CLIENT', 'Client Protocol', 1);
 INSERT INTO category (category, description, ordering)
-VALUES ('EE', 'Execution Engine', 1);
+VALUES ('PLAN', 'Planner', 2);
+INSERT INTO category (category, description, ordering)
+VALUES ('EE', 'Execution Engine', 3);
+INSERT INTO category (category, description, ordering)
+VALUES ('SE', 'Storage Engine', 4);
 
 CREATE TABLE tag
 (
