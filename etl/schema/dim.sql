@@ -1,46 +1,47 @@
-﻿
-CREATE SEQUENCE IF NOT EXISTS id_seq;
-
-CREATE TABLE category
+﻿CREATE TABLE component
 (
-    category_id BIGINT PRIMARY KEY DEFAULT nextval('id_seq'),
-    category    TEXT NOT NULL,
-    description TEXT NOT NULL      DEFAULT '',
-    ordering    INT  NOT NULL      DEFAULT 0
+    component_id BIGINT PRIMARY KEY,
+    component    TEXT NOT NULL,
+    description TEXT NOT NULL DEFAULT '',
+    ordering    INT  NOT NULL DEFAULT 0
 );
 
-INSERT INTO category (category, description, ordering)
-VALUES ('CLIENT', 'Client Protocol', 1);
-INSERT INTO category (category, description, ordering)
-VALUES ('PLAN', 'Planner', 2);
-INSERT INTO category (category, description, ordering)
-VALUES ('EE', 'Execution Engine', 3);
-INSERT INTO category (category, description, ordering)
-VALUES ('SE', 'Storage Engine', 4);
+INSERT INTO component (component_id, component, description, ordering)
+SELECT arena_key(component), component, description, ordering
+FROM (SELECT 'CLIENT' AS component, 'Client Protocol' AS description, 1 AS ordering
+      UNION ALL
+      SELECT 'PLAN', 'Planner', 2
+      UNION ALL
+      SELECT 'EE', 'Execution Engine', 3
+      UNION ALL
+      SELECT 'SE', 'Storage Engine', 4) AS c
+;
 
 CREATE TABLE tag
 (
-    tag_id BIGINT PRIMARY KEY DEFAULT nextval('id_seq'),
+    tag_id BIGINT PRIMARY KEY,
     tag    TEXT NOT NULL
 );
 
+
+
 CREATE TABLE theorem
 (
-    theorem_id  BIGINT PRIMARY KEY DEFAULT nextval('id_seq'),
+    theorem_id  BIGINT PRIMARY KEY,
     theorem     TEXT NOT NULL,
-    description TEXT NOT NULL      DEFAULT '',
-    ordering    INT  NOT NULL      DEFAULT 0
+    description TEXT NOT NULL DEFAULT '',
+    ordering    INT  NOT NULL DEFAULT 0
 );
 
 CREATE TABLE proof
 (
-    proof_id   BIGINT PRIMARY KEY DEFAULT nextval('id_seq'),
-    proof      TEXT NOT NULL,
-    value_type TEXT NOT NULL
+    proof_id BIGINT PRIMARY KEY,
+    proof    TEXT NOT NULL
 );
 
-CREATE TABLE engine (
-    engine_id BIGINT PRIMARY KEY DEFAULT nextval('id_seq'),
+CREATE TABLE engine
+(
+    engine_id BIGINT PRIMARY KEY,
     engine    TEXT NOT NULL,
     version   TEXT NOT NULL
 );

@@ -1,20 +1,7 @@
-/* --- Tron tokens (still pure tags elsewhere) --- */
-:root {
-    --bg: #0A0F2C;
-    --panel: rgba(10, 15, 44, 0.86);
-    --line: #242b5a;
-    --cyan: #00EAFF;
-    --text: #c8d0e0;
-    --text-dim: #8e97b2;
-    --glow: 0 0 .35rem rgba(0, 234, 255, .35), 0 0 1.1rem rgba(0, 234, 255, .18);
-    --tron-font: "Orbitron", "Audiowide", "Rajdhani", "Segoe UI", "Arial", sans-serif;
-    --body-font: "Roboto", "Exo 2", "Rajdhani", "Segoe UI", "Arial", sans-serif;
-    --tron-primary-colour: #0aa;
-    --tron-glow-small: 0 0 8px var(--tron-primary-colour);
-    --tron-glow-medium: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour);
-    --tron-glow-inset: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour) inset;
-    --body-text-colour: #ddd;            /* default body text */
-}
+@import './styles/tokens.css';
+@import './styles/selectors-lists.css';
+@import './styles/tables.css';
+
 
 /* BODY: Tron background (tile under everything) */
 body {
@@ -60,7 +47,7 @@ nav li {
 nav a {
     color: var(--tron-primary-colour);
     text-decoration: none;
-    font-family: var(--tron-font);
+    font-family: var(--tron-font), sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     position: relative;
@@ -138,10 +125,18 @@ main {
     text-align: center;
 }
 
+article {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--data-background);
+    text-align: left;
+}
+
 
 h1, h2, h3 {
     text-align: center;
-    font-family: var(--tron-font);
+    font-family: var(--tron-font), sans-serif;
     color: var(--tron-primary-colour);
     margin: 2rem 0 1rem;
     text-shadow: var(--tron-glow-small);
@@ -150,27 +145,24 @@ h1, h2, h3 {
 h1 {
     font-size: 2.5rem;
     border-bottom: 2px solid #0ff;
-    display: inline-block; /* keeps underline tight around text */
-    padding-bottom: 0.3rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 h2 {
     font-size: 2rem;
-    color: #0ff;
 }
 
 h3 {
     font-size: 1.6rem;
-    color: #0ff;
 }
 
 p {
-    font-family: var(--body-font);
+    font-family: var(--body-font), sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
     color: #ddd; /* softer contrast vs neon */
     margin: 1rem 0;
-    text-align: center; /* stays consistent with your main layout */
 }
 
 a {
@@ -185,41 +177,15 @@ a:hover {
     text-shadow: 0 0 6px var(--tron-primary-colour), 0 0 12px var(--tron-primary-colour);
 }
 
-/* Big selector vertical list */
-.big-selector {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;   /* stack vertically */
-    align-items: center;      /* center each item */
-    gap: 1.5rem;
-}
-
-.big-selector li {
-    width: 100%;              /* full width inside main */
-    max-width: 500px;         /* but not too wide */
-}
-
-.big-selector a {
-    display: block;
-    font-family: var(--tron-font);
-    font-size: 1.6rem;
-    color: #0ff;
-    text-decoration: none;
-    padding: 1.2rem 2rem;
-    border: 2px solid #0ff;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
-
-.big-selector a:hover {
-    color: #fff;
-    background: rgba(0, 255, 255, 0.15);
-    box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
-    transform: scale(1.03);
+code {
+    display: inline-block;
+    color: var(--cyan);
+    font-weight: bold;
+    font-family: var(--code-font), monospace;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-radius: 2px;
+    font-size: inherit;
 }
 
 /* Accessibility niceties */
@@ -244,89 +210,3 @@ summary::-webkit-details-marker {
     }
 }
 
-/* Tier List */
-
-table.tier-list {
-    width: 90%;
-    border-collapse: collapse;
-    table-layout: auto;
-}
-
-tr.tier-row {
-    min-height: 80px;
-    border: 5px solid #000;
-}
-
-th.tier-label {
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    width: 150px;
-    min-width: 150px;
-    max-width: 150px;
-    color: rgb(0,0,0);
-    height: 100px;
-    box-sizing: border-box;
-}
-
-td.tier-data {
-    background-color: rgb(26, 26, 24);
-    text-align: left;
-    padding: 0.5rem 1rem;
-    vertical-align: top;
-    width: auto;
-}
-
-div.tier-items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    box-sizing: border-box;
-    gap: 1rem 0.5rem;
-    max-width: 100%;
-    justify-content: flex-start;
-}
-
-div.tier-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 2rem;
-    margin-right: 0;
-    margin-bottom: 0;
-    /* Prevent item from stretching full width */
-    max-width: 100%;
-}
-
-img.tier-icon {
-    width: 100px;
-    height: 100px;
-}
-
-.tier-S {
-    background-color: rgb(255, 127, 126);
-}
-
-.tier-A {
-    background-color: rgb(255, 191, 127);
-}
-
-.tier-B {
-    background-color: rgb(254, 255, 127);
-}
-
-.tier-C {
-    background-color: rgb(126, 255, 128);
-}
-
-.tier-D {
-    background-color: rgb(127, 255, 255);
-}
-
-.tier-E {
-    background-color:rgb(128, 127, 255)
-}
-
-.tier-F {
-    background-color: rgb(255, 127, 254);
-}

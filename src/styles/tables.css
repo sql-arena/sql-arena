@@ -1,0 +1,182 @@
+﻿table.data {
+    width: 90%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--tron-glow-medium);
+    border: var(--data-grid-table-border);
+}
+
+
+table.data tr {
+    background-color: #000;
+}
+
+table.data td {
+    border: var(--data-grid-border);
+    vertical-align: center;
+    background-color: var(--data-background);
+    text-align: center;
+    padding: 5px;
+}
+
+
+table.data th {
+    text-align: center;
+    background-color: var(--data-header-background);
+    border: var(--data-grid-header-border);
+    padding: 5px;
+}
+
+table.data th.sub-header {
+    color: var(--data-grid-sub-header-color);
+}
+
+/* Order of magnitude tables */
+table.magnitude {
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.magnitude td, table.magnitude th {
+    border: 0;
+    padding: 0.001rem 0.25rem;
+    margin: 0;
+    text-align: right;
+}
+
+td.shit-scale-0 {
+    color: var(--scale-green-dim);
+}
+
+td.shit-scale-1 {
+    color: var(--scale-lime-dim);
+}
+
+td.shit-scale-2 {
+    color: var(--scale-yellow-dim);
+}
+
+td.shit-scale-3 {
+    color: var(--scale-orange-dim);
+}
+
+td.shit-scale-4 {
+    color: var(--scale-red-dim);
+}
+
+.table-logo {
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+
+/* Control the rendering of data points */
+td.number, th.number {
+    text-align: right !important;
+}
+
+td.text, th.text {
+    text-align: left !important;
+}
+
+td.grouped, th.grouped {
+    text-align: left !important;
+    margin-left: 0;
+    padding: 0;
+}
+
+
+/* Tier List */
+
+table.tier-list {
+    width: 90%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.tier-row {
+    min-height: 80px;
+    border: 5px solid #000;
+}
+
+th.tier-label {
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    color: rgb(0,0,0);
+    height: 100px;
+    box-sizing: border-box;
+}
+
+td.tier-data {
+    background-color: rgb(26, 26, 24);
+    text-align: left;
+    padding: 0.5rem 1rem;
+    vertical-align: top;
+    width: auto;
+}
+
+div.tier-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+    gap: 1rem 0.5rem;
+    max-width: 100%;
+    justify-content: flex-start;
+}
+
+div.tier-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    /* Prevent item from stretching full width */
+    max-width: 100%;
+}
+
+img.tier-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.tier-S {
+    background-color: rgb(255, 127, 126);
+}
+
+.tier-A {
+    background-color: rgb(255, 191, 127);
+}
+
+.tier-B {
+    background-color: rgb(254, 255, 127);
+}
+
+.tier-C {
+    background-color: rgb(126, 255, 128);
+}
+
+.tier-D {
+    background-color: rgb(127, 255, 255);
+}
+
+.tier-E {
+    background-color:rgb(128, 127, 255)
+}
+
+.tier-F {
+    background-color: rgb(255, 127, 254);
+}

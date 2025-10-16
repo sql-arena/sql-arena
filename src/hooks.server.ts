@@ -1,5 +1,8 @@
 import type { Handle } from '@sveltejs/kit';
 import { paraglideMiddleware } from '$lib/paraglide/server';
+import { minify } from 'html-minifier-terser';
+import beautify from 'js-beautify';
+import { sequence } from '@sveltejs/kit/hooks';
 
 const handleParaglide: Handle = ({ event, resolve }) =>
 	paraglideMiddleware(event.request, ({ request, locale }) => {
@@ -10,4 +13,16 @@ const handleParaglide: Handle = ({ event, resolve }) =>
 		});
 	});
 
-export const handle: Handle = handleParaglide;
+
+export async function handlePretty({ event, resolve }) {
+	const response = await resolve(event, {
+		transformPageChunk: ({ html }) =>
+			process.env.NODE_ENV === 'development'
+				? beautify.html(html, { indent_size: 2 })
+				: minify(html, { collapseWhitespace: true }),
+	});
+
+	return response;
+}
+
+export const handle: Handle = sequence(handleParaglide, handlePretty);

@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"prebuild": "tsx etl/load_dbprove.ts",
+		"prebuild": "tsx etl/load-dbprove.ts",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -54,7 +54,10 @@
 		"duckdb": "^1.4.0",
 		"find-up": "^8.0.0",
 		"glob": "^11.0.3",
+		"html-minifier-terser": "^7.2.0",
 		"inflight": "^1.0.6",
+		"js-beautify": "^1.15.4",
+		"marked": "^16.4.0",
 		"npmlog": "^7.0.1"
 	}
 }

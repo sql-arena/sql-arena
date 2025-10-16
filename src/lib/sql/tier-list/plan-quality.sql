@@ -21,5 +21,6 @@ UNION ALL
 SELECT 'Spark', 'D', 75
 UNION ALL
 SELECT 'Trino', 'F', 75
-
+UNION ALL
+SELECT 'Starburst', 'F', 75
 ;

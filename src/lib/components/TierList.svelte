@@ -1,17 +1,16 @@
 ﻿<script lang="ts">
-	export let data: Array<{ tier: string; engine: string; score: number }>;
+	export let data: Array<{ tier: string; engine: string; score: number }> = {};
 
 	const tiers = ['S', 'A', 'B', 'C', 'D', 'F'];
 
-	// Group items by tier
+	// Put items into arrays per tier
 	$: itemsByTier = data.reduce((acc, item) => {
 		if (!acc[item.tier]) {
 			acc[item.tier] = [];
 		}
 		acc[item.tier].push(item);
 		return acc;
-	}, {} as Record<string, Array<{ tier: string; engine: string; score: number }>>);
-	$: console.log('itemsByTier:', itemsByTier);
+	}, {} );
 </script>
 
 <table class="tier-list">

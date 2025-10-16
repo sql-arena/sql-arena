@@ -1,0 +1,41 @@
+﻿:root {
+    --bg: #0A0F2C;
+    --panel: rgba(10, 15, 44, 0.86);
+    --line: #242b5a;
+    --cyan: #00EAFF;
+    --text: #c8d0e0;
+    --text-dim: #8e97b2;
+    --glow: 0 0 .35rem rgba(0, 234, 255, .35), 0 0 1.1rem rgba(0, 234, 255, .18);
+    --tron-font: "Orbitron", "Audiowide", "Rajdhani", "Segoe UI", "Arial", sans-serif;
+    --body-font: "Roboto", "Exo 2", "Rajdhani", "Segoe UI", "Arial", sans-serif;
+    --code-font: 'Consolas';
+    --tron-primary-colour: #0aa;
+    --tron-glow-small: 0 0 8px var(--tron-primary-colour);
+    --tron-glow-medium: 0 0 10px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour);
+    --tron-glow-inset: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour) inset;
+    --body-text-colour: #ddd;            /* default body text */
+
+
+
+    /* Number Colour scales */
+    --scale-green-dim:  #00C87A;
+    --scale-lime-dim:   #89D800;
+    --scale-yellow-dim: #E5B700;
+    --scale-orange-dim: #E56200;
+    --scale-red-dim:    #D4123C;
+
+    /* Brighter Number Colour scales */
+    --scale-green:  #00FF9C;
+    --scale-lime:   #A8FF00;
+    --scale-yellow: #FFD500;
+    --scale-orange: #FF7B00;
+    --scale-red:    #FF1744;
+
+    /* Standard background for table cells containing data */
+    --data-background: rgb(26, 26, 24);
+    --data-header-background: rgb(18, 18, 16);
+    --data-grid-border: 1px solid rgb(38, 38, 36);
+    --data-grid-header-border: 1px solid rgb(130, 130, 130);
+    --data-grid-table-border: 3px solid rgb(130, 130, 130);
+    --data-grid-sub-header-color: rgb(130, 130, 130);
+}
