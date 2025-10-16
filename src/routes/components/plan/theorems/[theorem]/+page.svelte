@@ -1,10 +1,12 @@
 ﻿<script lang="ts">
-	import PlanTheorem from '$lib/components/PlanTheorem.svelte';
+	import TheoremPlanStats from '$lib/components/TheoremPlanStats.svelte';
+	import TheoremPlans from '$lib/components/TheoremPlans.svelte';
 	import MarkdownSnippet from '$lib/components/MarkdownSnippet.svelte';
 	export let data: {
 		theorem: string,
 		description: string,
 		proofData: Array<{name: string, value: string, unit: string}>,
+		planData: Array<{engine: string, version: string, plan: string}>
 		commentary: string
 	};
 </script>
@@ -13,6 +15,6 @@
 
 <MarkdownSnippet data="{data.commentary}" />
 
-<PlanTheorem
-	theorem="{data.theorem}"
-	data="{data.proofData}" />
+<TheoremPlanStats data="{data.proofData}" />
+
+<TheoremPlans data="{data.planData}" />

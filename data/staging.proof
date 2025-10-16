@@ -1,0 +1,1152 @@
+ENGINE,engine_version,submitter,file_source,CATEGORIES,TAGS,THEOREM,THEOREM_DESCRIPTION,PROOF_NAME,PROOF_VALUE,PROOF_UNIT
+DuckDB,[engine_version],[submitter],[path],PLAN,CONFIG,CONFIG-VERSION,Version of Engine,version,1.3.2,version
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Join,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Aggregate,5642532,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Sort,4,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Scan,5642532,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q01,TPC-H Q01 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Join,1201489,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Aggregate,473,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Sort,346,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Scan,1197599,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join =,5,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join +4x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate +8x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan =,6,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan +4x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan +8x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q02,TPC-H Q02 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Join,4080841,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Aggregate,28114,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Sort,10,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Scan,4111077,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan -2x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q03,TPC-H Q03 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Join,3974931,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Aggregate,47831,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Sort,5,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Scan,6050773,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan +4x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q04,TPC-H Q04 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Join,6491163,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Aggregate,6988,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Sort,5,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Scan,6330085,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join =,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan =,5,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05,TPC-H Q05 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Join,6495272,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Aggregate,34761,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Sort,5,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Scan,6324290,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join =,7,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan =,6,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan +4x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q05HR,TPC-H Q05HR Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Join,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Aggregate,121011,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Sort,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Scan,121011,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q06,TPC-H Q06 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Join,7992060,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Aggregate,12302,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Sort,10,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Scan,7501210,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join +2x,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan =,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan +8x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Mis-estimate Filter >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q07,TPC-H Q07 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Join,6548845,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Aggregate,2323,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Sort,2,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Scan,6539428,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join =,7,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan =,7,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q08,TPC-H Q08 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Join,5598397,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Aggregate,245491,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Sort,175,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Scan,6618379,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join +4x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan =,5,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q09,TPC-H Q09 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Join,1692690,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Aggregate,108325,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Sort,30170,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Scan,1596791,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan =,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan +4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q10,TPC-H Q10 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Join,1215082,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Aggregate,44517,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Sort,2806,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Scan,1194028,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join =,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan =,6,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Scan >16x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q11,TPC-H Q11 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Join,1499971,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Aggregate,29129,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Sort,2,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Scan,2334081,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter +8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q12,TPC-H Q12 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Join,1599945,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Aggregate,1749945,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Sort,48,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Scan,1649945,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q13,TPC-H Q13 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Join,68122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Aggregate,68122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Sort,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Scan,268122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Scan >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q14,TPC-H Q14 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Join,68122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Aggregate,68122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Sort,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Scan,268122,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Join >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Scan >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q15,TPC-H Q15 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Join,874962,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Aggregate,61214,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Sort,15163,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Scan,788721,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join -2x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Scan >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter -8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter -2x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q16,TPC-H Q16 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Join,11853388,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Aggregate,6544,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Sort,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Scan,11841430,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Join >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Aggregate >16x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Scan >16x,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Mis-estimate Filter >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q17,TPC-H Q17 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Join,561666,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Aggregate,5998855,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Sort,5,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Scan,6710479,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Join >16x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Sort >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan +8x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Mis-estimate Filter >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q18,TPC-H Q18 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Join,214265,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Aggregate,97,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Sort,0,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Scan,1699869,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Aggregate >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan =,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Mis-estimate Filter >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q19,TPC-H Q19 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Join,1257476,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Aggregate,6793,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Sort,145,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Scan,1242881,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join =,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Join >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Aggregate >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan =,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Scan >16x,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Mis-estimate Filter >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q20,TPC-H Q20 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Join,14924939,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Aggregate,4060,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Sort,396,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Scan,18754973,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join -8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join -2x,4,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join =,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Join >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate -8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Aggregate >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan -8x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan -2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan =,5,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Scan >16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter -2x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q21,TPC-H Q21 Analysis,Plan,,Plan
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Join,1745710,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Aggregate,48823,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Sort,7,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Scan,1576781,Rows
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join <16x,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join +2x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Join >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Aggregate >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Sort >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan <16x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan -4x,1,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan =,3,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Scan >16x,2,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter <16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter -8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter -4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter -2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter =,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter +2x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter +4x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter +8x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Mis-estimate Filter >16x,0,Magnitude
+DuckDB,[engine_version],[submitter],[path],PLAN,TPC-H,TPCH-Q22,TPC-H Q22 Analysis,Plan,,Plan

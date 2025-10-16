@@ -53,8 +53,8 @@ async function loadData(conn: DuckDBConnection) {
 
 	for (const file of inputFiles) {
 		const parts = file.split(path.sep);
-		const user = parts[parts.length - 1];
-		const version = parts[parts.length - 2];
+		const user = parts[parts.length - 2];
+		const version = parts[parts.length - 3];
 
 		const sql = stageSqlTemplate
 			.replace(/\[submitter]/g, user)

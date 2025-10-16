@@ -1,11 +1,13 @@
 ﻿table.data {
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-left: auto;
     margin-right: auto;
     box-shadow: var(--tron-glow-medium);
     border: var(--data-grid-table-border);
+    table-layout: fixed;
 }
 
 
@@ -87,6 +89,7 @@ td.text, th.text {
 
 td.grouped, th.grouped {
     text-align: left !important;
+    width: 200px !important;
     margin-left: 0;
     padding: 0;
 }

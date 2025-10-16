@@ -36,11 +36,16 @@ export function closeDb(): void {
 
 export async function loadMarkdown(slug: string) {
 	const filePath = path.resolve(markdownDir, `${slug}.md`);
-	return await fs.readFile(filePath, "utf-8");
+	try {
+		await fs.access(filePath);
+		return await fs.readFile(filePath, "utf-8");
+	} catch {
+		return "";
+	}
 }
 
 function logSql(msg: string): void {
-	 console.log(msg);
+	 // console.log(msg);
 }
 
 export async function fetchAll(query: string): Promise<Rows> {
@@ -93,3 +98,8 @@ export async function fetchTagsPerComponent(component: string) {
 	return await fetchAll(sql);
 }
 
+export async function fetchTheoremPlanData(theorem: string) {
+	const path= sqlFilePath("theorem", "proof-plan-data")
+	const sql = await parameteriseFile(path, { theorem : theorem})
+	return await fetchAll(sql);
+}

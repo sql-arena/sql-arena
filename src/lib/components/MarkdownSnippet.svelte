@@ -8,4 +8,7 @@ if (data) {
 }
 </script>
 
+{#if html}
+<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 <article>{@html html}</article>
+{/if}

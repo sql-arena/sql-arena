@@ -1,0 +1,49 @@
+﻿pre {
+    font-family: var(--code-font), monospace;
+    color: var(--text);
+    padding: 1em;
+    text-align: left;
+    border-radius: 6px;
+    overflow-x: auto;     /* show horizontal scrollbar */
+    overflow-y: hidden;   /* optional, keeps it cleaner */
+    font-size: 0.9rem;
+    line-height: 1.1;
+    margin: 1.5em 0;
+    white-space: pre;     /* critical: preserve spacing, no wrapping */
+    width: 100%;          /* match container */
+    max-width: 100%;      /* don’t grow beyond container */
+    box-sizing: border-box;
+    word-break: normal;   /* <-- must be normal, not break-all */
+    display: block;
+}
+
+pre code {
+    display: inline-block;
+    min-width: 100%; /* keeps scrollbar inside <pre>, not on the page */
+}
+
+span.plan-header {
+    color: var(--tron-primary-colour);
+    font-weight: bold;
+}
+
+span.plan-estimate {
+    color: var(--text-dim);
+}
+
+span.plan-keyword {
+    color: var(--tron-primary-colour);
+    font-weight: bold;
+}
+
+span.plan-operator {
+    color: rgb(184, 82, 36);
+}
+
+span.plan-function {
+    color: rgb(151, 113, 146);
+}
+
+span.plan-lines {
+    color: var(--scale-red);
+}

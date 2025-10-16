@@ -1,7 +1,7 @@
 @import './styles/tokens.css';
 @import './styles/selectors-lists.css';
 @import './styles/tables.css';
-
+@import './styles/code.css';
 
 /* BODY: Tron background (tile under everything) */
 body {
@@ -177,6 +177,7 @@ a:hover {
     text-shadow: 0 0 6px var(--tron-primary-colour), 0 0 12px var(--tron-primary-colour);
 }
 
+/*
 code {
     display: inline-block;
     color: var(--cyan);
@@ -187,6 +188,7 @@ code {
     border-radius: 2px;
     font-size: inherit;
 }
+*/
 
 /* Accessibility niceties */
 summary::-webkit-details-marker {

@@ -13,8 +13,7 @@ const handleParaglide: Handle = ({ event, resolve }) =>
 		});
 	});
 
-
-export async function handlePretty({ event, resolve }) {
+export const handlePretty: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event, {
 		transformPageChunk: ({ html }) =>
 			process.env.NODE_ENV === 'development'
@@ -23,6 +22,6 @@ export async function handlePretty({ event, resolve }) {
 	});
 
 	return response;
-}
+};
 
 export const handle: Handle = sequence(handleParaglide, handlePretty);
