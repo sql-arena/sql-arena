@@ -136,6 +136,7 @@ article {
 
 h1, h2, h3 {
     text-align: center;
+    display: block;
     font-family: var(--tron-font), sans-serif;
     color: var(--tron-primary-colour);
     margin: 2rem 0 1rem;
@@ -147,6 +148,7 @@ h1 {
     border-bottom: 2px solid #0ff;
     display: inline-block;
     padding-bottom: 0.5rem;
+    clear: both;
 }
 
 h2 {
@@ -157,9 +159,20 @@ h3 {
     font-size: 1.6rem;
 }
 
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 p {
     font-family: var(--body-font), sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #ddd; /* softer contrast vs neon */
     margin: 1rem 0;
@@ -177,8 +190,7 @@ a:hover {
     text-shadow: 0 0 6px var(--tron-primary-colour), 0 0 12px var(--tron-primary-colour);
 }
 
-/*
-code {
+:not(pre) > code {
     display: inline-block;
     color: var(--cyan);
     font-weight: bold;
@@ -188,7 +200,6 @@ code {
     border-radius: 2px;
     font-size: inherit;
 }
-*/
 
 /* Accessibility niceties */
 summary::-webkit-details-marker {

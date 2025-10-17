@@ -1,22 +1,28 @@
 ﻿<script lang="ts">
 	export let data:
-		Array<
-			{
+	 Array<{
 				description: string,
 				proof: string,
 				unit: string,
 				value: string,
-				engine: string,
-				version: string
-			}> =  [];
+				/* We can either group by engine or by theorem, depending on the context. */
+				engine?: string,
+				version?: string,
+				theorem?: string
+			}>;
+	export let tag: string = ""
+	export let is_summary: boolean = false;
 
 	import { SvelteMap } from 'svelte/reactivity';
+	import type { MisEstimate } from '$lib/arena_types';
 	import EstimateMagnitude from '$lib/components/EstimateMagnitude.svelte';
 	import EngineData from '$lib/components/EngineData.svelte';
-	import type { MisEstimate } from '$lib/arena_types';
+	import LinkTheorem from '$lib/components/LinkTheorem.svelte';
+	import { formatRows } from '$lib/format';
 
 
-	let engineRowData = new SvelteMap<string, {
+	let rowData = new SvelteMap<string, {
+		type: string,
 		join: number,
 		aggregate: number,
 		sort: number,
@@ -37,13 +43,16 @@
 
 	const ESTIMATE_CATEGORIES = ['join', 'aggregate', 'sort', 'hash', 'scan'];
 	for (let entry of data) {
-		if (!engineRowData.has(entry.engine)) {
-			engineRowData.set(entry.engine, {});
+		const type = entry.engine ? "engine" : "theorem";
+		const key = entry.engine ? entry.engine : entry.theorem;
+		if (!rowData.has(key)) {
+			rowData.set(key, {});
 		}
-		let engine_data = engineRowData.get(entry.engine);
+		let values = rowData.get(key);
+		values.type = type;
 		const proofLower = entry.proof.toLowerCase();
 		if (ESTIMATE_CATEGORIES.includes(proofLower)) {
-			engine_data[proofLower] = parseInt(entry.value);
+			values[proofLower] = parseInt(entry.value);
 			continue;
 		}
 
@@ -51,24 +60,24 @@
 			let parts = entry.proof.split(" ")
 			let c = parseInt(entry.value)
 			let m = parts[2]
-			if (!engine_data.mis_estimates) {
-				engine_data.mis_estimates = Object.fromEntries(
+			if (!values.mis_estimates) {
+				values.mis_estimates = Object.fromEntries(
 					ESTIMATE_CATEGORIES.map(cat => [cat, []])
 				);
 			}
 			const op = parts[1].toLowerCase();
-			if (engine_data.mis_estimates[op]) {
-				engine_data.mis_estimates[op].push({magnitude: m, count: c});
+			if (values.mis_estimates[op]) {
+				values.mis_estimates[op].push({magnitude: m, count: c});
 			}
 		}
 	}
 
-  $ : sortedEngineRow = (Array.from(engineRowData.entries())).sort((a, b) => a[0].localeCompare(b[0]));
+  $ : sortedEngineRow = (Array.from(rowData.entries())).sort((a, b) => a[0].localeCompare(b[0]));
 
 
 </script>
 
-<h2>Plan Efficiency and Estimation</h2>
+<h2>Plan Efficiency and Estimation{#if is_summary}&nbsp;-&nbsp;Summary{/if}</h2>
 <table class="data">
 	<thead>
 	<tr>
@@ -87,18 +96,24 @@
 	</tr>
 	</thead>
 	<tbody>
-		{#each sortedEngineRow as [engine, data]}
+		{#each sortedEngineRow as [key, data]}
 		<tr>
-			<td class="grouped"><EngineData engine="{engine}"/></td>
-			<td class="table-number">{data.scan}</td>
+			<td class="grouped">
+				{#if data.type === "engine"}
+				<EngineData engine="{key}" tag="{tag}"/>
+				{:else}
+				<LinkTheorem theorem="{key}" component="plan"/>
+				{/if}
+			</td>
+			<td class="table-number">{formatRows(data.scan)}</td>
 			<td><EstimateMagnitude data="{data.mis_estimates?.scan ?? null}"></EstimateMagnitude></td>
-			<td class="table-number">{data.join}</td>
+			<td class="table-number">{formatRows(data.join)}</td>
 			<td><EstimateMagnitude data="{data.mis_estimates?.join ?? null}"></EstimateMagnitude></td>
-			<td class="table-number">{data.sort}</td>
+			<td class="table-number">{formatRows(data.sort)}</td>
 			<td><EstimateMagnitude data="{data.mis_estimates?.sort ?? null}"></EstimateMagnitude></td>
-			<td class="table-number">{data.hash}</td>
+			<td class="table-number">{formatRows(data.hash)}</td>
 			<td><EstimateMagnitude data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitude></td>
-			<td class="table-number">{data.aggregate}</td>
+			<td class="table-number">{formatRows(data.aggregate)}</td>
 			<td><EstimateMagnitude data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitude></td>
 		</tr>
 		{/each}

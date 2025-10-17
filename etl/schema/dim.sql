@@ -8,8 +8,7 @@
 
 INSERT INTO component (component_id, component, description, ordering)
 SELECT arena_key(component), component, description, ordering
-FROM (SELECT 'CLIENT' AS component, 'Client Protocol' AS description, 1 AS ordering
-      UNION ALL
+FROM (
       SELECT 'PLAN', 'Planner', 2
       UNION ALL
       SELECT 'EE', 'Execution Engine', 3

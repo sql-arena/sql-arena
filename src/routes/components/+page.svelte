@@ -10,6 +10,6 @@
 
 <ul class="big-selector">
 	{#each data.components as s (s.component)}
-	<li><a href={`/components/${s.component.toLowerCase()}`}>{s.description}</a></li>
+	<LinkComponent component="{s.component}" title="{s.description}"/>
 	{/each}
 </ul>

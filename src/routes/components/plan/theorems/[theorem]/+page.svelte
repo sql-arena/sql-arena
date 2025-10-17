@@ -2,12 +2,14 @@
 	import TheoremPlanStats from '$lib/components/TheoremPlanStats.svelte';
 	import TheoremPlans from '$lib/components/TheoremPlans.svelte';
 	import MarkdownSnippet from '$lib/components/MarkdownSnippet.svelte';
+	import TagPicker from '$lib/components/TagPicker.svelte';
 	export let data: {
 		theorem: string,
 		description: string,
 		proofData: Array<{name: string, value: string, unit: string}>,
 		planData: Array<{engine: string, version: string, plan: string}>
 		commentary: string
+		tags: string[]
 	};
 </script>
 
@@ -18,3 +20,9 @@
 <TheoremPlanStats data="{data.proofData}" />
 
 <TheoremPlans data="{data.planData}" />
+
+{#if data.tags.length > 0}
+<h2>Related Tags</h2>
+
+<TagPicker data="{data.tags}" component="plan"/>
+{/if}

@@ -45,7 +45,10 @@ export async function loadMarkdown(slug: string) {
 }
 
 function logSql(msg: string): void {
-	 // console.log(msg);
+	const logDir = path.join(libDir, '..', 'logs');
+	const logFile = path.join(logDir, 'sql.log');
+	fs.mkdir(logDir, { recursive: true }).catch(() => {});
+	fs.appendFile(logFile, `${new Date().toISOString()} ${msg}\n`).catch(() => {});
 }
 
 export async function fetchAll(query: string): Promise<Rows> {
@@ -68,6 +71,14 @@ function sqlFilePath(sub_directory: string, file: string): string {
 }
 
 
+async function fetchAllByFile(sub_directory: string, file: string, values: Record<string, string> = {}) {
+	const sqlPath = path.join(sqlDir, sub_directory);
+	const dataPath = path.join(sqlPath, `${file}.sql`)
+	const sql = await parameteriseFile(dataPath, values)
+	return await fetchAll(sql);
+
+}
+
 async function parameteriseFile(filePath: string, values: Record<string, string>): Promise<string> {
 	const content = await fs.readFile(filePath, 'utf-8');
 	return parameterise(content, values);
@@ -79,27 +90,29 @@ export async function allComponents(): Promise<Rows> {
 }
 
 export async function fetchTierList(tierList: string) {
-	const sqlPath = path.join(sqlDir, "tier-list");
-	const tierPath = path.join(sqlPath, `${tierList}.sql`)
-	const sql = await fs.readFile(tierPath, 'utf-8');
-	return await fetchAll(sql);
+	return await fetchAllByFile("tier-list", tierList);
 }
 
 export async function fetchTheoremProofData(theorem: string) {
-	const sqlPath = path.join(sqlDir, "theorem");
-	const dataPath = path.join(sqlPath, `proof-data.sql`)
-	const sql = await parameteriseFile(dataPath, { theorem : theorem})
-	return await fetchAll(sql);
+	return await fetchAllByFile("theorem", "proof-data", { theorem : theorem})
+}
+
+export async function fetchTagProofData(component: string, tag: string) {
+	return await fetchAllByFile("tag", "proof-data", { component : component, tag : tag})
+}
+
+export async function fetchTheoremTags(component: string, theorem: string) {
+	return await fetchAllByFile("theorem", "tag", { theorem : theorem, component: component})
 }
 
 export async function fetchTagsPerComponent(component: string) {
-	const path= sqlFilePath("theorem", "tags-per-component")
-	const sql = await parameteriseFile(path, { component : component})
-	return await fetchAll(sql);
+	return await fetchAllByFile("theorem", "tags-per-component", { component : component})
 }
 
 export async function fetchTheoremPlanData(theorem: string) {
-	const path= sqlFilePath("theorem", "proof-plan-data")
-	const sql = await parameteriseFile(path, { theorem : theorem})
-	return await fetchAll(sql);
+	return await fetchAllByFile("theorem", "proof-plan-data", { theorem : theorem})
+}
+
+export async function fetchEngineProofDataByTag(engine: string, tag: string) {
+	return await fetchAllByFile("engine", "proof-data-by-tag", { engine : engine, tag: tag})
 }

@@ -1,4 +1,9 @@
-﻿import { fetchTheoremPlanData, fetchTheoremProofData, loadMarkdown } from '$lib/db';
+﻿import {
+	fetchTheoremPlanData,
+	fetchTheoremProofData,
+	fetchTheoremTags,
+	loadMarkdown
+} from '$lib/db';
 export const prerender = true;
 
 export const load = async ({params}) => {
@@ -6,11 +11,12 @@ export const load = async ({params}) => {
 	const proofData = await fetchTheoremProofData(theorem);
 	const commentary = await loadMarkdown(theorem);
 	const planData = await fetchTheoremPlanData(theorem);
-	console.log(planData)
+	const tags = await fetchTheoremTags("plan", theorem);
 	return {
 		theorem: theorem,
 		proofData: proofData,
 		planData: planData,
 		commentary: commentary,
+		tags : tags
 	};
 }
