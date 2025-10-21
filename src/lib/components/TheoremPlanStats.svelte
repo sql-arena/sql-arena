@@ -1,28 +1,30 @@
 ﻿<script lang="ts">
+	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
+
 	export let data:
 	 Array<{
 				description: string,
 				proof: string,
 				unit: string,
 				value: string,
-				/* We can either group by engine or by theorem, depending on the context. */
+				/* We can either group by engine or by theorem (or both), depending on the context. */
 				engine?: string,
 				version?: string,
 				theorem?: string
 			}>;
 	export let tag: string = ""
-	export let is_summary: boolean = false;
 
-	import { SvelteMap } from 'svelte/reactivity';
+	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import type { MisEstimate } from '$lib/arena_types';
-	import EstimateMagnitude from '$lib/components/EstimateMagnitude.svelte';
+	import EstimateMagnitudeGraph from '$lib/components/EstimateMagnitudeGraph.svelte';
 	import EngineData from '$lib/components/EngineData.svelte';
 	import LinkTheorem from '$lib/components/LinkTheorem.svelte';
 	import { formatRows } from '$lib/format';
 
 
 	let rowData = new SvelteMap<string, {
-		type: string,
+		theorem?: string,
+		grouping: string,
 		join: number,
 		aggregate: number,
 		sort: number,
@@ -40,16 +42,32 @@
 			}
 	}>();
 
-
-	const ESTIMATE_CATEGORIES = ['join', 'aggregate', 'sort', 'hash', 'scan'];
+	let distinctEngines = new SvelteSet<string>();
+	let grouping: string = "unknown";
+	let key: string = ""
 	for (let entry of data) {
-		const type = entry.engine ? "engine" : "theorem";
-		const key = entry.engine ? entry.engine : entry.theorem;
+		if (entry.engine && entry.theorem) {
+			grouping = "both";
+			key = entry.engine + " " + entry.theorem;
+		}
+		else if (entry.engine) {
+			grouping = "engine";
+			key = entry.engine;
+		}
+		else if (entry.theorem) {
+			grouping = "theorem";
+			key = entry.theorem;
+		}
 		if (!rowData.has(key)) {
 			rowData.set(key, {});
 		}
+
 		let values = rowData.get(key);
-		values.type = type;
+		values.grouping = grouping;
+		values.engine = entry.engine
+		values.theorem = entry.theorem
+		distinctEngines.add(entry.engine ?? "");
+
 		const proofLower = entry.proof.toLowerCase();
 		if (ESTIMATE_CATEGORIES.includes(proofLower)) {
 			values[proofLower] = parseInt(entry.value);
@@ -72,16 +90,26 @@
 		}
 	}
 
-  $ : sortedEngineRow = (Array.from(rowData.entries())).sort((a, b) => a[0].localeCompare(b[0]));
+	let engineCount = distinctEngines.size;
+
+	$ : sortedEngineRow = (Array.from(rowData.entries())).sort((a, b) => {
+		const theoremCompare = (a[1].theorem) ? a[1].theorem.localeCompare(b[1].theorem) : 0;
+		return theoremCompare !== 0 ? theoremCompare : a[1].engine.localeCompare(b[1].engine);
+	});
 
 
 </script>
 
-<h2>Plan Efficiency and Estimation{#if is_summary}&nbsp;-&nbsp;Summary{/if}</h2>
+
 <table class="data">
 	<thead>
 	<tr>
+		{#if grouping === "both" || grouping === "theorem"}
+		<th rowspan="2" class="text grouped">Theorem</th>
+		{/if}
+		{#if grouping === "both" || grouping === "engine"}
 		<th rowspan="2" class="text grouped">Engine</th>
+		{/if}
 		<th colspan="2">Scanning</th>
 		<th colspan="2">Joining</th>
 		<th colspan="2">Sorting</th>
@@ -90,31 +118,36 @@
 	</tr>
 	<tr>
 		{#each ESTIMATE_CATEGORIES}
-		<th class="sub-header">Rows</th>
-		<th class="sub-header">Estimation</th>
+		<th class="sub-header">Rows Processed</th>
+		<th class="sub-header">Estimation Accuracy</th>
 		{/each}
 	</tr>
 	</thead>
 	<tbody>
-		{#each sortedEngineRow as [key, data]}
+		{#each sortedEngineRow as [key, data], index}
 		<tr>
-			<td class="grouped">
-				{#if data.type === "engine"}
-				<EngineData engine="{key}" tag="{tag}"/>
-				{:else}
-				<LinkTheorem theorem="{key}" component="plan"/>
-				{/if}
+			{#if grouping === "both" || grouping === "theorem"}
+			{#if index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem}
+			<td class="grouped" rowspan="{engineCount}">
+				<LinkTheorem theorem="{data.theorem}" component="plan"/>
 			</td>
+			{/if}
+			{/if}
+			{#if grouping === "both" || grouping === "engine"}
+			<td class="grouped">
+				<EngineData engine="{data.engine}" tag="{tag}"/>
+			</td>
+			{/if}
 			<td class="table-number">{formatRows(data.scan)}</td>
-			<td><EstimateMagnitude data="{data.mis_estimates?.scan ?? null}"></EstimateMagnitude></td>
+			<td><EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"></EstimateMagnitudeGraph></td>
 			<td class="table-number">{formatRows(data.join)}</td>
-			<td><EstimateMagnitude data="{data.mis_estimates?.join ?? null}"></EstimateMagnitude></td>
+			<td><EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"></EstimateMagnitudeGraph></td>
 			<td class="table-number">{formatRows(data.sort)}</td>
-			<td><EstimateMagnitude data="{data.mis_estimates?.sort ?? null}"></EstimateMagnitude></td>
+			<td><EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"></EstimateMagnitudeGraph></td>
 			<td class="table-number">{formatRows(data.hash)}</td>
-			<td><EstimateMagnitude data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitude></td>
+			<td><EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitudeGraph></td>
 			<td class="table-number">{formatRows(data.aggregate)}</td>
-			<td><EstimateMagnitude data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitude></td>
+			<td><EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph></td>
 		</tr>
 		{/each}
 	</tbody>

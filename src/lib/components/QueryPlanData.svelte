@@ -1,6 +1,15 @@
 ﻿<script lang="ts">
 	export let plan: string = "";
 
+	function escapeHtml(text: string): string {
+		return text
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#039;');
+	}
+
 
 	function highlight(line: string, find: string[], css_class: string ) {
 		return line.replace(
@@ -35,6 +44,10 @@
 		'!=',
 		'<=',
 		'>=',
+		'&lt;=',
+		'&gt;=',
+		'&lt;',
+		'&gt;',
 		'\\*',
 		'\\-',
 		'\\+',
@@ -52,7 +65,7 @@
 				return `<span class="plan-header">${line.trim()}</span>`
 			}
 			const estimate = `<span class="plan-estimates">${line.slice(0, 20)}</span>`;
-			let rest = line.slice(20);
+			let rest = escapeHtml(line.slice(20));
 			rest = highlight(rest, keywords, "keyword");
 			rest = highlight(rest, ops, "operator");
 			rest = highlight(rest, funcs, "function");

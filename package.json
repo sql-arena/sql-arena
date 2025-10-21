@@ -6,7 +6,7 @@
 	"scripts": {
 		"prebuild": "tsx etl/load-dbprove.ts",
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && node scripts/fix-links.ts",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -59,6 +59,7 @@
 		"html-minifier-terser": "^7.2.0",
 		"inflight": "^1.0.6",
 		"js-beautify": "^1.15.4",
+		"jsdom": "^27.0.1",
 		"marked": "^16.4.0",
 		"npmlog": "^7.0.1"
 	}

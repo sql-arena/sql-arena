@@ -1,8 +1,20 @@
 ﻿import { DuckDBConnection, DuckDBInstance } from '@duckdb/node-api';
-import { databasePath } from './paths';
+import { databasePath } from './paths.server';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs/promises';
+import componentAll from './sql/component/all.sql?raw'
+import tierListPlan from './sql/tier-list/plan-quality.sql?raw'
+import theoremTag from './sql/theorem/tag.sql?raw'
+import theoremProofData from './sql/theorem/proof-data.sql?raw'
+import theoremProofDataPlan from './sql/theorem/proof-data-plan.sql?raw'
+import theoremPerComponent from './sql/theorem/per-component.sql?raw'
+import tagPerComponent from './sql/tag/per-component.sql?raw'
+import engineProofDataByTag from './sql/engine/proof-data-by-tag.sql?raw'
+
+import tagProofDataSummary from './sql/tag/proof-data-summary.sql?raw'
+import tagProofData from './sql/tag/proof-data.sql?raw'
+import planScore from './sql/plan/score.sql?raw'
 
 export type Row = Record<string, unknown>;
 export type Rows = Row[];
@@ -64,55 +76,54 @@ function parameterise(sql: string, values: Record<string, string>): string {
 		sql
 	);
 }
-
-function sqlFilePath(sub_directory: string, file: string): string {
-	const sqlPath = path.join(sqlDir, sub_directory);
-	return  path.join(sqlPath, `${file}.sql`)
-}
-
-
-async function fetchAllByFile(sub_directory: string, file: string, values: Record<string, string> = {}) {
-	const sqlPath = path.join(sqlDir, sub_directory);
-	const dataPath = path.join(sqlPath, `${file}.sql`)
-	const sql = await parameteriseFile(dataPath, values)
+export
+async function fetchParameterised(file_content: string, values: Record<string, string> = {}) {
+	const sql = parameterise(file_content, values)
 	return await fetchAll(sql);
 
 }
 
-async function parameteriseFile(filePath: string, values: Record<string, string>): Promise<string> {
-	const content = await fs.readFile(filePath, 'utf-8');
-	return parameterise(content, values);
-}
-
 export async function allComponents(): Promise<Rows> {
-	const file = sqlFilePath("component", "all");
-	return fetchAll(await parameteriseFile(file, {}));
+	return await fetchParameterised(componentAll, {});
 }
 
-export async function fetchTierList(tierList: string) {
-	return await fetchAllByFile("tier-list", tierList);
+export async function fetchTierListPlan() {
+	return await fetchParameterised(tierListPlan);
 }
 
 export async function fetchTheoremProofData(theorem: string) {
-	return await fetchAllByFile("theorem", "proof-data", { theorem : theorem})
+	return await fetchParameterised(theoremProofData, { theorem : theorem})
+}
+
+export async function fetchTagProofDataSummary(component: string, tag: string) {
+	return await fetchParameterised(tagProofDataSummary, { component : component, tag : tag})
 }
 
 export async function fetchTagProofData(component: string, tag: string) {
-	return await fetchAllByFile("tag", "proof-data", { component : component, tag : tag})
+	return await fetchParameterised(tagProofData, { component : component, tag : tag})
 }
 
+
 export async function fetchTheoremTags(component: string, theorem: string) {
-	return await fetchAllByFile("theorem", "tag", { theorem : theorem, component: component})
+	return await fetchParameterised(theoremTag, { theorem : theorem, component: component})
 }
 
 export async function fetchTagsPerComponent(component: string) {
-	return await fetchAllByFile("theorem", "tags-per-component", { component : component})
+	return await fetchParameterised(tagPerComponent, { component : component})
 }
 
 export async function fetchTheoremPlanData(theorem: string) {
-	return await fetchAllByFile("theorem", "proof-plan-data", { theorem : theorem})
+	return await fetchParameterised(theoremProofDataPlan, { theorem : theorem})
 }
 
 export async function fetchEngineProofDataByTag(engine: string, tag: string) {
-	return await fetchAllByFile("engine", "proof-data-by-tag", { engine : engine, tag: tag})
+	return await fetchParameterised(engineProofDataByTag, { engine : engine, tag: tag})
+}
+
+export async function fetchTheoremPerComponent(component: string) {
+	return await fetchParameterised(theoremPerComponent, { component : component})
+}
+
+export async function fetchPlanScores() {
+	return await fetchParameterised(planScore, {})
 }

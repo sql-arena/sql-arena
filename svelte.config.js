@@ -7,7 +7,18 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex()],
-	kit: { adapter: adapter() },
+	kit: {
+		adapter: adapter({
+			fallback: undefined,
+			precompress: false,
+			strict: true
+		}),
+		// use relative paths for easy ZIP file distribution
+		paths: {
+			base: '',
+			relative: true
+		},
+	},
 	extensions: ['.svelte', '.svx']
 };
 

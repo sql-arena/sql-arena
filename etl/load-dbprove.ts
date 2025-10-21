@@ -4,6 +4,8 @@ import { findUpSync } from 'find-up';
 import { DuckDBConnection, DuckDBInstance } from '@duckdb/node-api';
 import { promises as fs } from 'fs';
 import { glob } from 'glob';
+import { databasePath } from '../src/lib/paths.server';
+
 
 function repo_root() {
 	const __filename = fileURLToPath(import.meta.url);

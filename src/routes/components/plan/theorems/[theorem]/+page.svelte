@@ -3,6 +3,8 @@
 	import TheoremPlans from '$lib/components/TheoremPlans.svelte';
 	import MarkdownSnippet from '$lib/components/MarkdownSnippet.svelte';
 	import TagPicker from '$lib/components/TagPicker.svelte';
+
+
 	export let data: {
 		theorem: string,
 		description: string,
@@ -11,13 +13,14 @@
 		commentary: string
 		tags: string[]
 	};
+
 </script>
 
 <h1>Planning Theorem: {data.theorem}</h1>
 
 <MarkdownSnippet data="{data.commentary}" />
 
-<TheoremPlanStats data="{data.proofData}" />
+<TheoremPlanStats data="{data.proofData}" />1
 
 <TheoremPlans data="{data.planData}" />
 

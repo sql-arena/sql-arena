@@ -1,9 +1,9 @@
-<div style="background-image: url('/img/arena-front.png');
-	background-repeat: no-repeat;">
+<script lang="ts">
+	import LinkComponent from "$lib/components/LinkComponent.svelte";
+</script>
+<div class="front-cover">
 
-
-<h1>SQL Arena</h1>
-	<div style="height: 200px"></div>
+<h1>SQL Arena</h1><div class="sub-title">Where databases go to fight!</div>
 
 
 <h2>What are Theorems?</h2>
@@ -30,6 +30,9 @@
 		This component section is all about the shapes of query plans and the power of the
 		query optimiser.
 	</p>
+	<ul class="big-selector">
+	<LinkComponent component="PLAN" description="Explore Planner"/>
+	</ul>
 </article>
 
 <h2>Execution Engine</h2>
@@ -53,7 +56,9 @@
 		<li>The impact of object storage on your cloud.</li>
 		<li>How fast the engine can run when given all its needs</li>
 	</ul>
-
+	<ul class="big-selector">
+	<LinkComponent component="SE" description="Explore Storage Engine"/>
+	</ul>
 </article>
 
 

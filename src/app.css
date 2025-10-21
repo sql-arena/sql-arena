@@ -2,6 +2,7 @@
 @import './styles/selectors-lists.css';
 @import './styles/tables.css';
 @import './styles/code.css';
+@import 'styles/data-points.css';
 
 /* BODY: Tron background (tile under everything) */
 body {
@@ -74,10 +75,59 @@ main {
     border: 1px solid rgba(0, 234, 255, .35);
     border-radius: .8rem;
     box-shadow: 0 0 1rem rgba(0, 234, 255, .15);
-
-    /* not fixed width; let it breathe. If you want a soft cap, uncomment: */
-    /* max-width: 1400px; */
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+div.front-cover {
+    display: block;
+    margin-left: calc(-1 * clamp(16px, 3vw, 32px));
+    margin-right: calc(-1 * clamp(16px, 3vw, 32px));
+    background-image: linear-gradient(to bottom,
+        rgba(0,0,0,0 ) 640px,
+        rgba(0,0,0,0.45) 660px,
+        rgba(0,0,0,0.85) 680px,
+        rgba(0,0,0,1) 700px),
+        url(/img/arena-front.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+div.sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--tron-primary-colour);
+    margin-bottom: 1rem;
+    min-height: 500px;
+}
+
+@media (max-width: 900px) {
+    div.sub-title {
+        visibility: hidden;
+        min-height: 350px;
+    }
+}
+@media (max-width: 700px) {
+    div.sub-title {
+        visibility: hidden;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    div.sub-title {
+        visibility: hidden;
+        min-height: 0px;
+    }
+    div.front-cover {
+        background-image: none;
+    }
+}
+
+
 
 /* FOOTER: small, fixed to bottom */
 footer {
@@ -126,11 +176,13 @@ main {
 }
 
 article {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1rem;
+    width: 90%;
+    margin: 30px;
+    padding: 0.85rem 1.2rem;
     background-color: var(--data-background);
     text-align: left;
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 
@@ -170,12 +222,20 @@ h6::after {
     clear: both;
 }
 
-p {
+p, li {
     font-family: var(--body-font), sans-serif;
     font-size: 1.2rem;
-    line-height: 1.6;
     color: #ddd; /* softer contrast vs neon */
+}
+
+p {
+    line-height: 1.6;
     margin: 1rem 0;
+}
+
+li {
+    line-height: 1.2;
+    margin: 0.2rem 0;
 }
 
 a {

@@ -2,7 +2,6 @@
 	import EngineData from '$lib/components/EngineData.svelte';
 	import QueryPlanData from '$lib/components/QueryPlanData.svelte';
 	export let data: Array<{engine: string, version: string, plan: string}> = []
-	console.log(data);
 </script>
 
 <h2>Actual Query Plans</h2>

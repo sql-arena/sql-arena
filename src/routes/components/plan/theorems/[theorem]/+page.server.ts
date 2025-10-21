@@ -6,6 +6,12 @@
 } from '$lib/db';
 export const prerender = true;
 
+export async function entries() {
+	const { fetchTheoremPerComponent } = await import('$lib/db');
+	const rows = await fetchTheoremPerComponent("plan");
+	return rows.map(row => ({ theorem: String(row.theorem).toLowerCase() }));
+}
+
 export const load = async ({params}) => {
 	const theorem = params.theorem;
 	const proofData = await fetchTheoremProofData(theorem);

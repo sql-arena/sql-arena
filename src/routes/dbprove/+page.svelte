@@ -30,6 +30,6 @@ variety of initiatives:</p>
 the artifacts DBProve creates (it is a bunch of CSV files). Once you have collected the
 results you file a PR against the result repository.</p>
 
-<p>Result contribution is done via this repo: <a href="">[insert repo link]</a>. In the
+<p>Contributing results is is done via this repo: <a href="/">[insert repo link]</a>. In the
 	README file of that repo you the exact process is described.</p>
 </article>

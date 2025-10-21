@@ -9,7 +9,7 @@
 INSERT INTO component (component_id, component, description, ordering)
 SELECT arena_key(component), component, description, ordering
 FROM (
-      SELECT 'PLAN', 'Planner', 2
+      SELECT 'PLAN' AS component, 'Planner' AS description, 2 AS ordering
       UNION ALL
       SELECT 'EE', 'Execution Engine', 3
       UNION ALL

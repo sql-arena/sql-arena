@@ -1,4 +1,5 @@
 <script lang="ts">
+	import LinkComponent from "$lib/components/LinkComponent.svelte";
 	export let data: {
 		components: { component: string; description: string }[];
 	};
@@ -10,6 +11,6 @@
 
 <ul class="big-selector">
 	{#each data.components as s (s.component)}
-	<LinkComponent component="{s.component}" title="{s.description}"/>
+	<LinkComponent component="{s.component}" description="{s.description}"/>
 	{/each}
 </ul>

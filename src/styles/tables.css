@@ -13,11 +13,14 @@
 
 table.data tr {
     background-color: #000;
+    border-top: var(--data-grid-border-row);
+    border-bottom: var(--data-grid-border-row);
 }
 
 table.data td {
-    border: var(--data-grid-border);
-    vertical-align: center;
+    border-left: var(--data-grid-border-column);
+    border-right: var(--data-grid-border-column);
+    vertical-align: top;
     background-color: var(--data-background);
     text-align: center;
     padding: 5px;
@@ -42,31 +45,12 @@ table.magnitude {
     margin-left: auto;
     margin-right: auto;
 }
+
 table.magnitude td, table.magnitude th {
     border: 0;
     padding: 0.001rem 0.25rem;
     margin: 0;
     text-align: right;
-}
-
-td.shit-scale-0 {
-    color: var(--scale-green-dim);
-}
-
-td.shit-scale-1 {
-    color: var(--scale-lime-dim);
-}
-
-td.shit-scale-2 {
-    color: var(--scale-yellow-dim);
-}
-
-td.shit-scale-3 {
-    color: var(--scale-orange-dim);
-}
-
-td.shit-scale-4 {
-    color: var(--scale-red-dim);
 }
 
 .table-logo {
@@ -84,15 +68,17 @@ td.number, th.number {
     text-align: right !important;
 }
 
+td.vcenter, th.vcenter {
+    vertical-align: middle !important;
+}
+
 td.text, th.text {
     text-align: left !important;
 }
 
 td.grouped, th.grouped {
     text-align: left !important;
-    width: 200px !important;
-    margin-left: 0;
-    padding: 0;
+    border-right: var(--data-grid-header-border) !important;
 }
 
 
@@ -118,7 +104,7 @@ th.tier-label {
     width: 150px;
     min-width: 150px;
     max-width: 150px;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     height: 100px;
     box-sizing: border-box;
 }
@@ -141,46 +127,33 @@ div.tier-items {
     justify-content: flex-start;
 }
 
-div.tier-item {
+
+/* Rendering of various elements */
+.engine-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    font-size: 2rem;
-    margin-right: 0;
-    margin-bottom: 0;
-    /* Prevent item from stretching full width */
-    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
-img.tier-icon {
-    width: 100px;
-    height: 100px;
+.engine-logo {
+    max-width: 64px;
+    height: auto;
 }
 
-.tier-S {
-    background-color: rgb(255, 127, 126);
+.engine-text {
+    margin-left: 8px;
 }
 
-.tier-A {
-    background-color: rgb(255, 191, 127);
-}
+@media (max-width: 200px) {
+    .engine-container {
+        flex-direction: column;
+    }
 
-.tier-B {
-    background-color: rgb(254, 255, 127);
-}
-
-.tier-C {
-    background-color: rgb(126, 255, 128);
-}
-
-.tier-D {
-    background-color: rgb(127, 255, 255);
-}
-
-.tier-E {
-    background-color:rgb(128, 127, 255)
-}
-
-.tier-F {
-    background-color: rgb(255, 127, 254);
+    .engine-text {
+        margin-left: 0;
+        margin-top: 8px;
+    }
 }

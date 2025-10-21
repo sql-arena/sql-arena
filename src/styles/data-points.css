@@ -1,0 +1,128 @@
+﻿
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 1px;
+    height: 100px;
+    flex-direction: row;
+}
+
+.bar {
+    flex: 1;
+    min-width: 5px;
+    min-height: 1px;
+}
+
+.gradient-scale-0 {
+    color: var(--scale-green-dim);
+}
+
+.gradient-scale-0-background {
+    background-color: var(--scale-green-dim);
+}
+
+.gradient-scale-1 {
+    color: var(--scale-lime-dim);
+}
+
+.gradient-scale-1-background {
+    background-color: var(--scale-lime-dim);
+}
+
+.gradient-scale-2 {
+    color: var(--scale-yellow-dim);
+}
+
+.gradient-scale-2-background {
+    background-color: var(--scale-yellow-dim);
+}
+
+.gradient-scale-3 {
+    color: var(--scale-orange-dim);
+}
+
+.gradient-scale-3-background {
+    background-color: var(--scale-orange-dim);
+}
+
+.gradient-scale-4 {
+    color: var(--scale-red-dim);
+}
+
+.gradient-scale-4-background {
+    background-color: var(--scale-red-dim);
+}
+
+/* Tier list images and text */
+div.tier-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+div.tier-item span {
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    clear: both;
+}
+
+div.tier-item img {
+    clear: both;
+    text-align: center;
+}
+
+
+
+.rank {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.tier-S {
+    background-color: rgb(255, 127, 126);
+}
+
+.tier-A {
+    background-color: rgb(255, 191, 127);
+}
+
+.tier-B {
+    background-color: rgb(254, 255, 127);
+}
+
+.tier-C {
+    background-color: rgb(126, 255, 128);
+}
+
+.tier-D {
+    background-color: rgb(127, 255, 255);
+}
+
+.tier-E {
+    background-color: rgb(128, 127, 255)
+}
+
+.tier-F {
+    background-color: rgb(255, 127, 254);
+}
+
+
+@media (max-width: 700px) {
+    div.tier-item img {
+        width: 30px;
+        height: 30px;
+    }
+    div.tier-item span {
+        display: none;
+    }
+    .rank {
+        font-size: 2rem;
+    }
+}
