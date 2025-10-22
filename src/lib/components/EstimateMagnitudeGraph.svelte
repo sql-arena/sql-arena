@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-	import type { MisEstimate } from '$lib/arena_types';
+	import type { MisEstimate } from '$lib/arena-types.js';
 	import { SvelteMap } from 'svelte/reactivity';
 
 	export let data: MisEstimate[] = [];
@@ -27,7 +27,7 @@
 			css_class: m.css_class,
 			ordering: m.ordering
 		};
-	}).sort((a, b) => b.ordering - a.ordering);
+	}).sort((a, b) => a.ordering - b.ordering );
 
 
 	const maxCount = Math.max(...(data?.map(d => d.count) || []), 0);

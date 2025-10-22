@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-	import type { MisEstimate } from '$lib/arena_types';
+	import type { MisEstimate } from '$lib/arena-types.js';
 	import { SvelteMap } from 'svelte/reactivity';
 
 	export let data: MisEstimate[] = [];

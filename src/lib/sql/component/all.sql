@@ -1,3 +1,4 @@
-﻿SELECT component, description
+﻿SELECT component, slug, description
 FROM component
 ORDER BY ordering
+;

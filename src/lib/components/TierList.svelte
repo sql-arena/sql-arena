@@ -1,5 +1,7 @@
 ﻿<script lang="ts">
-	export let data: Array<{ tier: string; engine: string; score: number }> = {};
+	import type { Engine } from '$lib/arena-types.js';
+
+	export let data: Array<{ tier: string; engine: Engine; score: number }> = {};
 
 	import EngineTier from '$lib/components/EngineTier.svelte';
 	const tiers = ['S', 'A', 'B', 'C', 'D', 'F'];

@@ -1,8 +1,9 @@
 ﻿<script lang="ts">
 	import ImgEngine from '$lib/components/ImgEngine.svelte';
-	export let engine: string = "";
+	import type { Engine } from '$lib/arena-types.js';
+	export let engine: Engine;
 </script>
 <div class="tier-item">
 	<ImgEngine engine="{engine}"/>
-	<span>{engine}</span>
+	<span>{engine.engine}</span>
 </div>

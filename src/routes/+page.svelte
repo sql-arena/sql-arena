@@ -1,12 +1,64 @@
 <script lang="ts">
-	import LinkComponent from "$lib/components/LinkComponent.svelte";
+	import ListComponent from '$lib/components/ListComponent.svelte';
+
+	export let data: {
+		components: { component: string; description: string }[];
+	};
+
 </script>
 <div class="front-cover">
+	<h1>SQL Arena</h1>
+	<div class="sub-title">Where databases go to fight!</div>
+</div>
 
-<h1>SQL Arena</h1><div class="sub-title">Where databases go to fight!</div>
+<h2>Why?</h2>
+<article>
+	<p>SQL Arena is an independent project that aims to provide comparative data between database vendors.
+		This should help you make informed decisions about which database to use for your next project and
+		tell you where to expect issues.
+	</p>
+
+	<p>Data rendered on this website is collected using a tool called <code>dbprove</code>.</p>
+
+	<p>All tooling used by SQL Arena are open source under the Apache License. People interested in databases
+		are invited to contribute (see: <a href="/dbprove/">DBProve</a>).</p>
+
+	<p>In the cases where the <a href="https://en.wikipedia.org/wiki/David_DeWitt">DeWitt Clause</a> allows it
+		&mdash; performance metrics will be measured. For other cases, vendors will either be excluded or
+		measurements not related to performance will be published.</p>
+</article>
+
+<h2>Components</h2>
+<article>
+	<p>Data is divided into components that roughly match the typical, architectural stack of a relational database.
+		Explore below.</p>
+
+</article>
+<ListComponent components="{data.components}" />
 
 
-<h2>What are Theorems?</h2>
+<article>
+	<p>This site is meant to be educational. It is a way to compare multiple databases against each
+		other in as neutral and objective a way as possible.</p>
+
+	<p>We are always looking to improve the site and our measurement. Comments, sugggestions and
+		improvements are most welcome and can be directed to Thomas Kejser at my LinkedIn account
+		of via email.</p>
+
+	<p>All data rendered on this site is made with <a href="/dbprove">DBProve</a>.</p>
+</article>
+
+<h2>How can I contribute?</h2>
+<article>
+	<p>We are glad you asked!</p>
+
+	<p>You can contribute results to this site or if you feel like hacking code - you can
+		even files Pull Requests against DBProve</p>
+
+	<p>More details are here: <a href="/dbprove/">Contributing</a></p>
+</article>
+
+<h2>Theorems?</h2>
 <article>
 	<p>Theorems are tests bundles with analysis. Typically, a query or set of queries is run
 		and automated analysis is then performed on the results.</p>
@@ -22,47 +74,3 @@
 	</ul>
 
 </article>
-
-<h2>Planner</h2>
-<article>
-	<p>
-		Focusing on the big ticket items that bring your <b>big-O</b> complexity down.
-		This component section is all about the shapes of query plans and the power of the
-		query optimiser.
-	</p>
-	<ul class="big-selector">
-	<LinkComponent component="PLAN" description="Explore Planner"/>
-	</ul>
-</article>
-
-<h2>Execution Engine</h2>
-<article>
-	<p>Measuring the strength of the individual operators in the Execution Engine. </p>
-	<p>Classifying
-		things like: "How many CPU cycles are needed to do a hash join?" and detailed level
-		breakdown of spilling (falling back to disk) behavior</p>
-
-	<p>Also measures bandwidth of distributed clusters.</p>
-</article>
-
-<h2>Storage Engine</h2>
-<article>
-	<p>Focus on raw speeds against your storage.</p>
-
-	<p>Measuring things like:</p>
-	<ul>
-		<li>Iceberg vs. Delta</li>
-		<li>NVMe max speeds vs. whatever EBS gives you</li>
-		<li>The impact of object storage on your cloud.</li>
-		<li>How fast the engine can run when given all its needs</li>
-	</ul>
-	<ul class="big-selector">
-	<LinkComponent component="SE" description="Explore Storage Engine"/>
-	</ul>
-</article>
-
-
-
-</div>
-
-

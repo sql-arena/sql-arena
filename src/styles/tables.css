@@ -1,15 +1,14 @@
 ﻿table.data {
     width: 100%;
-    max-width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
-    margin-left: auto;
-    margin-right: auto;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
     box-shadow: var(--tron-glow-medium);
     border: var(--data-grid-table-border);
     table-layout: fixed;
+    align-self: stretch;
 }
-
 
 table.data tr {
     background-color: #000;
@@ -24,14 +23,15 @@ table.data td {
     background-color: var(--data-background);
     text-align: center;
     padding: 5px;
+    height: auto;
 }
-
 
 table.data th {
     text-align: center;
     background-color: var(--data-header-background);
     border: var(--data-grid-header-border);
     padding: 5px;
+    height: auto;
 }
 
 table.data th.sub-header {
@@ -80,6 +80,7 @@ td.grouped, th.grouped {
     text-align: left !important;
     border-right: var(--data-grid-header-border) !important;
 }
+
 
 
 /* Tier List */
@@ -155,5 +156,14 @@ div.tier-items {
     .engine-text {
         margin-left: 0;
         margin-top: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .rotate-to-shrink {
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+        text-align: right !important;
+        vertical-align: center !important;
     }
 }

@@ -1,21 +1,22 @@
 ﻿<script lang="ts">
-	import TheoremPlanStats from '$lib/components/TheoremPlanStats.svelte';
+	import { TheoremPlanStats } from '$lib/components';
+	import type { Tag, Component, Engine } from '$lib/arena-types.js';
 	export let data : {
-		proofSummaryData: Array<{engine: string, version, proof: string, string, value: string, unit: string}>
-		proofData: Array<{theorem: string, engine: string, version: string, proof: string, value: string, unit: string}>
-		tag: string
+		proofSummaryData: Array<{engine: Engine, version, proof: string, string, value: string, unit: string}>
+		proofData: Array<{theorem: string, engine: Engine, version: string, proof: string, value: string, unit: string}>
+		tag: Tag,
+		component: Component
 	};
 </script>
 
-<h1>Theorem Tag: {data.tag}</h1>
+<h1>Workload: {data.tag.tag} - Summary</h1>
 
 <p>Click on the individual engines for detailed drilldown</p>
 
-<h2>Theorem Tag: {data.tag} &mdash; Summary</h2>
 
-<TheoremPlanStats data="{data.proofSummaryData}" tag="{data.tag}" />
+<TheoremPlanStats data="{data.proofSummaryData}" tag="{data.tag}" component="{data.component}"/>
 
-<h2>Theorem Breakdown</h2>
+<h2>{data.tag.tag} Breakdown</h2>
 
-<TheoremPlanStats data="{data.proofData}" tag="{data.tag}" />
+<TheoremPlanStats data="{data.proofData}" tag="{data.tag}" component="{data.component}"/>
 

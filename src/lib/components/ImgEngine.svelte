@@ -1,4 +1,5 @@
 ﻿<script lang="ts">
-	export let engine: string = "";
+	import type { Engine } from '$lib/arena-types.js';
+	export let engine: Engine;
 </script>
-<img alt="{engine} logo" class="engine-logo" src="/img/logo-dark/{engine}.png"/>
+<img alt="{engine.engine} logo" class="engine-logo" src="/img/logo-dark/{engine.engine}.png"/>

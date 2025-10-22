@@ -13,6 +13,16 @@
     min-height: 1px;
 }
 
+@media (max-width: 700px) {
+    .bar-chart {
+        height: 50px;
+        gap: 0;
+    }
+    .bar {
+        min-width: 2px;
+    }
+}
+
 .gradient-scale-0 {
     color: var(--scale-green-dim);
 }

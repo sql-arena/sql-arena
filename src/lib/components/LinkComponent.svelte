@@ -1,5 +1,6 @@
 ﻿<script lang="ts">
-	export let component: string = "";
-	export let description: string = "";
+	import type { Component } from '$lib/arena-types.js';
+
+	export let component: Component;
 </script>
-<li><a href={`/components/${component.toLowerCase()}`}>{description}</a></li>
+<a href="/components/{component.slug}">{component.description}</a>
