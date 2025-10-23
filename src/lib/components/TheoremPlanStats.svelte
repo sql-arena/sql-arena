@@ -2,7 +2,7 @@
 	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import type { Engine, MisEstimate, Tag, Component } from '$lib/arena-types.js';
-	import { EngineData, LinkTheorem, LinkTag, EstimateMagnitudeGraph } from '$lib/components';
+	import { EngineData, LinkTheorem, LinkTag, EstimateMagnitudeGraph, RowData } from '$lib/components';
 	import { formatRows } from '$lib/format';
 
 	export let data:
@@ -16,7 +16,7 @@
 			theorem?: string,
 			tag?: Tag
 		}>;
-	export let tag: Tag ;
+	export let tag: Tag;
 	export let engine: Engine;
 	export let component: Component;
 
@@ -55,7 +55,7 @@
 		}
 		if (entry.engine && entry.theorem) {
 			grouping = 'both';
-			key = entry.engine.slug + ':' + entry.theorem.slug;
+			key = entry.theorem.slug + ':' + entry.engine.slug;
 		} else if (entry.engine) {
 			grouping = 'engine';
 			key = entry.engine.slug;
@@ -71,8 +71,9 @@
 		values.grouping = grouping;
 		values.engine = entry.engine;
 		values.theorem = entry.theorem;
-		distinctEngines.add(entry.engine ?? '');
-
+		if (entry.engine) {
+			distinctEngines.add(entry.engine.slug);
+		}
 		const proofLower = entry.proof.toLowerCase();
 		if (ESTIMATE_CATEGORIES.includes(proofLower)) {
 			values[proofLower] = parseInt(entry.value);
@@ -95,82 +96,85 @@
 		}
 	}
 
-	let engineCount = distinctEngines.size;
+	let engineCount = Math.max(distinctEngines.size, 1);
 
 	$ : sortedEngineRow = (Array.from(rowData.entries())).sort((a, b) => {
-		return a[0].localeCompare(b[0])
+		return a[0].localeCompare(b[0]);
 	});
 
 
 </script>
 
-	<p>Also see: <a href="/legend/">Interpreting Estimation Accuracy</a></p>
 <table class="data">
 	<thead>
 	<tr>
-		{#if grouping === "both" || grouping === "theorem"}
-		<th rowspan="2" class="text grouped rotate-to-shrink">Theorem</th>
+		{#if grouping === "theorem"}
+		<th class="text" style="width:10%">Theorem</th>
 		{/if}
-		{#if grouping === "both" || grouping === "engine"}
-		<th rowspan="2" class="text grouped rotate-to-shrink">Engine</th>
+		{#if grouping === "engine" || grouping === "both"}
+		<th class="text" style="width:10%"></th>
 		{/if}
 		{#if grouping === "tag" }
-		<th rowspan="2" class="text grouped rotate-to-shrink">Workload</th>
+		<th class="text">Workload</th>
 		{/if}
-
-		<th colspan="2" class="rotate-to-shrink">Scanning</th>
-		<th colspan="2" class="rotate-to-shrink">Joining</th>
-		<th colspan="2" class="rotate-to-shrink">Sorting</th>
-		<th colspan="2" class="rotate-to-shrink">Hash Building</th>
-		<th colspan="2" class="rotate-to-shrink">Aggregating</th>
-	</tr>
-	<tr>
-		{#each ESTIMATE_CATEGORIES}
-		<th class="sub-header rotate-to-shrink">Rows Processed</th>
-		<th class="sub-header rotate-to-shrink">Estimation Accuracy</th>
-		{/each}
+		<th class="sticky">Scan</th>
+		<th class="sticky">Join</th>
+		<th class="sticky">Sort</th>
+		<th class="sticky">Hash</th>
+		<th class="sticky">Agg</th>
+		<th class="sticky">Dist</th>
 	</tr>
 	</thead>
 	<tbody>
 	{#each sortedEngineRow as [key, data], index}
+
+	{#if grouping === "both" && (index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem)}
+	<tr>
+		<th class="left header-divider" colspan="1">
+				<LinkTheorem theorem="{data.theorem}" component="{component}" />
+		</th>
+		<th colspan="6"></th>
+
+	</tr>
+	{/if}
+
 	<tr>
 		{#if grouping === "tag"}
 		<td class="grouped" rowspan="{engineCount}">
-			<LinkTag tag="{key}" engine="{engine}" component="{component}"/>
+			<LinkTag tag="{key}" engine="{engine}" component="{component}" />
 		</td>
 		{/if}
 		{#if grouping === "both" || grouping === "theorem"}
-		{#if index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem}
-		<td class="grouped" rowspan="{engineCount}">
-			<LinkTheorem theorem="{data.theorem}" component="{component}" />
-		</td>
-		{/if}
 		{/if}
 		{#if grouping === "both" || grouping === "engine"}
 		<td class="grouped">
-			<EngineData engine="{data.engine}" tag="{tag}" />
+			<a href="/">
+				<EngineData engine="{data.engine}" tag="{tag}" />
+			</a>
 		</td>
 		{/if}
-		<td class="table-number">{formatRows(data.scan)}</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"></EstimateMagnitudeGraph>
+			<RowData value="{data.scan}"></RowData>
 		</td>
-		<td class="table-number">{formatRows(data.join)}</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"></EstimateMagnitudeGraph>
+			<RowData value="{data.join}"></RowData>
 		</td>
-		<td class="table-number">{formatRows(data.sort)}</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"></EstimateMagnitudeGraph>
+			<RowData value="{data.sort}"></RowData>
 		</td>
-		<td class="table-number">{formatRows(data.hash)}</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitudeGraph>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitudeGraph><RowData value="{data.hash}"></RowData>
 		</td>
-		<td class="table-number">{formatRows(data.aggregate)}</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph><RowData value="{data.aggregate}"></RowData>
 		</td>
+		<td>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph><RowData value="{data.aggregate}"></RowData>
+		</td>
+
 	</tr>
 	{/each}
 	</tbody>

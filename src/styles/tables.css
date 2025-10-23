@@ -8,34 +8,61 @@
     border: var(--data-grid-table-border);
     table-layout: fixed;
     align-self: stretch;
+    border-color: var(--data-grid-color-bright);
 }
 
-table.data tr {
-    background-color: #000;
-    border-top: var(--data-grid-border-row);
-    border-bottom: var(--data-grid-border-row);
+
+
+
+table.data th {
+    background-color: var(--data-background-header-color);
+    text-align: center;
+
+    border-top: 2px solid var(--data-grid-color-bright);
+    border-bottom: 2px solid var(--data-grid-color-bright);
+    border-left: 1px solid var(--data-grid-color-dark);
+    border-right: 1px solid var(--data-grid-color-dark);
+    padding: 5px;
+    height: auto;
+}
+
+
+table.data th.header-divider {
+    background-color: var(--data-background-header-color);
+    overflow: visible;
+    white-space: nowrap;
+    border-right: 0;
+    border-left: 0;
+}
+
+
+div.sticky-content {
+    background-color: var(--data-background-header-color);
 }
 
 table.data td {
-    border-left: var(--data-grid-border-column);
-    border-right: var(--data-grid-border-column);
+
+    border-top: 2px solid var(--data-grid-color-bright);
+    border-bottom: 2px solid var(--data-grid-color-bright);
+    border-left: 1px solid var(--data-grid-color-dark);
+    border-right: 1px solid var(--data-grid-color-dark);
+
     vertical-align: top;
-    background-color: var(--data-background);
+    background-color: var(--data-background-color);
     text-align: center;
-    padding: 5px;
+    padding: 8px;
     height: auto;
 }
 
-table.data th {
-    text-align: center;
-    background-color: var(--data-header-background);
-    border: var(--data-grid-header-border);
-    padding: 5px;
-    height: auto;
+td.column-divider, th.column-divider {
+}
+
+td.column-divider-soft, th.column-divider-soft {
 }
 
 table.data th.sub-header {
     color: var(--data-grid-sub-header-color);
+
 }
 
 /* Order of magnitude tables */
@@ -76,9 +103,13 @@ td.text, th.text {
     text-align: left !important;
 }
 
-td.grouped, th.grouped {
+td.left, th.left {
     text-align: left !important;
-    border-right: var(--data-grid-header-border) !important;
+}
+
+td.grouped {
+    text-align: left !important;
+    justify-content: left;
 }
 
 
@@ -132,10 +163,10 @@ div.tier-items {
 /* Rendering of various elements */
 .engine-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: left;
+    text-align: left;
     flex-wrap: wrap;
 }
 
@@ -145,25 +176,64 @@ div.tier-items {
 }
 
 .engine-text {
-    margin-left: 8px;
+
 }
 
-@media (max-width: 200px) {
+@media (max-width: 400px) {
     .engine-container {
         flex-direction: column;
     }
-
     .engine-text {
         margin-left: 0;
         margin-top: 8px;
     }
+
+}
+@media (max-width: 600px) {
+    .big-value {
+        visibility: hidden;
+        display: none;
+    }
+    .small-value {
+        visibility: visible;
+        display: block;
+    }
 }
 
-@media (max-width: 700px) {
-    .rotate-to-shrink {
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-        text-align: right !important;
-        vertical-align: center !important;
+@media (min-width: 601px) {
+    .big-value {
+        visibility: visible;
+        display: block;
     }
+    .small-value {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    /*.rotate-to-shrink {*/
+    /*    writing-mode: vertical-rl;*/
+    /*    transform: rotate(180deg);*/
+    /*    white-space: nowrap;*/
+    /*    text-align: left !important;*/
+    /*    vertical-align: center !important;*/
+    /*    font-weight: normal !important;*/
+    /*    word-break: break-all;*/
+    /*    overflow-wrap: break-word;*/
+    /*}*/
+    table.data {
+        box-shadow: none;
+        border: var(--data-grid-table-border);
+
+    }
+    engine-text {
+        /*display: none;*/
+        font-size: 0.8rem;
+    }
+    .engine-logo {
+        max-width: 40px;
+        height: auto;
+    }
+
 }

@@ -70,7 +70,7 @@ function logSql(msg: string): void {
 
 async function fetchAllRaw(query: string): Promise<Rows> {
 	const cn = await conn();
-	logSql(query);
+	// logSql(query);
 	const reader = await cn.runAndReadAll(query);
 	return reader.getRowObjects();
 }

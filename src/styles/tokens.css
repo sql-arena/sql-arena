@@ -7,18 +7,19 @@
     --text-dim: #8e97b2;
     --glow: 0 0 .35rem rgba(0, 234, 255, .35), 0 0 1.1rem rgba(0, 234, 255, .18);
     --tron-font: "Orbitron", "Audiowide", "Rajdhani", "Segoe UI", "Arial", sans-serif;
-    --body-font: "Roboto", "Exo 2", "Rajdhani", "Segoe UI", "Arial", sans-serif;
+    --body-font: "Inter", "Exo 2", "IBM Plex Sans", "Source Sans 3", "Noto Sans", "Arial", sans-serif;
     --code-font: 'Consolas';
     --tron-primary-colour: #0aa;
-    --tron-glow-small: 0 0 8px var(--tron-primary-colour);
+    --tron-interact-color: #FF7B00;
+    --tron-glow-small: 0 0 2px var(--tron-primary-colour);
     --tron-glow-medium: 0 0 10px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour);
     --tron-glow-inset: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour) inset;
     --body-text-colour: #ddd;            /* default body text */
 
 
     /* Number Colour scales */
-    --scale-green-dim:  #00C87A;
-    --scale-lime-dim:   #89D800;
+    --scale-green-dim:  #00f85A;
+    --scale-lime-dim:   #89f800;
     --scale-yellow-dim: #E5B700;
     --scale-orange-dim: #E56200;
     --scale-red-dim:    #D4123C;
@@ -31,11 +32,8 @@
     --scale-red:    #FF1744;
 
     /* Standard background for table cells containing data */
-    --data-background: rgb(26, 26, 24);
-    --data-header-background: rgb(18, 18, 16);
-    --data-grid-border-column: 1px solid rgb(38, 38, 36);
-    --data-grid-border-row: 1px solid rgb(130, 130, 130);
-    --data-grid-header-border: 1px solid rgb(130, 130, 130);
-    --data-grid-table-border: 3px solid rgb(130, 130, 130);
-    --data-grid-sub-header-color: rgb(130, 130, 130);
+    --data-background-color: rgb(26, 26, 24);
+    --data-background-header-color: rgb(18, 18, 16);
+    --data-grid-color-dark: rgb(38, 38, 36);
+    --data-grid-color-bright: rgb(130, 130, 130);
 }

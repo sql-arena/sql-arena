@@ -10,10 +10,10 @@
 			, ['+4x', { css_class: 'gradient-scale-2-background', ordering: 2 }]
 			, ['+2x', { css_class: 'gradient-scale-1-background', ordering: 1 }]
 			, ['=', { css_class: 'gradient-scale-0-background', ordering: 0 }]
-			, ['-2x', { css_class: 'gradient-scale-1-background', ordering: -1 }]
-			, ['-4x', { css_class: 'gradient-scale-2-background', ordering: -2 }]
-			, ['-8x', { css_class: 'gradient-scale-3-background', ordering: -3 }]
-			, ['<16x', { css_class: 'gradient-scale-4-background', ordering: -4 }]]
+			, ['-2x', { css_class: 'gradient-scale--1-background', ordering: -1 }]
+			, ['-4x', { css_class: 'gradient-scale--2-background', ordering: -2 }]
+			, ['-8x', { css_class: 'gradient-scale--3-background', ordering: -3 }]
+			, ['<16x', { css_class: 'gradient-scale--4-background', ordering: -4 }]]
 	);
 
 	const render_data = (data || []).map(d => {

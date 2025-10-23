@@ -9,12 +9,12 @@
 </script>
 {#if tag.length > 0}
 <a href="/engines/{engine}/tags/{tag}" class="engine-container">
-	<img alt="{engine} logo" class="engine-logo" src="/img/logo-dark/{engine}.png"/>{engine}
+	<ImgEngine engine="{engine}" />{engine.engine}
 </a>
 {:else}
 <div class="engine-container">
 <ImgEngine engine="{engine}" />
-<span class="engine-text">{engine}</span>
+<div class="engine-text big-value">{engine.engine}</div>
 </div>
 {/if}
 

@@ -2,5 +2,5 @@
 	if (n === undefined || n === null || isNaN(n)) {
 		return '-';
 	}
-	return n.toLocaleString();
+	return n.toLocaleString() + " rows";
 }

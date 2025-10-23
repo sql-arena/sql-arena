@@ -9,14 +9,17 @@
 	};
 </script>
 
-<h1>Workload: {data.tag.tag} - Summary</h1>
+<h1>Workload: {data.tag.tag}</h1>
 
 <p>Click on the individual engines for detailed drilldown</p>
 
+<h2>Summary</h2>
 
+<p style="margin-top:-20px">Accuracy chart, rows processed <a class="help" href="/legend/">?</a></p>
 <TheoremPlanStats data="{data.proofSummaryData}" tag="{data.tag}" component="{data.component}"/>
 
-<h2>{data.tag.tag} Breakdown</h2>
+<h2>Breakdown</h2>
+<p style="margin-top:-20px">Accuracy chart, rows processed <a class="help" href="/legend/">?</a></p>
 
 <TheoremPlanStats data="{data.proofData}" tag="{data.tag}" component="{data.component}"/>
 

@@ -18,21 +18,29 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    font-family: var(--body-font), sans-serif;
 }
 
 /* HEADER + NAV: fixed to top with a dropdown menu */
 header {
-    position: fixed;
+    /*position: fixed;*/
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 5;
     background: linear-gradient(180deg, rgba(15, 22, 58, .95), rgba(11, 17, 49, .92));
     border-bottom: 1px solid var(--line);
     box-shadow: 0 2px 12px rgba(0, 0, 0, .35);
     backdrop-filter: saturate(1.1);
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.sticky {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10 !important;
 }
 
 nav ul {
@@ -152,14 +160,8 @@ div.sub-title {
         visibility: hidden;
         min-height: 0;
     }
-
     div.front-cover {
         background-image: none;
-    }
-    h1 {
-        font-size: 1rem !important;
-        border-bottom: none;
-        background-color: red !important;
     }
 }
 
@@ -260,6 +262,10 @@ h6::after {
     clear: both;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
 p, li {
     font-family: var(--body-font), sans-serif;
     font-size: 1.2rem;
@@ -277,15 +283,19 @@ li {
 }
 
 a {
-    color: var(--tron-primary-colour);
+    color: var(--tron-interact-color);
+}
+
+a.help {
+    display: inline-block;
+    color: var(--tron-interact-color);
     text-decoration: none;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 4px var(--tron-primary-colour); /* subtle glow */
+    font-weight: bold;
+
 }
 
 a:hover {
-    color: #fff;
-    text-shadow: 0 0 6px var(--tron-primary-colour), 0 0 12px var(--tron-primary-colour);
+    color: white;
 }
 
 :not(pre) > code {
@@ -299,10 +309,7 @@ a:hover {
     font-size: inherit;
 }
 
-/* Accessibility niceties */
-summary::-webkit-details-marker {
-    display: none;
-}
+
 
 :focus-visible {
     outline: none;
@@ -311,13 +318,53 @@ summary::-webkit-details-marker {
 }
 
 /* Small screens: keep margins but compress a bit */
-@media (max-width: 720px) {
-    nav summary {
-        padding: .4rem .6rem;
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2, h3, h4 {
+        font-size: 1.1rem;
+        padding-bottom: 0.1rem;
+    }
+    main {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    p, li {
+        font-size: 1rem;
+        padding-bottom: 0.1rem;
+    }
+    main {
+        padding: 0 !important;
+    }
+    article {
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
     }
 
-    main {
-        margin: calc(56px + 16px) 12px calc(36px + 16px);
+}
+
+@media (max-width: 400px) {
+    h1, h2, h3, h4 {
+        font-size: 1rem;
+        padding-bottom: 0.1rem;
     }
+    article {
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+    }
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    p, li {
+        font-size: 0.7rem;
+    }
+
 }
 
