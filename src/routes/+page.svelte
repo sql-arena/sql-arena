@@ -29,41 +29,22 @@
 </article>
 
 <h2>Components</h2>
+<ListComponent components="{data.components}" />
 <article>
 	<p>Data is divided into components that roughly match the typical, architectural stack of a relational database.
 		Explore below.</p>
 
 </article>
-<ListComponent components="{data.components}" />
 
 
+<h2>Queries and Analysis</h2>
 <article>
-	<p>This site is meant to be educational. It is a way to compare multiple databases against each
-		other in as neutral and objective a way as possible.</p>
+	<p>Queries are bundled into workloads (for example: TPC-H).
+		After each query run a post-hoc analysis is done to determine how well the query
+		was executed by the database engine. The focus is not just on runtime, but also
+	on what we can say about the database engine based on the observed behaviour of the query</p>
 
-	<p>We are always looking to improve the site and our measurement. Comments, sugggestions and
-		improvements are most welcome and can be directed to Thomas Kejser at my LinkedIn account
-		of via email.</p>
-
-	<p>All data rendered on this site is made with <a href="/dbprove">DBProve</a>.</p>
-</article>
-
-<h2>How can I contribute?</h2>
-<article>
-	<p>We are glad you asked!</p>
-
-	<p>You can contribute results to this site or if you feel like hacking code - you can
-		even files Pull Requests against DBProve</p>
-
-	<p>More details are here: <a href="/dbprove/">Contributing</a></p>
-</article>
-
-<h2>Theorems?</h2>
-<article>
-	<p>Theorems are tests bundles with analysis. Typically, a query or set of queries is run
-		and automated analysis is then performed on the results.</p>
-
-	<p>The automated Analysis Includes such things as</p>
+	<p>The automated Analysis Includes such things as:</p>
 
 	<ul>
 		<li>Runtimes broken into their components (when the engine supports it)</li>
@@ -73,4 +54,29 @@
 		<li>I/O detailed analysis using whatever instrumentation is available</li>
 	</ul>
 
+</article>
+
+<h2>How can I contribute?</h2>
+<article>
+	<p>We are glad you asked!</p>
+
+	<p>You can contribute results to this site via our result repository.</p>
+
+	<p>If you feel like hacking code - you can
+		even file Pull Requests against DBProve</p>
+
+	<p>More details are here: <a href="/dbprove/">Contributing</a></p>
+</article>
+
+<h2>Disclaimer and Boring Stuff</h2>
+<article>
+	<p>This site is meant to be educational. It is intended as a way to compare multiple databases against each
+		other in as neutral and objective a way as possible.</p>
+
+	<p>We are always looking to improve the site and our measurement. Comments, suggestions and
+		improvements are most welcome and can be directed to Thomas Kejser at my LinkedIn account
+		or via email.</p>
+
+	<p>All data rendered on this site is made with <a href="/dbprove">DBProve</a> or gathered
+		from the analysis of contributors.</p>
 </article>

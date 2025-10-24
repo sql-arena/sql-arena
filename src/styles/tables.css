@@ -2,7 +2,7 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 0;
+    margin: 0 0 0.9rem;
     padding: 0;
     box-shadow: var(--tron-glow-medium);
     border: var(--data-grid-table-border);
@@ -30,6 +30,7 @@ table.data th {
 table.data th.header-divider {
     background-color: var(--data-background-header-color);
     overflow: visible;
+    text-align: center;
     white-space: nowrap;
     border-right: 0;
     border-left: 0;
@@ -41,15 +42,12 @@ div.sticky-content {
 }
 
 table.data td {
-
     border-top: 2px solid var(--data-grid-color-bright);
     border-bottom: 2px solid var(--data-grid-color-bright);
     border-left: 1px solid var(--data-grid-color-dark);
     border-right: 1px solid var(--data-grid-color-dark);
-
     vertical-align: top;
     background-color: var(--data-background-color);
-    text-align: center;
     padding: 8px;
     height: auto;
 }
@@ -95,70 +93,39 @@ td.number, th.number {
     text-align: right !important;
 }
 
-td.vcenter, th.vcenter {
-    vertical-align: middle !important;
-}
-
 td.text, th.text {
     text-align: left !important;
+}
+
+td.fit {
+    width: 1% !important;
+    white-space: nowrap;
+}
+
+td.vcenter, th.vcenter {
+    vertical-align: middle !important;
 }
 
 td.left, th.left {
     text-align: left !important;
 }
 
-td.grouped {
+td.right, th.right {
+    text-align: right !important;
+}
+
+
+td.grouped, th.grouped {
+    width: 10%;
     text-align: left !important;
     justify-content: left;
 }
 
-
-
-/* Tier List */
-
-table.tier-list {
-    width: 90%;
-    border-collapse: collapse;
-    table-layout: auto;
-    margin-left: auto;
-    margin-right: auto;
+table.data caption {
+    caption-side: top;
+    position: relative;
+    top: -10px;
 }
-
-tr.tier-row {
-    min-height: 80px;
-    border: 5px solid #000;
-}
-
-th.tier-label {
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    width: 150px;
-    min-width: 150px;
-    max-width: 150px;
-    color: rgb(0, 0, 0);
-    height: 100px;
-    box-sizing: border-box;
-}
-
-td.tier-data {
-    background-color: rgb(26, 26, 24);
-    text-align: left;
-    padding: 0.5rem 1rem;
-    vertical-align: top;
-    width: auto;
-}
-
-div.tier-items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    box-sizing: border-box;
-    gap: 1rem 0.5rem;
-    max-width: 100%;
-    justify-content: flex-start;
-}
-
 
 /* Rendering of various elements */
 .engine-container {
@@ -212,16 +179,6 @@ div.tier-items {
 }
 
 @media (max-width: 800px) {
-    /*.rotate-to-shrink {*/
-    /*    writing-mode: vertical-rl;*/
-    /*    transform: rotate(180deg);*/
-    /*    white-space: nowrap;*/
-    /*    text-align: left !important;*/
-    /*    vertical-align: center !important;*/
-    /*    font-weight: normal !important;*/
-    /*    word-break: break-all;*/
-    /*    overflow-wrap: break-word;*/
-    /*}*/
     table.data {
         box-shadow: none;
         border: var(--data-grid-table-border);

@@ -10,12 +10,10 @@
 </script>
 
 <h1>
-	<LinkComponent component="{data.component}" />
-	&mdash;
-	<LinkEngine component="{data.component}" engine="{data.engine}" />
+	<LinkComponent component="{data.component}" /> &mdash; {data.engine.engine}
 </h1>
-<article>
-	<p>Click on the workload for a detailed breakdown.</p>
-</article>
+
+<h2>Workload Summary</h2>
+
 <TheoremPlanStats data="{data.proofSummaryData}" engine="{data.engine}" component="{data.component}" />
 

@@ -2,8 +2,7 @@
 	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import type { Engine, MisEstimate, Tag, Component } from '$lib/arena-types.js';
-	import { EngineData, LinkTheorem, LinkTag, EstimateMagnitudeGraph, RowData } from '$lib/components';
-	import { formatRows } from '$lib/format';
+	import { DataEngine, DataText, LinkTheorem, LinkTag, EstimateMagnitudeGraph, DataRow } from '$lib/components';
 
 	export let data:
 		Array<{
@@ -19,10 +18,10 @@
 	export let tag: Tag;
 	export let engine: Engine;
 	export let component: Component;
-
+	export let highlightEngine: Engine;
 
 	if (!component) {
-		throw new Error('component is required');
+		throw new Error('component is required for theoremPlanStats');
 	}
 
 	let rowData = new SvelteMap<string, {
@@ -106,23 +105,24 @@
 </script>
 
 <table class="data">
+	<caption>Accuracy chart, rows processed <a class="help" href="/legend/estimation">?</a></caption>
 	<thead>
 	<tr>
 		{#if grouping === "theorem"}
-		<th class="text" style="width:10%">Theorem</th>
+		<th class="grouped"></th>
 		{/if}
 		{#if grouping === "engine" || grouping === "both"}
-		<th class="text" style="width:10%"></th>
+		<th class="grouped"></th>
 		{/if}
 		{#if grouping === "tag" }
-		<th class="text">Workload</th>
+		<th class="grouped"></th>
 		{/if}
-		<th class="sticky">Scan</th>
-		<th class="sticky">Join</th>
-		<th class="sticky">Sort</th>
-		<th class="sticky">Hash</th>
-		<th class="sticky">Agg</th>
-		<th class="sticky">Dist</th>
+		<th class="sticky"><DataText bigValue="Scan"/></th>
+		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
+		<th class="sticky"><DataText bigValue="Sort"/></th>
+		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
+		<th class="sticky"><DataText bigValue="Aggregate" smallValue="Agg"/></th>
+		<th class="sticky"><DataText bigValue="Distribute" smallValue="Dist"/></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -130,49 +130,51 @@
 
 	{#if grouping === "both" && (index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem)}
 	<tr>
-		<th class="left header-divider" colspan="1">
+		<th class="header-divider" colspan="7">
 				<LinkTheorem theorem="{data.theorem}" component="{component}" />
 		</th>
-		<th colspan="6"></th>
-
 	</tr>
 	{/if}
 
 	<tr>
-		{#if grouping === "tag"}
-		<td class="grouped" rowspan="{engineCount}">
-			<LinkTag tag="{key}" engine="{engine}" component="{component}" />
-		</td>
-		{/if}
-		{#if grouping === "both" || grouping === "theorem"}
-		{/if}
-		{#if grouping === "both" || grouping === "engine"}
 		<td class="grouped">
-			<a href="/">
-				<EngineData engine="{data.engine}" tag="{tag}" />
+		{#if grouping === "tag"}
+			<LinkTag tag="{key}" engine="{engine}" component="{component}" />
+		{:else if grouping === "engine" || grouping === "both"}
+			{#if highlightEngine && highlightEngine.slug != data.engine.slug}
+			<a href="/engines/{data.engine.slug}/components/{component.slug}/tags/{tag.slug}">
+				<DataEngine engine="{data.engine}" tag="{tag}" />
 			</a>
-		</td>
+			{:else}
+			<DataEngine engine="{data.engine}" tag="{tag}" />
+			{/if}
+		{:else}
+			<LinkTheorem theorem="{data.theorem}" component="{component}" />
 		{/if}
-		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"></EstimateMagnitudeGraph>
-			<RowData value="{data.scan}"></RowData>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"></EstimateMagnitudeGraph>
-			<RowData value="{data.join}"></RowData>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"/>
+			<DataRow value="{data.scan}"/>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"></EstimateMagnitudeGraph>
-			<RowData value="{data.sort}"></RowData>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"/>
+			<DataRow value="{data.join}"/>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"></EstimateMagnitudeGraph><RowData value="{data.hash}"></RowData>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"/>
+			<DataRow value="{data.sort}"/>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph><RowData value="{data.aggregate}"></RowData>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"/>
+			<DataRow value="{data.hash}"/>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"></EstimateMagnitudeGraph><RowData value="{data.aggregate}"></RowData>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"/>
+			<DataRow value="{data.aggregate}"/>
+		</td>
+		<td>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.distribution ?? null}"/>
+			<DataRow value="0"/>
 		</td>
 
 	</tr>

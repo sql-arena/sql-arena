@@ -61,9 +61,10 @@ nav a {
     text-decoration: none;
     font-family: var(--tron-font), sans-serif;
     font-weight: bold;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 5px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -161,7 +162,6 @@ div.sub-title {
         min-height: 0;
     }
     div.front-cover {
-        background-image: none;
     }
 }
 
@@ -172,16 +172,15 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 36px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0 clamp(12px, 3vw, 32px);
     color: var(--text-dim);
     background: linear-gradient(0deg, rgba(11, 17, 49, .92), rgba(15, 22, 58, .95));
     border-top: 1px solid var(--line);
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 
@@ -216,30 +215,28 @@ main {
 
 article {
     width: 90%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 0.85rem 1.2rem;
-    background-color: var(--data-background);
+    margin: 0 0 1.5rem 0 ;
+    padding: 0.85rem 0.8rem;
+    background-color: var(--data-background-color);
     text-align: left;
     box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     text-align: center;
     display: block;
     font-family: var(--tron-font), sans-serif;
     color: var(--tron-primary-colour);
-    margin: 2rem 0 1rem;
     text-shadow: var(--tron-glow-small);
+    margin-bottom: 0.9rem;
 }
 
 h1 {
     font-size: 2.5rem;
     border-bottom: 2px solid #0ff;
     display: inline-block;
-    padding-bottom: 0.5rem;
     clear: both;
 }
 
@@ -249,6 +246,15 @@ h2 {
 
 h3 {
     font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.0rem;
+}
+
+
+article h2, article h3, article h4 {
+    text-align: left
 }
 
 h1::after,
@@ -262,7 +268,7 @@ h6::after {
     clear: both;
 }
 
-h1 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
 }
 
@@ -339,10 +345,8 @@ a:hover {
         padding: 0 !important;
     }
     article {
-        padding-top: 0.1rem;
-        padding-bottom: 0.1rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
     }
 
 }
@@ -353,10 +357,7 @@ a:hover {
         padding-bottom: 0.1rem;
     }
     article {
-        padding-top: 0.1rem;
-        padding-bottom: 0.1rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.3rem;
     }
     main {
         margin: 0;

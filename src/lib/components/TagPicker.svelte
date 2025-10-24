@@ -1,10 +1,12 @@
 ﻿<script lang="ts">
-export let data: Array<{ tag: string}> = [];
-export let component: string = "";
+import type { Tag, Component } from '$lib/arena-types.js';
+
+export let tags: Tag[];
+export let component: Component;
 </script>
 
 <ul class="small-selector">
-{#each data as {tag}}
-	<li><a href="/components/{component.toLowerCase()}/tags/{tag.toLowerCase()}">{tag}</a></li>
+{#each tags as {tag} (tag.slug) }
+		<li><a href="/components/{component.slug}/tags/{tag.slug}">{tag.tag}</a></li>
 {/each}
 </ul>

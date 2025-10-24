@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-	import { Theorem, Component } from '$lib/arena-types.js';
+	import type { Theorem, Component } from '$lib/arena-types.js';
 
 	export let theorem: Theorem;
 	export let component: Component;

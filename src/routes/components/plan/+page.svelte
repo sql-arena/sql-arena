@@ -1,24 +1,16 @@
 ﻿<script lang="ts">
-	import TierList from '$lib/components/TierList.svelte';
-	import TagPicker from '$lib/components/TagPicker.svelte';
-	import EngineTier from '$lib/components/EngineTier.svelte';
-	import ImgEngine from '$lib/components/ImgEngine.svelte';
-	import type { Engine, Tag } from '$lib/arena-types.js';
+	import {  EngineTier, TagPicker, DataText } from '$lib/components';
+	import type { Component, Tag } from '$lib/arena-types.js';
 
 	export let data: {
-		tierListData: Array<{ name: string; tier: string; score?: number }>,
-		featureData: Array<{
-			feature: string;
-			importance,
-			engines: Array<{ engine: Engine; status: string, comment?: string }>
-		}>,
-		tags: Array<{ tag: Tag }>,
+		tags: Tag[],
 		planScore: PlanScoreElement[],
-		operators: string[]
+		operators: string[],
+		component: Component
 	};
 </script>
 
-<h1>Planner Component</h1>
+<h1><a href="/components">Component</a> &mdash; Planner</h1>
 <article>
 	<p>
 		Focusing on the big ticket items that bring your <b>big-O</b> complexity down.
@@ -49,11 +41,12 @@
 	<thead>
 	<tr>
 		<th>Rank</th>
-		<th class="rotate-to-shrink">Scanning</th>
-		<th class="rotate-to-shrink">Joining</th>
-		<th class="rotate-to-shrink">Sorting</th>
-		<th class="rotate-to-shrink">Hash Building</th>
-		<th class="rotate-to-shrink">Aggregating</th>
+		<th class="sticky"><DataText bigValue="Scan"/></th>
+		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
+		<th class="sticky"><DataText bigValue="Sort"/></th>
+		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
+		<th class="sticky"><DataText bigValue="Aggregate" smallValue="Agg"/></th>
+		<th class="sticky"><DataText bigValue="Distribute" smallValue="Dist"/></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -67,70 +60,11 @@
 			{/each}
 		</td>
 		{/each}
+		<td>Soon</td>
 	</tr>
 	{/each}
 	</tbody>
 </table>
 
-<h2>Query Plan Instrumentation &mdash; Tier List</h2>
-
-<article>
-	<p>Database engines are not born equal when it comes to query plan instrumentation.
-	</p>
-	<p>DBProve does its best to extract and normalise plans. When writing the code to
-		do this plan normalisation you learn a lot about what is contained in <code>EXPLAIN</code>
-		for each database engine.
-
-		Hence, we can make the following tier list from those experiences.</p>
-</article>
-
-<TierList title="Database Performance Rankings" data={data.tierListData} />
-
-
-<h2>Instrumentation Tier List Ranking</h2>
-<article>
-	<p>The following table lists the features in each database engine as of the latest
-		knowledge present in DBProve and consulting the vendor documentation.
-
-		Vendors are very welcome to comment and correct mistakes. We also hope this table serves
-		as inspiration for database vendors to improve their query plan instrumentation.
-	</p>
-	<p>
-		A total of {data.featureData.length} features are evaluated (see below) and scored based
-		on importance. High scores cause higher tier rankings.
-
-	</p>
-</article>
-
-<table class="data">
-	<thead>
-	<tr>
-		<th class="grouped">Feature</th>
-		<th class="grouped">Importance</th>
-		<th class="grouped">Engine</th>
-		<th>Status</th>
-	</tr>
-	</thead>
-	<tbody>
-	{#each data.featureData as feature}
-	<tr>
-		<td class="grouped" rowspan="{feature.engines.length}">{feature.feature}</td>
-		<td class="grouped" rowspan="{feature.engines.length}">{feature.importance}</td>
-		<td>
-			<ImgEngine engine="{feature.engines[0].engine}"></ImgEngine>
-		</td>
-		<td title="{feature.engines[0].comment}">{feature.engines[0].status}</td>
-	</tr>
-	{#each feature.engines as e, index}
-	{#if index > 0}
-	<tr>
-		<td>
-			<EngineTier engine="{e.engine}"></EngineTier>
-		</td>
-		<td title="{e.comment}">{e.status}</td>
-	</tr>
-	{/if}
-	{/each}
-	{/each}
-	</tbody>
-</table>
+<h2>Explore Workloads</h2>
+<TagPicker component={data.component} tags={data.tags} />

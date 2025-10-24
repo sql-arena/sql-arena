@@ -7,30 +7,30 @@ ul.small-selector {
     align-items: center;
     margin: 0;
     padding: 0;
-
+    width: 50%
 }
 
 ul.small-selector li {
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 ul.small-selector li a {
     display: block;
     font-family: var(--tron-font), sans-serif;
     font-size: 1.3rem;
-    color: #0ff;
+    color: var(--tron-interact-color);
     text-decoration: none;
     padding: 1.1rem 1.8rem;
     border: 2px solid #0ff;
     border-radius: 8px;
     transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 ul.small-selector li a:hover {
-    color: #fff;
+    color: var(--tron-interact-color-hover);
     background: rgba(0, 255, 255, 0.15);
     box-shadow: 0 0 10px #0ff, 0 0 24px #0ff;
     transform: scale(1.00);

@@ -4,6 +4,9 @@
 	export let engine: Engine;
 	export let component: Component;
 	export let tag: Tag;
+	if (!component) {
+		throw new Error("Component context is required to render LinkTag");
+	}
 </script>
 {#if (engine)}
 <a href="/engines/{engine.slug}/components/{component.slug}/tags/{tag.slug}">{tag.tag}</a>

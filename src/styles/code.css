@@ -1,20 +1,45 @@
 ﻿pre {
     font-family: var(--code-font), monospace;
     color: var(--text);
-    padding: 1em;
     text-align: left;
     border-radius: 6px;
-    overflow-x: auto;     /* show horizontal scrollbar */
-    overflow-y: hidden;   /* optional, keeps it cleaner */
+    overflow-x: auto; /* show horizontal scrollbar */
+    overflow-y: hidden; /* optional, keeps it cleaner */
     font-size: 0.9rem;
     line-height: 1.1;
-    margin: 1.5em 0;
-    white-space: pre;     /* critical: preserve spacing, no wrapping */
-    width: 100%;          /* match container */
-    max-width: 100%;      /* don’t grow beyond container */
+    white-space: pre; /* critical: preserve spacing, no wrapping */
+    width: 100%; /* match container */
+    max-width: 100%; /* don’t grow beyond container */
     box-sizing: border-box;
-    word-break: normal;   /* <-- must be normal, not break-all */
+    word-break: normal; /* <-- must be normal, not break-all */
     display: block;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+pre::-webkit-scrollbar {
+    height: 10px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 8px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #00EAFF, #336AF2); /* Tron blue gradient */
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 234, 255, 0.7);
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #33AAAA, #4D6CAA);
+}
+
+/* Firefor*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #33AAAA #0A0F2C;
 }
 
 pre code {
@@ -45,5 +70,6 @@ span.plan-function {
 }
 
 span.plan-lines {
-    color: var(--scale-red);
+    color: var(--scale-yellow);
+    font-weight: bold;
 }

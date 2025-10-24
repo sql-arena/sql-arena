@@ -1,22 +1,21 @@
 ﻿<script lang="ts">
-	import EngineData from '$lib/components/EngineData.svelte';
-	import QueryPlanData from '$lib/components/QueryPlanData.svelte';
+	import {DataEngine, DataQueryPlan} from '$lib/components';
 	export let data: Array<{engine: string, version: string, plan: string}> = []
 </script>
 
-<h2>Actual Query Plans</h2>
 <table class="data">
+	<caption>Query Plan per Engine <a class="help" href="/legend/query-plan">?</a></caption>
 	<thead>
 	<tr>
-		<th class="text grouped">Engine</th>
+		<th class="grouped"></th>
 		<th>Query Plan</th>
 	</tr>
 	</thead>
 	<tbody>
 		{#each data as {engine, version, plan}}
 			<tr>
-				<td class="text grouped"><EngineData engine="{engine}"/></td>
-				<td><QueryPlanData plan="{plan}"/></td>
+				<td class="grouped"><DataEngine engine="{engine}"/></td>
+				<td><DataQueryPlan plan="{plan}"/></td>
 			</tr>
 		{/each}
 	</tbody>

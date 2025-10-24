@@ -1,5 +1,7 @@
-﻿Like many TPC-H queries, it has a filter on `o_orderdate`.
-This filter is a quick test for partitioning elimination.
+﻿
+## This filter on `o_orderdate`
+
+This is a quick test for partitioning elimination.
 
 We don't have to join via `supplier` to harvest the filter - we can go via `customer`
 and filter that first.
@@ -13,3 +15,4 @@ Even though we took the filter early on `customer` we must still apply the filte
 
 By combining the filters `r_name = 'ASIA'`  and `o_orderdate >= '1994-01-01' AND o_orderdate < '1995-01-01'`
 in this way, we can greatly reduce the work needed in the query.
+

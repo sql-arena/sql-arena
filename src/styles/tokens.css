@@ -11,11 +11,13 @@
     --code-font: 'Consolas';
     --tron-primary-colour: #0aa;
     --tron-interact-color: #FF7B00;
+    --tron-interact-color-hover: white;
     --tron-glow-small: 0 0 2px var(--tron-primary-colour);
     --tron-glow-medium: 0 0 10px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour);
     --tron-glow-inset: 0 0 15px var(--tron-primary-colour), 0 0 30px var(--tron-primary-colour) inset;
     --body-text-colour: #ddd;            /* default body text */
 
+    --scrollbar-background-color: #242b5a;
 
     /* Number Colour scales */
     --scale-green-dim:  #00f85A;

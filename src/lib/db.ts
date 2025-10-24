@@ -1,4 +1,4 @@
-﻿import { DuckDBConnection, DuckDBInstance } from '@duckdb/node-api';
+﻿import { type DuckDBConnection, DuckDBInstance } from '@duckdb/node-api';
 import { databasePath } from './paths.server';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -138,8 +138,8 @@ export async function fetchTheoremProofData(theorem: string) {
 	return await fetchParameterised(theoremProofData, { theorem: theorem });
 }
 
-export async function fetchTagProofDataSummary(component: string, tag: string) {
-	return await fetchParameterised(tagProofDataSummary, { component: component, tag: tag });
+export async function fetchTagProofDataSummary(component: string, tag: string, engine: string = "ALL") {
+	return await fetchParameterised(tagProofDataSummary, { component: component, tag: tag, engine: engine });
 }
 
 export async function fetchEngineProofDataSummary(component: string, engine: string) {
