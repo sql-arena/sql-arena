@@ -32,8 +32,7 @@
 <ListComponent components="{data.components}" />
 <article>
 	<p>Data is divided into components that roughly match the typical, architectural stack of a relational database.
-		Explore below.</p>
-
+	</p>
 </article>
 
 
@@ -42,7 +41,7 @@
 	<p>Queries are bundled into workloads (for example: TPC-H).
 		After each query run a post-hoc analysis is done to determine how well the query
 		was executed by the database engine. The focus is not just on runtime, but also
-	on what we can say about the database engine based on the observed behaviour of the query</p>
+		on what we can say about the database engine based on the observed behaviour of the query</p>
 
 	<p>The automated Analysis Includes such things as:</p>
 

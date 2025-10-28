@@ -14,6 +14,7 @@ import theoremProofDataPlan from './sql/theorem/proof-data-plan.sql?raw';
 import theoremPerComponent from './sql/theorem/per-component.sql?raw';
 import tagPerComponent from './sql/tag/per-component.sql?raw';
 import engineProofDataByTag from './sql/engine/proof-data-by-tag.sql?raw';
+import { marked } from "marked";
 
 import tagProofDataSummary from './sql/tag/proof-data-summary.sql?raw';
 import engineProofDataSummary from './sql/engine/proof-data-summary.sql?raw';
@@ -55,10 +56,12 @@ export async function loadMarkdown(slug: string) {
 	const filePath = path.resolve(markdownDir, `${slug}.md`);
 	try {
 		await fs.access(filePath);
-		return await fs.readFile(filePath, 'utf-8');
-	} catch {
-		return '';
-	}
+			const content  = await fs.readFile(filePath, 'utf-8');
+			return marked.parse(content);
+		}
+		catch {
+			return "";
+		}
 }
 
 function logSql(msg: string): void {

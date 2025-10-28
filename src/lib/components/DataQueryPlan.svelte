@@ -28,7 +28,8 @@
 	const keywords = [
 		'SCAN',
 		'INNER',
-		'JOIN',
+		'JOIN', 'OUTER',
+		'LIMIT',
 		'LEFT', 'RIGHT', 'SEMI', 'ANTI', 'FULL', 'CROSS',
 		'GROUP',
 		'BY',
@@ -36,7 +37,7 @@
 		'AGGREGATE',
 		'PROJECT',
 		'ON',
-		'WHERE',
+		'WHERE', 'TABLE', 'SEEK',
 		'SORT', 'FILTER', 'SIMPLE'
 	];
 

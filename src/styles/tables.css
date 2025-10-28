@@ -11,9 +11,6 @@
     border-color: var(--data-grid-color-bright);
 }
 
-
-
-
 table.data th {
     background-color: var(--data-background-header-color);
     text-align: center;
@@ -26,7 +23,6 @@ table.data th {
     height: auto;
 }
 
-
 table.data th.header-divider {
     background-color: var(--data-background-header-color);
     overflow: visible;
@@ -34,8 +30,12 @@ table.data th.header-divider {
     white-space: nowrap;
     border-right: 0;
     border-left: 0;
+    height: 76px;
 }
 
+table.data th.header-divider a {
+    font-size: 1.3rem;
+}
 
 div.sticky-content {
     background-color: var(--data-background-header-color);
@@ -113,7 +113,6 @@ td.left, th.left {
 td.right, th.right {
     text-align: right !important;
 }
-
 
 td.grouped, th.grouped {
     width: 10%;

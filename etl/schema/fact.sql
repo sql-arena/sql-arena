@@ -6,5 +6,8 @@ CREATE TABLE fact_proof (
     engine_id bigint REFERENCES engine(engine_id),
     proof_id bigint REFERENCES proof(proof_id),
     value TEXT,
-    unit TEXT
+    unit TEXT,
+    score bigint
 );
+
+/* TODO: Scores go here and get rendered */
