@@ -7,7 +7,7 @@
 		"prebuild": "tsx etl/load-dbprove.ts",
 		"dev": "vite dev",
 		"build": "vite build && node scripts/fix-links.ts",
-		"preview": "vite preview",
+		"deploy": "node scripts/deploy-ftp.ts",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -53,6 +53,8 @@
 	},
 	"dependencies": {
 		"@duckdb/node-api": "^1.4.0-r.1",
+		"adm-zip": "^0.5.16",
+		"basic-ftp": "^5.0.5",
 		"duckdb": "^1.4.0",
 		"find-up": "^8.0.0",
 		"glob": "^11.0.3",
@@ -61,6 +63,7 @@
 		"js-beautify": "^1.15.4",
 		"jsdom": "^27.0.1",
 		"marked": "^16.4.0",
-		"npmlog": "^7.0.1"
+		"npmlog": "^7.0.1",
+		"ssh2-sftp-client": "^12.0.1"
 	}
 }
