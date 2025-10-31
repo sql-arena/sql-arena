@@ -84,6 +84,10 @@ async function main() {
 	await loadData(conn);
 
 	await runFile(conn, 'transform-proof.sql');
+
+	await runFile(conn, 'calculate-rank.sql');
+	await runFile(conn, 'blog-entries.sql');
+
 	conn.closeSync();
 	db.closeSync();
 }

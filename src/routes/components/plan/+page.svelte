@@ -1,6 +1,7 @@
 ﻿<script lang="ts">
-	import {  EngineTier, TagPicker, DataText } from '$lib/components';
-	import type { Component, Tag } from '$lib/arena-types.js';
+	import {  EngineTier, TagPicker, DataText, DataRank } from '$lib/components';
+	import type { Component, Tag  } from '$lib/arena-types';
+	import  { MAX_RANK } from '$lib/arena-types';
 
 	export let data: {
 		tags: Tag[],
@@ -52,7 +53,9 @@
 	<tbody>
 	{#each data.planScore as score, index}
 	<tr>
-		<td class="rank vcenter">{index + 1}</td>
+		<td class="rank vcenter">{index + 1}<br>
+			<DataRank rank="{index + 1}" />
+		</td>
 		{#each data.operators as op}
 		<td class="vcenter">
 			{#each score[op] as engine}

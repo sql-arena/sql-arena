@@ -3,6 +3,7 @@
      , proof
      , theorem.description
      , theorem
+     , rank
 FROM fact_proof
 JOIN theorem  USING (theorem_id)
 JOIN engine E USING (engine_id)

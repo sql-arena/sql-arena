@@ -1,23 +1,17 @@
-﻿/* Score each query by row count from each operator. The one with the lowest row count is the best
-   If you are not in the top 5, you get 0 points. 10 points for first, 9 for second, etc.
+﻿/* Score all queries rewarding 3 points for being best, 2 for second best and 1 for third best
+   The aggregate of each score in each category determines the winnners.
    */
-WITH scoring AS (SELECT TRY_CAST(value AS BIGINT) AS rows
-   , proof AS operation
-   , theorem
-   , engine
-   , greatest(0, 5 - ROW_NUMBER() OVER (PARTITION BY theorem, proof ORDER BY TRY_CAST(value AS BIGINT) DESC)) AS score
-FROM fact_proof
-    JOIN theorem  USING (theorem_id)
-    JOIN engine  USING (engine_id)
-    JOIN proof  USING (proof_id)
-    JOIN component  USING (component_id)
-WHERE component = UPPER('plan')
-  AND unit = 'Rows')
-    , agg_scoring AS (
-SELECT engine, operation, SUM(score) as score
+WITH scoring AS (SELECT engine
+                      , proof AS operation
+                      , SUM(TRY_CAST(value AS BIGINT)) AS rows
+                 FROM fact_proof
+                          JOIN engine USING (engine_id)
+                          JOIN component USING (component_id)
+                          JOIN proof USING (proof_id)
+                 WHERE component.slug = 'plan'
+                   AND unit = 'Rows'
+                 GROUP BY ALL)
+
+SELECT engine, operation, RANK() OVER (PARTITION BY operation ORDER BY rows) AS rank
 FROM scoring
-GROUP BY ALL
-    )
-SELECT engine, operation, RANK() OVER (PARTITION BY operation ORDER BY score DESC) AS rank, score
-FROM agg_scoring
 ORDER BY operation, rank ASC

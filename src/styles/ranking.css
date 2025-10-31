@@ -1,0 +1,30 @@
+﻿.rank {
+    width: 24px;
+    height: 24px;
+}
+.rank1 { /* 🥇 Gold */
+    --star-color: rgb(255, 255, 130);     /* vivid yellow-gold */
+    --star-fill: rgba(255, 240, 100, 0.35);
+}
+
+.rank2 { /* 🥈 Silver */
+    --star-color: rgb(220, 240, 255);     /* icy white-blue silver */
+    --star-fill: rgba(200, 220, 255, 0.30);
+}
+
+.rank3 { /* 🥉 Bronze */
+    --star-color: rgb(255, 180, 110);     /* bright orange-bronze */
+    --star-fill: rgba(255, 160, 80, 0.30);
+}
+
+.rankNone {
+    --star-color: rgb(0, 0, 0, 0);
+    --star-fill: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 800px) {
+    .rank {
+        width: 10px;
+        height: 10px;
+    }
+}

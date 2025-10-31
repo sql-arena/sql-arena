@@ -7,7 +7,7 @@
 
 </script>
 <div class="front-cover">
-	<h1>SQL Arena</h1>
+	<h1 class="title">SQL Arena</h1>
 	<div class="sub-title">Where databases go to fight!</div>
 </div>
 

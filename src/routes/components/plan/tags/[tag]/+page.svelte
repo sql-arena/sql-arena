@@ -11,8 +11,6 @@
 
 <h1><LinkComponent component="{data.component}"/> &mdash; {data.tag.tag}</h1>
 
-<p>Click on the individual engines for detailed drilldown</p>
-
 <h2>Summary</h2>
 
 <TheoremPlanStats data="{data.proofSummaryData}" tag="{data.tag}" component="{data.component}"/>

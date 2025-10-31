@@ -1,0 +1,73 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     width="96"
+     height="96">
+    <symbol id="tron-star" viewBox="0 0 24 24" shape-rendering="geometricPrecision">
+        <defs>
+            <filter id="glow"
+                    x="-50%" y="-50%" width="200%" height="200%"
+                    filterUnits="objectBoundingBox">
+                <!-- blur relative to object size -->
+                <feGaussianBlur stdDeviation="0.05" result="blur"/>
+                <!-- brighten / increase contrast -->
+                <feColorMatrix in="blur" result="boost"
+                               type="matrix"
+                               values="1.6 0   0   0 0
+                         0   1.6 0   0 0
+                         0   0   1.6 0 0
+                         0   0   0   1 0"/>
+                <feMerge>
+                    <feMergeNode in="boost"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+
+            <style>
+                /* Each star path uses CSS variables set by the outer .rankN class */
+                .star-outer {
+                stroke: var(--star-color);
+                fill: var(--star-fill);
+                stroke-dasharray: 2 1;
+                stroke-width: 1.4;
+                filter: url(#glow);
+                }
+                .star-inner {
+                stroke: var(--cyan);
+                fill: none;
+                stroke-width: 0.9;
+                filter: url(#glow);
+                }
+            </style>
+        </defs>
+
+        <!-- Outer glowing star -->
+        <path class="star-inner"
+              d="M12 2
+       L14.9 8.3
+       L22 9.3
+       L16.8 14
+       L18.2 21
+       L12 17.5
+       L5.8 21
+       L7.2 14
+       L2 9.3
+       L9.1 8.3
+       Z"/>
+
+        <!-- Inner star: exact same path, scaled & recentered -->
+        <g transform="translate(12, 12) scale(0.60) translate(-12,-12)">
+            <path class="star-outer"
+                  d="M12 2
+         L14.9 8.3
+         L22 9.3
+         L16.8 14
+         L18.2 21
+         L12 17.5
+         L5.8 21
+         L7.2 14
+         L2 9.3
+         L9.1 8.3
+         Z" />
+        </g>
+    </symbol>
+</svg>

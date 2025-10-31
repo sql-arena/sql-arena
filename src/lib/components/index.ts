@@ -8,6 +8,7 @@ export { default as DataRow } from "./DataRow.svelte";
 export { default as DataText } from "./DataText.svelte";
 export { default as DataEngine } from "./DataEngine.svelte";
 export { default as DataQueryPlan } from "./DataQueryPlan.svelte";
+export { default as DataRank } from "./DataRank.svelte";
 export { default as EngineTier } from "./EngineTier.svelte";
 export { default as TierList } from "./TierList.svelte";
 export { default as ImgEngine } from "./ImgEngine.svelte";

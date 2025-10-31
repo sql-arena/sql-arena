@@ -4,7 +4,7 @@ export const load = async ({params}) => {
 	const component = await resolveComponent("plan");
 	const tag = await resolveTag(params.tag);
 	const proofSummaryData = await fetchTagProofDataSummary(component.slug, tag.slug)
-	const proofData = await fetchTagProofData(component.slug, tag.tag)
+	const proofData = await fetchTagProofData(component.slug, tag.slug)
 	return {
 		proofSummaryData: proofSummaryData,
 		proofData: proofData,

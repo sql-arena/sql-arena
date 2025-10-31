@@ -1,6 +1,6 @@
 ﻿import { fetchPlanScores, fetchTagsPerComponent, resolveComponent } from '$lib/db';
 import { ESTIMATE_CATEGORIES, operation_map } from '$lib/render-maps';
-import type { Engine } from '$lib/arena-types';
+import { type Engine, MAX_RANK } from '$lib/arena-types';
 
 export type PlanScoreElement = {
 	join: Engine[];
@@ -18,7 +18,7 @@ export const load = async () => {
 
 	const planScores: Map<number, PlanScoreElement> = new Map<number, PlanScoreElement>();
 
-	for (let i = 0; i < 6; i++) {
+	for (let i = 0; i < MAX_RANK; i++) {
 		planScores.set(i, {
 			join: [],
 			aggregate: [],

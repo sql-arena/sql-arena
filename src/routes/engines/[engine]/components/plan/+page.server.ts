@@ -2,7 +2,7 @@
 
 export const load = async ({params}) => {
 	const engine = await resolveEngine(params.engine);
-	const proofData = await fetchEngineProofDataSummary("plan", engine.engine )
+	const proofData = await fetchEngineProofDataSummary("plan", engine.slug )
 	const component = await resolveComponent("plan");
 	return {
 		engine: engine,

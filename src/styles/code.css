@@ -42,6 +42,17 @@ pre::-webkit-scrollbar-thumb:hover {
     scrollbar-color: #33AAAA #0A0F2C;
 }
 
+:not(pre) > code {
+    display: inline-block;
+    color: var(--cyan-dim);
+    font-family: var(--code-font), monospace;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-radius: 2px;
+    font-size: inherit;
+}
+
+
 pre code {
     display: inline-block;
     min-width: 100%; /* keeps scrollbar inside <pre>, not on the page */

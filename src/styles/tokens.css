@@ -3,6 +3,7 @@
     --panel: rgba(10, 15, 44, 0.86);
     --line: #242b5a;
     --cyan: #00EAFF;
+    --cyan-dim: #00AABF;
     --text: #c8d0e0;
     --text-dim: #8e97b2;
     --glow: 0 0 .35rem rgba(0, 234, 255, .35), 0 0 1.1rem rgba(0, 234, 255, .18);

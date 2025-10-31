@@ -2,7 +2,7 @@
 	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import type { Engine, MisEstimate, Tag, Component } from '$lib/arena-types.js';
-	import { DataEngine, DataText, LinkTheorem, LinkTag, EstimateMagnitudeGraph, DataRow } from '$lib/components';
+	import { DataEngine, DataText, DataRank, LinkTheorem, LinkTag, EstimateMagnitudeGraph, DataRow } from '$lib/components';
 
 	export let data:
 		Array<{
@@ -14,6 +14,7 @@
 			version?: string,
 			theorem?: string,
 			tag?: Tag
+			rank: number
 		}>;
 	export let tag: Tag;
 	export let engine: Engine;
@@ -33,6 +34,14 @@
 		hash: number,
 		scan: number,
 		distribution: number,
+		ranks : {
+			join: number,
+			scan: number,
+			sort: number,
+			hash: number,
+			aggregate: number,
+			distribution: number
+		}
 		mis_estimates:
 			{
 				join: MisEstimate[],
@@ -48,6 +57,7 @@
 	let grouping: string = 'unknown';
 	let key: string = '';
 	for (let entry of data) {
+
 		if (entry.tag) {
 			grouping = 'tag';
 			key = entry.tag;
@@ -74,6 +84,17 @@
 			distinctEngines.add(entry.engine.slug);
 		}
 		const proofLower = entry.proof.toLowerCase();
+
+		if (entry.unit === "Rows") {
+			/* Extract the rankings */
+			if (!values.ranks) {
+				values.ranks = {}
+				values.ranks.distribution = 0;
+			}
+			values["ranks"][proofLower] = parseInt(entry.rank);
+		}
+
+
 		if (ESTIMATE_CATEGORIES.includes(proofLower)) {
 			values[proofLower] = parseInt(entry.value);
 			continue;
@@ -154,26 +175,32 @@
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"/>
+			<DataRank rank="{data.ranks.scan}"></DataRank>
 			<DataRow value="{data.scan}"/>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"/>
+			<DataRank rank="{data.ranks.join}"></DataRank>
 			<DataRow value="{data.join}"/>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"/>
+			<DataRank rank="{data.ranks.sort}"></DataRank>
 			<DataRow value="{data.sort}"/>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"/>
+			<DataRank rank="{data.ranks.hash}"></DataRank>
 			<DataRow value="{data.hash}"/>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"/>
+			<DataRank rank="{data.ranks.aggregate}"></DataRank>
 			<DataRow value="{data.aggregate}"/>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.distribution ?? null}"/>
+			<DataRank rank="{data.ranks.distribution}"></DataRank>
 			<DataRow value="0"/>
 		</td>
 

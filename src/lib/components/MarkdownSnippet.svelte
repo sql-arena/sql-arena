@@ -3,8 +3,6 @@ export let data: string;
 export let header: string = "";
 </script>
 
-
-
 {#if data}
 {#if header}
 <h2>{header}</h2>

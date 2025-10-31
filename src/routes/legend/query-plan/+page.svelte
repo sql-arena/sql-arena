@@ -8,6 +8,9 @@
 	<p>Query Plans are rendered in a standard format that unifies the plans
 		across engines.</p>
 
+	<p>Since Logical Plans are mostly pointless from a point of comparing capability, we are focused
+	on the actual, physical plan being executed by the entire (since that is what you measure as
+	useful functionality)</p>
 
 </article>
 
@@ -21,9 +24,14 @@
 	</thead>
 	<tbody>
 	<tr>
-		<td class="grouped"><span class="plan-keyword">SCAN</span></td>
-		<td class="text"><p>The scanning or seek of a table. In the case of a seek:
-			total rows retrieved from the seek are rendered</p>
+		<td class="grouped"><span class="plan-keyword">TABLE</span></td>
+		<td class="text"><p>The scanning or seek of a table. </p>
+
+			<ul>
+				<li><span class="plan-keyword">SCAN</span> - The table was scanned - total rows visited (as reported by the engine) are rendered as actual.</li>
+				<li><span class="plan-keyword">SEEK</span> - Some kind of indexing structure was used to find rows matching a filter. Total rows retrieved from the seek are rendered</li>
+			</ul>
+
 			<p>If a <span class="plan-keyword">WHERE</span> is present, it means the query engine was able to push down a
 				filter.</p>
 		</td>

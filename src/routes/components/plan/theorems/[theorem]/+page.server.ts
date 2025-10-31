@@ -7,12 +7,11 @@
 	resolveTheorem
 } from '$lib/db';
 import type { Theorem } from '$lib/arena-types';
-export const prerender = true;
 
 export async function entries() {
 	const { fetchTheoremPerComponent } = await import('$lib/db');
 	const rows = await fetchTheoremPerComponent("plan");
-	return rows.map(row => ({ theorem: (row.theorem as Theorem).slug }));
+	return rows.map(row => ({ theorem: (row.theorem as Theorem).slug })).filter(r => !r.theorem.startsWith("config"));
 }
 
 export const load = async ({params}) => {

@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-	import { EstimateMagnitudeGraph } from "$lib/components";
+	import { EstimateMagnitudeGraph, DataRank } from "$lib/components";
 
 	const data = [
 		{ magnitude: ">16x", count: 4 },
@@ -12,7 +12,8 @@
 	]
 </script>
 
-<h2>Legend &mdash; Interpreting Estimation Accuracy</h2>
+<h1>Legend</h1>
+<h2>Interpreting Estimation Accuracy</h2>
 
 <article>
 
@@ -57,4 +58,27 @@
 	for the <b>TPC-H</b> workload.</p>
 
 	<p>We can also see that  the entire workload of <b>TPC-H</b> did <b>1.2M</b> join operations.</p>
+</article>
+
+
+<h2>Interpreting Rank</h2>
+<article>
+	<p>Rank is assigned for each category of operation the database engine will have to do. You can
+	win for one operation and lose for another.</p>
+
+	<p>Lower number of operations is better (less work needs doing). The three lowest values for each
+	operation are given:</p>
+
+	<ul>
+		<li><DataRank rank="1"/> - Best Score</li>
+		<li><DataRank rank="2"/> - Second Best</li>
+		<li><DataRank rank="3"/> - Third Best</li>
+	</ul>
+
+	<p>The ranking is dense, so you can share the top seat with another engine. Databases that are not in the
+	top 3 earns no stars. Because some database (notably PostgreSQL) don't report exact row counts, the Row counts  are rounded
+	down to nearest 10s before ranking.</p>
+
+	<p>The final scoreboard adds up rowcounts for all workloads, operators and queries and then rank the overall best.</p>
+
 </article>

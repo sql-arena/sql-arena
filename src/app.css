@@ -2,7 +2,9 @@
 @import './styles/selectors-lists.css';
 @import './styles/tables.css';
 @import './styles/code.css';
-@import 'styles/data-points.css';
+@import './styles/data-points.css';
+@import './styles/ranking.css';
+
 
 /* BODY: Tron background (tile under everything) */
 body {
@@ -76,24 +78,6 @@ nav a:hover {
     background: rgba(0, 255, 255, 0.1);
 }
 
-/* MAIN: bordered panel, fluid width, with generous outer breathing room */
-main {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    padding: 0;
-    margin-left: 2px;
-    margin-right: 2px;
-    background: var(--panel);
-    color: var(--body-text-colour);
-    border: 1px solid rgba(0, 234, 255, .35);
-    border-radius: .8rem;
-    box-shadow: 0 0 1rem rgba(0, 234, 255, .15);
-    width: calc(100% - 100px);
-    max-width: 1400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 div.front-cover {
     display: block;
@@ -123,7 +107,6 @@ div.sub-title {
 
 @media (max-width: 1200px) {
     div.sub-title {
-        visibility: hidden;
         min-height: 350px;
     }
     main {
@@ -187,30 +170,23 @@ footer {
 /* Main content */
 
 main {
+    padding: 3rem 3rem;
+    margin: 3rem 2px;
+    background: var(--panel);
+    color: var(--body-text-colour);
+    border: 1px solid rgba(0, 234, 255, .35);
+    width: calc(100% - 100px);
     display: flex;
     max-width: 1200px;
-    padding: 3rem;
-    background-color: white;
-    /* neon border */
-    border-top-width: 3px;
-    border-top-style: solid;
-    border-top-color: #0ff;
-    border-right-width: 3px;
-    border-right-style: solid;
-    border-right-color: #0ff;
-    border-left-width: 3px;
-    border-left-style: solid;
-    border-left-color: #0ff;
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-    border-bottom-color: #0ff;
     /* translucent background panel */
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 12px;
+    border-radius: 5px;
     box-shadow: 0 0 15px #0ff, 0 0 30px #0ff inset;
+
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 article {
@@ -225,6 +201,8 @@ article {
 
 
 h1, h2, h3, h4 {
+    padding: 0;
+    margin-top: 0;
     text-align: center;
     display: block;
     font-family: var(--tron-font), sans-serif;
@@ -236,8 +214,10 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 2.5rem;
     border-bottom: 2px solid #0ff;
-    display: inline-block;
-    clear: both;
+}
+
+h1.title {
+    border-bottom: none;
 }
 
 h2 {
@@ -304,19 +284,6 @@ a:hover {
     color: white;
 }
 
-:not(pre) > code {
-    display: inline-block;
-    color: var(--cyan);
-    font-weight: bold;
-    font-family: var(--code-font), monospace;
-    padding-left: 1px;
-    padding-right: 1px;
-    border-radius: 2px;
-    font-size: inherit;
-}
-
-
-
 :focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px rgba(0, 234, 255, .45);
@@ -335,6 +302,7 @@ a:hover {
     main {
         margin: 0;
         border-radius: 0;
+        width: 100%;
         box-shadow: none;
     }
     p, li {

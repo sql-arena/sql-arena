@@ -33,7 +33,7 @@
 		'LEFT', 'RIGHT', 'SEMI', 'ANTI', 'FULL', 'CROSS',
 		'GROUP',
 		'BY',
-		'HASH', 'LOOP',
+		'HASH', 'LOOP', 'MERGE',
 		'AGGREGATE',
 		'PROJECT',
 		'ON',
