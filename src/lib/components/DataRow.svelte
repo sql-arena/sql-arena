@@ -1,5 +1,6 @@
 ﻿<script lang="ts">
 	import { formatRows } from '$lib/format.js';
+	import { DataText } from '$lib/components/';
 
 	export let value: number = "";
 	$: bigValue = formatRows(value);
@@ -32,4 +33,5 @@
 		}
 	})();
 </script>
-<div class="big-value">{bigValue}</div><div class="small-value">{smallValue}</div>
+<span class="sub-data"><DataText bigValue="Row Operations" smallValue="Ops"/></span>
+<div class="big-value text-data">{bigValue}</div><div class="small-value">{smallValue}</div>

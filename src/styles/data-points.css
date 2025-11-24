@@ -10,6 +10,28 @@
     margin-bottom: 10px;
 }
 
+.bar-heat {
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    height: 25px;
+    width: 100%;
+    flex-direction: row;
+    padding: 0;
+    margin: 5px 5px;
+}
+
+.text-data {
+    margin: 5px 5px;
+}
+
+.temp {
+    flex: 1;
+    min-height: 100%;
+}
+
+
+
 .bar {
     flex: 1;
     min-height: 5px;
@@ -40,15 +62,15 @@
 }
 
 .gradient-scale--3-background {
-    background-color: rgb(51, 102, 204);
+    background-color: rgb(50, 102, 204);
 }
 
 .gradient-scale--2-background {
-    background-color: rgb(102, 143, 153);
+    background-color: rgb(50, 140, 160);
 }
 
 .gradient-scale--1-background {
-    background-color: rgb(153, 180, 122);
+    background-color: rgb(50, 180, 122);
 }
 
 .gradient-scale-0-background {
@@ -87,6 +109,9 @@
     background-color: var(--scale-red-dim);
 }
 
+.no-data {
+    background-color: #333333;
+}
 
 div.tier-items {
     display: flex;
@@ -159,6 +184,12 @@ th.tier-label {
     color: rgb(0, 0, 0);
     height: 100px;
     box-sizing: border-box;
+}
+
+.sub-data {
+    color: var(--text-dim);
+    padding: 0;
+    margin: 0;
 }
 
 .tier-S {

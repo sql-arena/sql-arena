@@ -175,33 +175,43 @@
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.scan ?? null}"/>
-			<DataRank rank="{data.ranks.scan}"></DataRank>
 			<DataRow value="{data.scan}"/>
+			<div class="sub-data">Rank</div>
+			<DataRank rank="{data.ranks.scan}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"/>
-			<DataRank rank="{data.ranks.join}"></DataRank>
+
 			<DataRow value="{data.join}"/>
+			<div class="sub-data">Rank</div>
+
+			<DataRank rank="{data.ranks.join}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.sort ?? null}"/>
-			<DataRank rank="{data.ranks.sort}"></DataRank>
 			<DataRow value="{data.sort}"/>
+			<div class="sub-data">Rank</div>
+			<DataRank rank="{data.ranks.sort}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.hash ?? null}"/>
-			<DataRank rank="{data.ranks.hash}"></DataRank>
 			<DataRow value="{data.hash}"/>
+			<div class="sub-data">Rank</div>
+			<DataRank rank="{data.ranks.hash}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"/>
-			<DataRank rank="{data.ranks.aggregate}"></DataRank>
 			<DataRow value="{data.aggregate}"/>
+			<div class="sub-data">Rank</div>
+
+			<DataRank rank="{data.ranks.aggregate}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.distribution ?? null}"/>
-			<DataRank rank="{data.ranks.distribution}"></DataRank>
 			<DataRow value="0"/>
+			<div class="sub-data">Rank</div>
+
+			<DataRank rank="{data.ranks.distribution}"></DataRank>
 		</td>
 
 	</tr>

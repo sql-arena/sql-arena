@@ -1,5 +1,6 @@
 ﻿<script lang="ts">
 	import type { MisEstimate } from '$lib/arena-types.js';
+	import { DataText } from '$lib/components/';
 	import { SvelteMap } from 'svelte/reactivity';
 
 	export let data: MisEstimate[] = [];
@@ -30,11 +31,16 @@
 	}).sort((a, b) => a.ordering - b.ordering );
 
 
-	const maxCount = Math.max(...(data?.map(d => d.count) || []), 0);
+	const sumCount = (data?.reduce((s, d) => s + d.count, 0)) ?? 0;
 </script>
+<span class="sub-data"><DataText bigValue="Estimation Error" smallValue="Est Err"/></span>
+<div class="bar-heat">
+{#if sumCount === 0}
+	<span class="temp no-data" style="min-width: 100%" title="No Nodes"></span>
+{:else}
 
-<div class="bar-chart">
 	{#each render_data as { magnitude, count, css_class }(magnitude) }
-	<div class="bar {css_class}" style="height: {100 * count / maxCount}%" title="{magnitude} {count} operators"></div>
+	<span class="temp {css_class}" style="min-width: {Math.round(100 * count / sumCount)}%" title="{magnitude} {count} operators"></span>
 	{/each}
+{/if}
 </div>

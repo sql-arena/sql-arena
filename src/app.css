@@ -90,7 +90,7 @@ div.front-cover {
         rgba(4,6,17,0.45) calc(100% - 15px),
         rgba(4,6,17,0.85) calc(100% - 10px),
         rgba(4,6,17,0.90) calc(100% - 5px)),
-        url(/img/arena-front.png);
+        url(/img/arena-front.webp);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
