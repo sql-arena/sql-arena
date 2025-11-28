@@ -203,14 +203,12 @@
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.aggregate ?? null}"/>
 			<DataRow value="{data.aggregate}"/>
 			<div class="sub-data">Rank</div>
-
 			<DataRank rank="{data.ranks.aggregate}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.distribution ?? null}"/>
 			<DataRow value="0"/>
 			<div class="sub-data">Rank</div>
-
 			<DataRank rank="{data.ranks.distribution}"></DataRank>
 		</td>
 

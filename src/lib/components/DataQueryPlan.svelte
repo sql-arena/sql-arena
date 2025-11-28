@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-	export let plan: string = "";
+	export let plan: string = '';
 
 	function escapeHtml(text: string): string {
 		return text
@@ -11,7 +11,7 @@
 	}
 
 
-	function highlight(line: string, find: string[], css_class: string ) {
+	function highlight(line: string, find: string[], css_class: string) {
 		return line.replace(
 			new RegExp(`(?<!\\w)(${find.join('|')})(?!\\w)`, 'g'),
 			`<span class="plan-${css_class}">$1</span>`
@@ -55,27 +55,28 @@
 		'\\+',
 		'AND',
 		'OR',
+		'CASE', 'WHEN', 'THEN', 'ELSE', 'END',
 		'NOT',
 		'DISTINCT FROM', 'CAST'
 	];
 
 	const funcs = ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX', 'PARTIALCOUNT', 'PARTIALSUM'
-	, 'EXTRACT'
+		, 'EXTRACT'
 	];
 
 	$: prettyPlan = plan
 		.split('\n')
 		.map((line, idx) => {
 			if (idx === 0) {
-				return `<span class="plan-header">${line.trim()}</span>`
+				return `<span class="plan-header">${line.trim()}</span>`;
 			}
 			const estimate = `<span class="plan-estimates">${line.slice(0, 20)}</span>`;
 			let rest = escapeHtml(line.slice(20));
-			rest = highlight(rest, keywords, "keyword");
-			rest = highlight(rest, ops, "operator");
-			rest = highlight(rest, funcs, "function");
+			rest = highlight(rest, keywords, 'keyword');
+			rest = highlight(rest, ops, 'operator');
+			rest = highlight(rest, funcs, 'function');
 			rest = highlightBoxDrawing(rest);
-			return `${estimate}${rest}`
+			return `${estimate}${rest}`;
 		})
 		.join('\n');
 </script>

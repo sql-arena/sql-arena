@@ -18,7 +18,11 @@ export const load = async () => {
 
 	const planScores: Map<number, PlanScoreElement> = new Map<number, PlanScoreElement>();
 
-	for (let i = 0; i < MAX_RANK; i++) {
+	const max_found_rank = planScoreRows.reduce((max: number, row) => {
+		const rank = Number(row['rank']) || 0;
+		return rank > max ? rank : max;
+	}, 0);
+	for (let i = 0; i < max_found_rank; i++) {
 		planScores.set(i, {
 			join: [],
 			aggregate: [],

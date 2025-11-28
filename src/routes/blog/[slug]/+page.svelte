@@ -2,11 +2,15 @@
 
 	export let data: {
 		blog: string,
-		title: string
+		url: string,
+		meta: {
+			title: string,
+			description: string
+		}
 	};
-
 </script>
-<h1>{data.title}</h1>
+
+<h1>{data.meta.title}</h1>
 <article>
 	{@html data.blog}
 </article>
