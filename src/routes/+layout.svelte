@@ -12,6 +12,17 @@
 </script>
 
 <svelte:head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZR8PL1S07"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'GT-K8G6ST78');
+		gtag('config', 'GT-P8ZRHDTZ');
+	</script>
+
 	<link rel="icon" href={favicon} />
 	<!-- Open Graph -->
 	<meta property="og:type" content="article" />
@@ -19,6 +30,9 @@
 	<meta property="og:description" content={desc} />
 	<meta property="og:image" content="https://sql-arena.com/img/arena-avatar.png" />
 	<meta property="og:url" content={url} />
+
+
+
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
