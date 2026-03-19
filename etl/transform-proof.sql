@@ -4,7 +4,7 @@ SET theorem = UPPER(theorem);
 
 INSERT INTO tag (tag_id, tag, slug)
 SELECT arena_key(tag) AS tag_id, tag, LOWER(tag) AS slug
-FROM (SELECT DISTINCT UNNEST(string_split(tags, ',')) AS tag
+FROM (SELECT DISTINCT TRIM(UNNEST(string_split(tags, ','))) AS tag
       FROM staging.proof) AS unn
 ;
 
@@ -50,12 +50,13 @@ SELECT theorem_id,
        value,
        unit
 FROM (SELECT
-          UNNEST(string_split(tags, ','))       AS tag
-           , UNNEST(string_split(components, ',')) AS component
+          TRIM(UNNEST(string_split(tags, ',')))       AS tag
+           , TRIM(UNNEST(string_split(components, ','))) AS component
            , arena_key(theorem)                    AS theorem_id
            , arena_key(engine, engine_version)     AS engine_id
            , arena_key(proof)                      AS proof_id
            , proof_value AS value
            , proof_unit AS unit
       FROM staging.proof) AS unn
+WHERE component <> 'TEST'
 ;

@@ -1,4 +1,8 @@
-﻿SQL Arena is rapidly progressing. This week I added SQL Server to the scoreboards. Feedback has been really good,
+﻿---
+title: The Actual Trouble with ClickHouse
+publish_date: 2025-10-30
+---
+SQL Arena is rapidly progressing. This week I added SQL Server to the scoreboards. Feedback has been really good,
 thank you to all who are now participating in the discussions.
 
 A volunteer has offered to work on a TiDB driver - which I am looking very much forward to. If this person is happy

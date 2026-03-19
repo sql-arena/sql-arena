@@ -43,6 +43,7 @@
 	<tr>
 		<th>Rank</th>
 		<th class="sticky"><DataText bigValue="Scan"/></th>
+		<th class="sticky"><DataText bigValue="Seek"/></th>
 		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
 		<th class="sticky"><DataText bigValue="Sort"/></th>
 		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
@@ -63,7 +64,6 @@
 			{/each}
 		</td>
 		{/each}
-		<td>Soon</td>
 	</tr>
 	{/each}
 	</tbody>

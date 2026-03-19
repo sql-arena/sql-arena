@@ -63,7 +63,13 @@ async function loadData(conn: DuckDBConnection) {
 			.replace(/\[path]/g, file)
 			.replace(/\[engine_version]/g, version);
 		console.log(`Staging file: ${file}`);
-		await conn.run(sql);
+		try {
+			await conn.run(sql);
+		}
+		catch (e:any) {
+			console.error(`Cannot stage: ${file} due to: ${e}`)
+			console.error(`SQL: ${sql}`);
+		}
 	}
 }
 

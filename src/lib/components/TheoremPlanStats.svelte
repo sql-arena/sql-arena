@@ -28,6 +28,7 @@
 	let rowData = new SvelteMap<string, {
 		theorem?: string,
 		grouping: string,
+		seek: number,
 		join: number,
 		aggregate: number,
 		sort: number,
@@ -36,6 +37,7 @@
 		distribution: number,
 		ranks : {
 			join: number,
+			seek: number,
 			scan: number,
 			sort: number,
 			hash: number,
@@ -45,6 +47,7 @@
 		mis_estimates:
 			{
 				join: MisEstimate[],
+				seek: MisEstimate[],
 				scan: MisEstimate[],
 				sort: MisEstimate[],
 				hash: MisEstimate[],
@@ -89,6 +92,7 @@
 			/* Extract the rankings */
 			if (!values.ranks) {
 				values.ranks = {}
+				values.ranks.seek = 0;
 				values.ranks.distribution = 0;
 			}
 			values["ranks"][proofLower] = parseInt(entry.rank);
@@ -139,6 +143,7 @@
 		<th class="grouped"></th>
 		{/if}
 		<th class="sticky"><DataText bigValue="Scan"/></th>
+		<th class="sticky"><DataText bigValue="Seek"/></th>
 		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
 		<th class="sticky"><DataText bigValue="Sort"/></th>
 		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
@@ -151,7 +156,7 @@
 
 	{#if grouping === "both" && (index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem)}
 	<tr>
-		<th class="header-divider" colspan="7">
+		<th class="header-divider" colspan="8">
 				<LinkTheorem theorem="{data.theorem}" component="{component}" />
 		</th>
 	</tr>
@@ -178,6 +183,12 @@
 			<DataRow value="{data.scan}"/>
 			<div class="sub-data">Rank</div>
 			<DataRank rank="{data.ranks.scan}"></DataRank>
+		</td>
+		<td>
+			<EstimateMagnitudeGraph data="{data.mis_estimates?.seek ?? null}"/>
+			<DataRow value="{data.seek}"/>
+			<div class="sub-data">Rank</div>
+			<DataRank rank="{data.ranks.seek}"></DataRank>
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"/>
@@ -207,7 +218,7 @@
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.distribution ?? null}"/>
-			<DataRow value="0"/>
+			<DataRow value="{data.distribution}"/>
 			<div class="sub-data">Rank</div>
 			<DataRank rank="{data.ranks.distribution}"></DataRank>
 		</td>

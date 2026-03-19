@@ -106,6 +106,14 @@ td.vcenter, th.vcenter {
     vertical-align: middle !important;
 }
 
+table.data td.vcenter > a {
+    display: block;
+}
+
+table.data td.vcenter > a + a {
+    margin-top: 0.7rem;
+}
+
 td.left, th.left {
     text-align: left !important;
 }

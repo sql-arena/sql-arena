@@ -1,4 +1,8 @@
-﻿I have generously been given some DataBricks compute credits which should allow me to add this very popular engine
+﻿---
+title: Preparing DataBricks for the Arena
+publish_date: 2025-11-28
+---
+I have generously been given some DataBricks compute credits which should allow me to add this very popular engine
 to the SQL Arena. In particular DataBricks SQL (I hope I am using that name right) with Photon execution engine.
 
 ## `EXPLAIN` output

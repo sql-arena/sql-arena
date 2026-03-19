@@ -3,11 +3,10 @@ import { databasePath } from './paths.server';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs/promises';
+import matter from 'gray-matter';
 import componentAll from './sql/component/all.sql?raw';
 import engineAll from './sql/engine/all.sql?raw';
 import tagAll from './sql/tag/all.sql?raw';
-import blogAll from './sql/blog/all.sql?raw';
-import blogTitle from './sql/blog/title.sql?raw';
 import tierListPlan from './sql/tier-list/plan-quality.sql?raw';
 import theoremAll from './sql/theorem/all.sql?raw';
 import theoremTag from './sql/theorem/tag.sql?raw';
@@ -65,20 +64,26 @@ export async function loadMarkdown(slug: string, syntax_highlight: boolean = fal
 		);
 	}
 
+	let raw = "";
 	try {
-		const content = await fs.readFile(filePath, 'utf-8');
-		return md.parse(content);
+		raw = await fs.readFile(filePath, 'utf-8');
 	} catch {
 		// Fallback for static build / Vite: try importing the raw markdown bundled by the build
 		try {
 			// relative to `src/lib` — Vite will resolve `?raw` at build time
 			const mod = await import(`../content/markdown/${slug}.md?raw`);
-			const raw = (mod && (mod as any).default) ?? String(mod);
-			return md.parse(raw);
+			raw = (mod && (mod as any).default) ?? String(mod);
 		} catch  {
-			return "";
+			return { content: "", metadata: {} };
 		}
 	}
+
+	const { data, content } = matter(raw);
+	if (data.publish_date instanceof Date) {
+		data.publish_date = data.publish_date.toISOString().split('T')[0];
+	}
+	const html = await md.parse(content);
+	return { content: html, metadata: data };
 }
 
 
@@ -139,17 +144,6 @@ export async function allComponents(): Promise<Rows> {
 	return await fetchAllRaw(componentAll, await grabConn());
 }
 
-export async function fetchBlogTitle(slug: string): Promise<string> {
-	const rows = await fetchParameterised(blogTitle, { slug });
-	if (!rows || rows.length === 0) {
-		throw new Error(`No blog row found for slug: ${slug}`);
-	}
-	const firstRow = rows[0];
-	const firstKey = Object.keys(firstRow)[0];
-	if (!firstKey) return '';
-	const val = firstRow[firstKey];
-	return val == null ? '' : String(val);
-}
 
 export async function allTheorems(): Promise<Rows> {
 	return await fetchAllRaw(theoremAll, await grabConn());
@@ -163,7 +157,26 @@ export async function allEngines(): Promise<Rows> {
 }
 
 export async function allBlogs(): Promise<Rows> {
-	return await fetchAllRaw(blogAll, await grabConn());
+	const files = await fs.readdir(markdownDir);
+	const blogs = await Promise.all(
+		files
+			.filter((file) => file.endsWith('.md'))
+			.map(async (file) => {
+				const slug = file.replace(/\.md$/, '');
+				const { metadata } = await loadMarkdown(slug);
+				if (metadata.title && metadata.publish_date) {
+					return {
+						title: metadata.title,
+						slug,
+						publish_date: metadata.publish_date
+					};
+				}
+				return null;
+			})
+	);
+	return blogs
+		.filter((blog): blog is Row => blog !== null)
+		.sort((a, b) => String(b.publish_date).localeCompare(String(a.publish_date)));
 }
 
 export async function fetchTierListPlan() {

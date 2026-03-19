@@ -4,8 +4,10 @@ export const operation_map = new Map<string, string>([
 	['Aggregate', 'aggregate'],
 	['Hash', 'hash'],
 	['Scan', 'scan'],
+	['Seek', 'seek'],
 	['Sort', 'sort'],
+	['Distribute', 'distribution'],
 ]);
 
 
-export const ESTIMATE_CATEGORIES = ['join', 'aggregate', 'sort', 'hash', 'scan'];
+export const ESTIMATE_CATEGORIES = ['scan', 'seek', 'join', 'sort', 'hash', 'aggregate', 'distribution'];

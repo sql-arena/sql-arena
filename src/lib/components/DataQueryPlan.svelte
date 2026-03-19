@@ -27,6 +27,7 @@
 
 	const keywords = [
 		'SCAN',
+		'DISTRIBUTE',
 		'INNER',
 		'JOIN', 'OUTER',
 		'LIMIT',

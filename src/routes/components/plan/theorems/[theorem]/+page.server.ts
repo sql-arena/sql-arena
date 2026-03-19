@@ -17,7 +17,7 @@ export async function entries() {
 export const load = async ({params}) => {
 	const theorem = await resolveTheorem(params.theorem);
 	const proofData = await fetchTheoremProofData(theorem.slug);
-	const commentary = await loadMarkdown(theorem.slug);
+	const { content: commentary } = await loadMarkdown(theorem.slug);
 	const planData = await fetchTheoremPlanData(theorem.slug);
 	const tags = await fetchTheoremTags("plan", theorem.slug);
 	const component = await resolveComponent("plan");
