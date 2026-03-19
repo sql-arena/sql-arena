@@ -74,6 +74,10 @@ Once ClickHouse supports this, I will update the parser.
 - Added docker container for ClickHouse.
 - Greatly improved the plan parser handling subplans better (they are a mess)
 - Upgraded ClickHouse runs to version 26
+- Notice that Clickhouse actually returns a different result for Q13  
+  due to the way it handles NULL (see: `join_use_null`) in the [Docs](https://clickhouse.com/docs/operations/settings/settings)
+  - In a future run, I may set the flag to make sure correct results are
+    returned
 
 ## Trino
 

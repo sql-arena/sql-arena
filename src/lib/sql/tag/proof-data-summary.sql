@@ -54,4 +54,5 @@ SELECT *
             ELSE NULL
         END AS rank
 FROM by_engine
+WHERE NOT (proof = 'Seek' AND unit = 'Rows' AND COALESCE(numeric_value, 0) = 0)
 ;

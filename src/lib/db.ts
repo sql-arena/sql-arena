@@ -1,5 +1,5 @@
 ﻿import { type DuckDBConnection, DuckDBInstance } from '@duckdb/node-api';
-import { databasePath } from './paths.server';
+import { databasePath, repoRoot } from './paths.server';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs/promises';
@@ -15,7 +15,7 @@ import theoremProofDataPlan from './sql/theorem/proof-data-plan.sql?raw';
 import theoremPerComponent from './sql/theorem/per-component.sql?raw';
 import tagPerComponent from './sql/tag/per-component.sql?raw';
 import engineProofDataByTag from './sql/engine/proof-data-by-tag.sql?raw';
-import { Marked, marked } from 'marked';
+import { Marked } from 'marked';
 import {markedHighlight} from 'marked-highlight';
 import hljs from "highlight.js";
 import tagProofDataSummary from './sql/tag/proof-data-summary.sql?raw';
@@ -29,7 +29,7 @@ export type Rows = Row[];
 
 export const libDir = path.dirname(fileURLToPath(import.meta.url));
 export const sqlDir = path.join(libDir, 'sql');
-export const markdownDir = path.join(libDir, '..', 'content', 'markdown');
+export const markdownDir = path.join(repoRoot, 'src', 'content', 'markdown');
 
 const g = globalThis as unknown as { __duckdb?: DuckDBConnection };
 

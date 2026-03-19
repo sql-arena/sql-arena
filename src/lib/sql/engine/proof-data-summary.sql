@@ -55,4 +55,5 @@ JOIN engine E USING (engine_id)
 JOIN tag T USING (tag_id)
 WHERE E.slug = '%%engine%%'
   AND T.tag <> 'CONFIG'
+  AND NOT (proof = 'Seek' AND unit = 'Rows' AND COALESCE(numeric_value, 0) = 0)
 ;

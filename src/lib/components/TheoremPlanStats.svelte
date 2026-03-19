@@ -185,10 +185,12 @@
 			<DataRank rank="{data.ranks.scan}"></DataRank>
 		</td>
 		<td>
-			<EstimateMagnitudeGraph data="{data.mis_estimates?.seek ?? null}"/>
-			<DataRow value="{data.seek}"/>
-			<div class="sub-data">Rank</div>
-			<DataRank rank="{data.ranks.seek}"></DataRank>
+			{#if data.seek !== undefined}
+				<EstimateMagnitudeGraph data="{data.mis_estimates?.seek ?? null}"/>
+				<DataRow value="{data.seek}"/>
+				<div class="sub-data">Rank</div>
+				<DataRank rank="{data.ranks.seek}"></DataRank>
+			{/if}
 		</td>
 		<td>
 			<EstimateMagnitudeGraph data="{data.mis_estimates?.join ?? null}"/>

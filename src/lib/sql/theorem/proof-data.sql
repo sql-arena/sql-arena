@@ -57,4 +57,5 @@ SELECT value
            ELSE NULL
        END AS rank
 FROM aggregated
+WHERE NOT (proof = 'Seek' AND unit = 'Rows' AND COALESCE(numeric_value, 0) = 0)
 ;

@@ -26,12 +26,16 @@ WITH raw AS (
          , SUM(COALESCE(rows, 0)) AS rows
     FROM normalized
     GROUP BY ALL
+), filtered AS (
+    SELECT *
+    FROM scoring
+    WHERE NOT (operation = 'Seek' AND rows = 0)
 ), ranked AS (
     SELECT engine
          , operation
          , theorem_id
          , DENSE_RANK() OVER (PARTITION BY theorem_id, operation ORDER BY rows) AS theorem_rank
-    FROM scoring
+    FROM filtered
 )
 SELECT engine
      , operation

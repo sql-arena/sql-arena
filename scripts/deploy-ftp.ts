@@ -4,11 +4,19 @@ import { Client } from "basic-ftp";
 import AdmZip from "adm-zip";
 import fetch from "node-fetch";
 
-const FTP_USER = process.env.SQL_ARENA_FTP_USER!;
-const FTP_PASS = process.env.SQL_ARENA_FTP_PWD!;
+function requireEnv(name: string): string {
+	const value = process.env[name];
+	if (!value) {
+		throw new Error(`Missing required environment variable: ${name}`);
+	}
+	return value;
+}
+
+const FTP_USER = requireEnv("SQL_ARENA_FTP_USER");
+const FTP_PASS = requireEnv("SQL_ARENA_FTP_PWD");
 const HOST = "sql-arena.com";
 const HOST_WWW ="www.sql-arena.com"
-const REMOTE_DIR = "/";
+const REMOTE_DIR = "/public_html";
 const LOCAL_BUILD = "./build";
 const ZIP_PATH = "./build.zip";
 
