@@ -27,12 +27,17 @@ This document outlines the coding standards and architectural patterns for the `
 - Components should be located in `src/lib/components`.
 - Use `lang="ts"` in `<script>` tags.
 - Props should be clearly typed. Prefer using types from `$lib/arena-types.ts` where possible.
-- CSS should be scoped to components or use the global stylesheets in `src/styles/` for shared design tokens.
+- Do not add component-local `<style>` blocks for shared or reusable styling. Put shared presentation rules in the central stylesheets under `src/styles/`.
 
 ## Styling
 
 - Global styles and design tokens are located in `src/styles/`.
 - Use CSS variables defined in `tokens.css` for colors, spacing, and other constants.
+- If a class is reused across views or components, add or update it in the relevant shared stylesheet such as `src/styles/data-points.css` instead of styling it inline in a Svelte component.
+
+## Workflow
+
+- Read `CONVENTIONS.md` before making code changes so naming, styling, and architectural patterns stay consistent.
 
 ## Directory Structure
 

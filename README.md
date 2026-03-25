@@ -43,6 +43,7 @@ If `data/dbprove.duckdb` does not exist yet, run `npx tsx etl/load-dbprove.ts` b
 
 ## Notes For Future Agents
 
+- Read [CONVENTIONS.md](./CONVENTIONS.md) before making changes.
 - `npm run dev` does not rebuild the benchmark database. If result files or ETL SQL changed, rerun `npx tsx etl/load-dbprove.ts` or `npm run build`.
 - `etl/load-dbprove.ts` pulls `data/dbprove-results` with `git submodule update --init --remote ...` before loading data. If you are debugging data issues, remember the ETL can move the submodule.
 - Only `*.csv` files in `data/dbprove-results` are ingested. `submission.md` files are documentation for humans.

@@ -134,16 +134,6 @@ table.data caption {
     top: -10px;
 }
 
-/* Rendering of various elements */
-.engine-container {
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-    justify-content: left;
-    text-align: left;
-    flex-wrap: wrap;
-}
-
 .engine-logo {
     max-width: 64px;
     height: auto;
@@ -154,9 +144,6 @@ table.data caption {
 }
 
 @media (max-width: 400px) {
-    .engine-container {
-        flex-direction: column;
-    }
     .engine-text {
         margin-left: 0;
         margin-top: 8px;
@@ -191,7 +178,7 @@ table.data caption {
         border: var(--data-grid-table-border);
 
     }
-    engine-text {
+    .engine-text {
         /*display: none;*/
         font-size: 0.8rem;
     }

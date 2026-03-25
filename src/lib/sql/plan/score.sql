@@ -29,7 +29,7 @@ WITH raw AS (
 ), filtered AS (
     SELECT *
     FROM scoring
-    WHERE NOT (operation = 'Seek' AND rows = 0)
+    WHERE NOT (operation IN ('Seek', 'Distribute') AND rows = 0)
 ), ranked AS (
     SELECT engine
          , operation

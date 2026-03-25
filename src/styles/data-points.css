@@ -25,6 +25,14 @@
     margin: 5px 5px;
 }
 
+.engine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .temp {
     flex: 1;
     min-height: 100%;

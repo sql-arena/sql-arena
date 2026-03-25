@@ -1,0 +1,79 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Development Mode",
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: build",
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Preview Mode",
+			"type": "npm",
+			"script": "preview",
+			"problemMatcher": []
+		},
+		{
+			"label": "Deploy",
+			"type": "npm",
+			"script": "deploy",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: check",
+			"type": "npm",
+			"script": "check",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: check:watch",
+			"type": "npm",
+			"script": "check:watch",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: format",
+			"type": "npm",
+			"script": "format",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: lint",
+			"type": "npm",
+			"script": "lint",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: test:unit",
+			"type": "npm",
+			"script": "test:unit",
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: test",
+			"type": "npm",
+			"script": "test",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "npm: test:e2e",
+			"type": "npm",
+			"script": "test:e2e",
+			"problemMatcher": []
+		}
+	]
+}
