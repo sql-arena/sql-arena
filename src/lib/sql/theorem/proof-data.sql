@@ -1,21 +1,21 @@
-﻿WITH raw AS (
+WITH raw AS (
     SELECT TRY_CAST(value AS BIGINT) AS numeric_value
          , value
          , unit
          , proof
          , T.description
          , engine
-         , version
+         , E.storage_variant
     FROM fact_proof
     JOIN theorem T USING (theorem_id)
     JOIN engine E USING (engine_id)
     JOIN proof P USING (proof_id)
     WHERE T.slug = '%%theorem%%'
 ), normalized AS (
-    SELECT numeric_value, value, unit, proof, description, engine, version
+    SELECT numeric_value, value, unit, proof, description, engine, storage_variant
     FROM raw
     UNION ALL
-    SELECT numeric_value, value, unit, 'Scan' AS proof, description, engine, version
+    SELECT numeric_value, value, unit, 'Scan' AS proof, description, engine, storage_variant
     FROM raw
     WHERE proof = 'Seek'
       AND unit = 'Rows'
@@ -26,7 +26,7 @@
          , proof
          , description
          , engine
-         , version
+         , storage_variant
     FROM normalized
     WHERE unit = 'Rows'
     GROUP BY ALL
@@ -37,7 +37,7 @@
          , proof
          , description
          , engine
-         , version
+         , storage_variant
     FROM normalized
     WHERE unit <> 'Rows'
     GROUP BY ALL
@@ -51,7 +51,7 @@ SELECT value
     , proof
     , description
     , engine
-    , version
+    , storage_variant
     , CASE WHEN unit = 'Rows'
            THEN DENSE_RANK() OVER (PARTITION BY proof ORDER BY numeric_value)
            ELSE NULL

@@ -1,2 +1,2 @@
-﻿SELECT theorem, slug
+SELECT theorem, slug, sql
 FROM theorem;

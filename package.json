@@ -4,7 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"prebuild": "tsx etl/load-dbprove.ts",
+		"generate:logos": "tsx scripts/generate-logo.ts",
+		"predev": "npm run generate:logos",
+		"prebuild": "npm run generate:logos && tsx etl/load-dbprove.ts",
 		"dev": "vite dev",
 		"build": "vite build && node scripts/fix-links.ts",
 		"preview": "vite preview",

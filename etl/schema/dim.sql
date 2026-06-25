@@ -31,6 +31,7 @@ CREATE TABLE theorem
     theorem     TEXT NOT NULL,
     description TEXT NOT NULL DEFAULT '',
     slug        TEXT NOT NULL,
+    sql         TEXT NOT NULL DEFAULT '',
     ordering    INT  NOT NULL DEFAULT 0
 );
 
@@ -42,8 +43,9 @@ CREATE TABLE proof
 
 CREATE TABLE engine
 (
-    engine_id BIGINT PRIMARY KEY,
-    engine    TEXT NOT NULL,
-    version   TEXT NOT NULL,
-    slug      TEXT NOT NULL
+    engine_id       BIGINT PRIMARY KEY,
+    engine          TEXT NOT NULL,
+    version         TEXT NOT NULL,
+    storage_variant TEXT NOT NULL DEFAULT 'native',
+    slug            TEXT NOT NULL
 );

@@ -3,7 +3,7 @@
 	import type { Engine, Component, Tag } from '$lib/arena-types.js';
 
 	export let data: {
-		proofSummaryData: Array<{ tag: Tag, proof: string, string, value: string, unit: string }>,
+		proofSummaryData: Array<{ tag: Tag, proof: string, value: string, unit: string, rank: number }>,
 		component: Component,
 		engine: Engine
 	};

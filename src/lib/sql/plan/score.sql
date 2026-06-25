@@ -1,26 +1,29 @@
-﻿/* Score all queries rewarding 3 points for being best, 2 for second best and 1 for third best
+/* Score all queries rewarding 3 points for being best, 2 for second best and 1 for third best
    The aggregate of each score in each category determines the winnners.
+   Scored per engine+storage_variant so native and iceberg variants are ranked independently.
    */
 WITH raw AS (
     SELECT engine
+         , E.storage_variant
          , proof
          , theorem_id
          , TRY_CAST(value AS BIGINT) AS rows
     FROM fact_proof
-    JOIN engine USING (engine_id)
+    JOIN engine E USING (engine_id)
     JOIN component USING (component_id)
     JOIN proof USING (proof_id)
     WHERE component.slug = 'plan'
       AND unit = 'Rows'
 ), normalized AS (
-    SELECT engine, proof AS operation, theorem_id, rows
+    SELECT engine, storage_variant, proof AS operation, theorem_id, rows
     FROM raw
     UNION ALL
-    SELECT engine, 'Scan' AS operation, theorem_id, rows
+    SELECT engine, storage_variant, 'Scan' AS operation, theorem_id, rows
     FROM raw
     WHERE proof = 'Seek'
 ), scoring AS (
     SELECT engine
+         , storage_variant
          , operation
          , theorem_id
          , SUM(COALESCE(rows, 0)) AS rows
@@ -32,12 +35,14 @@ WITH raw AS (
     WHERE NOT (operation IN ('Seek', 'Distribute') AND rows = 0)
 ), ranked AS (
     SELECT engine
+         , storage_variant
          , operation
          , theorem_id
          , DENSE_RANK() OVER (PARTITION BY theorem_id, operation ORDER BY rows) AS theorem_rank
     FROM filtered
 )
 SELECT engine
+     , storage_variant
      , operation
      , SUM(CASE theorem_rank
            WHEN 1 THEN 5
@@ -59,5 +64,5 @@ SELECT engine
                   END) DESC
        ) AS rank
 FROM ranked
-GROUP BY engine, operation
+GROUP BY engine, storage_variant, operation
 ORDER BY operation, rank ASC, engine ASC

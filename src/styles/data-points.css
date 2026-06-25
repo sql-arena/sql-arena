@@ -33,6 +33,18 @@
     text-align: center;
 }
 
+.engine-variant {
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+.variant-icon {
+    height: 1.2em;
+    width: auto;
+    vertical-align: middle;
+}
+
 .temp {
     flex: 1;
     min-height: 100%;

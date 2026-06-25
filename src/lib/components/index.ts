@@ -15,3 +15,4 @@ export { default as ImgEngine } from "./ImgEngine.svelte";
 export { default as TheoremPlans } from "./TheoremPlans.svelte";
 export { default as TagPicker } from "./TagPicker.svelte";
 export { default as MarkdownSnippet } from "./MarkdownSnippet.svelte";
+export { default as DataSQL } from "./DataSQL.svelte";

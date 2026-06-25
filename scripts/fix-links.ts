@@ -25,16 +25,21 @@ function buildUrlMap() {
 		const url = '/' + rel;
 
 		map.set(url, file);
+		map.set(encodeURI(url), file);
 
 		// Special handling for pages
 		if (rel.endsWith('/index.html')) {
 			const base = '/' + rel.slice(0, -'index.html'.length);
 			map.set(base, file);
 			map.set(base.slice(0, -1), file);
+			map.set(encodeURI(base), file);
+			map.set(encodeURI(base.slice(0, -1)), file);
 		} else if (rel.endsWith('.html')) {
 			const base = '/' + rel.slice(0, -'.html'.length);
 			map.set(base, file);
 			map.set(base + '/', file);
+			map.set(encodeURI(base), file);
+			map.set(encodeURI(base + '/'), file);
 		}
 	}
 
@@ -45,7 +50,7 @@ function buildUrlMap() {
 function resolveRelative(fromFile: string, absHref: string, urlMap: Map<string, string>) {
 	if (!absHref.startsWith('/') || /^https?:\/\//i.test(absHref)) return null;
 
-	const target = urlMap.get(absHref);
+	const target = urlMap.get(absHref) ?? urlMap.get(decodeURI(absHref));
 	if (!target) {
 		console.warn(`[relativize] Unresolved: ${absHref} (from ${fromFile})`);
 		return null;

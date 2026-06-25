@@ -1,11 +1,11 @@
 ﻿<script lang="ts">
 	import {  EngineTier, TagPicker, DataText, DataRank } from '$lib/components';
-	import type { Component, Tag  } from '$lib/arena-types';
+	import type { Component, Tag, Engine } from '$lib/arena-types';
 	import  { MAX_RANK } from '$lib/arena-types';
 
 	export let data: {
-		tags: Tag[],
-		planScore: PlanScoreElement[],
+		tags: Array<{tag: Tag}>,
+		planScore: Array<{[key: string]: Engine[]}>,
 		operators: string[],
 		component: Component
 	};

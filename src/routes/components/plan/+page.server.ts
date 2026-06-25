@@ -14,8 +14,7 @@ export type PlanScoreElement = {
 
 export const load = async () => {
 	const component = await resolveComponent('plan');
-	const tags = [... await fetchTagsPerComponent('plan')
-		,{tag:  { tag: "EXPLAIN instrumentation", slug: "instrumentation" }}];
+	const tags = [...await fetchTagsPerComponent('plan'), {tag: {tag: "EXPLAIN instrumentation", slug: "instrumentation"}}];
 	const planScoreRows = await fetchPlanScores();
 
 	const planScores: Map<number, PlanScoreElement> = new Map<number, PlanScoreElement>();

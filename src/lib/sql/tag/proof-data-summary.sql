@@ -1,6 +1,6 @@
-﻿WITH raw AS (
+WITH raw AS (
     SELECT engine
-         , version
+         , E.storage_variant
          , proof
          , TRY_CAST(value AS BIGINT) AS numeric_value
          , value
@@ -16,16 +16,16 @@
       AND (E.slug = '%%engine%%'
        OR '%%engine%%' = 'ALL')
 ), normalized AS (
-    SELECT engine, version, proof, numeric_value, value, unit
+    SELECT engine, storage_variant, proof, numeric_value, value, unit
     FROM raw
     UNION ALL
-    SELECT engine, version, 'Scan' AS proof, numeric_value, value, unit
+    SELECT engine, storage_variant, 'Scan' AS proof, numeric_value, value, unit
     FROM raw
     WHERE proof = 'Seek'
       AND unit = 'Rows'
 ), rows_by_engine AS (
     SELECT engine
-         , version
+         , storage_variant
          , proof
          , SUM(COALESCE(numeric_value, 0)) AS numeric_value
          , CAST(SUM(COALESCE(numeric_value, 0)) AS BIGINT) AS value
@@ -35,7 +35,7 @@
     GROUP BY ALL
 ), non_rows AS (
     SELECT engine
-         , version
+         , storage_variant
          , proof
          , NULL AS numeric_value
          , MAX(TRY_CAST(value AS BIGINT)) AS value

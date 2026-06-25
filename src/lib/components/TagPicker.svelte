@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
 import type { Tag, Component } from '$lib/arena-types.js';
 
-export let tags: Tag[];
+export let tags: Array<{tag: Tag}>;
 export let component: Component;
 </script>
 

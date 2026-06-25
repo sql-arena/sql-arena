@@ -2,8 +2,8 @@
 	import { TheoremPlanStats, LinkComponent } from '$lib/components';
 	import type { Tag, Component, Engine, Theorem } from '$lib/arena-types.js';
 	export let data : {
-		proofSummaryData: Array<{engine: Engine, version, proof: string, string, value: string, unit: string}>
-		proofData: Array<{theorem: Theorem, engine: Engine, version: string, proof: string, value: string, unit: string}>
+		proofSummaryData: Array<{engine: Engine, storage_variant: string, proof: string, value: string, unit: string, rank: number}>
+		proofData: Array<{theorem: Theorem, engine: Engine, storage_variant: string, proof: string, value: string, unit: string, rank: number}>
 		tag: Tag,
 		component: Component
 	};

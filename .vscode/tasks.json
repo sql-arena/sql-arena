@@ -8,7 +8,7 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "npm: build",
+			"label": "Build",
 			"type": "npm",
 			"script": "build",
 			"group": {
@@ -27,30 +27,6 @@
 			"label": "Deploy",
 			"type": "npm",
 			"script": "deploy",
-			"problemMatcher": []
-		},
-		{
-			"label": "npm: check",
-			"type": "npm",
-			"script": "check",
-			"problemMatcher": []
-		},
-		{
-			"label": "npm: check:watch",
-			"type": "npm",
-			"script": "check:watch",
-			"problemMatcher": []
-		},
-		{
-			"label": "npm: format",
-			"type": "npm",
-			"script": "format",
-			"problemMatcher": []
-		},
-		{
-			"label": "npm: lint",
-			"type": "npm",
-			"script": "lint",
 			"problemMatcher": []
 		},
 		{

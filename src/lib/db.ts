@@ -31,18 +31,9 @@ export const libDir = path.dirname(fileURLToPath(import.meta.url));
 export const sqlDir = path.join(libDir, 'sql');
 export const markdownDir = path.join(repoRoot, 'src', 'content', 'markdown');
 
-const g = globalThis as unknown as { __duckdb?: DuckDBConnection };
-
 async function grabConn(): Promise<DuckDBConnection> {
 	const db = await DuckDBInstance.create(databasePath, { access_mode: 'READ_ONLY' });
 	return await db.connect();
-}
-
-async function conn(): Promise<DuckDBConnection> {
-	if (!g.__duckdb) {
-		g.__duckdb = await grabConn();
-	}
-	return g.__duckdb;
 }
 
 
@@ -101,7 +92,7 @@ async function fetchAllRaw(query: string, conn: DuckDBConnection): Promise<Rows>
 }
 
 export async function fetchAll(query: string): Promise<Rows> {
-	const rows = await fetchAllRaw(query, await conn());
+	const rows = await fetchAllRaw(query, await grabConn());
 	return await Promise.all(
 		rows.map(async (row) => {
 			const updatedRow: Record<string, unknown> = { ...row };
@@ -116,7 +107,14 @@ export async function fetchAll(query: string): Promise<Rows> {
 				updatedRow.component = await resolveComponent(String(row.component));
 			}
 			if (row.engine) {
-				updatedRow.engine = await resolveEngine(String(row.engine));
+				// Spread so we don't mutate the cached object, then override per-row fields.
+				// Multiple variants of the same engine share a slug, so the cache entry may not
+				// match this specific row's version/storage_variant.
+				const cached = await resolveEngine(String(row.engine));
+				const enriched = { ...cached };
+				if (row.storage_variant !== undefined) enriched.storage_variant = String(row.storage_variant);
+				if (row.version !== undefined) enriched.version = String(row.version);
+				updatedRow.engine = enriched;
 			}
 			if (row.theorem) {
 				updatedRow.theorem = await resolveTheorem(String(row.theorem));
@@ -245,6 +243,11 @@ async function resolveWithCache<T extends string>(
 				const items = await fetchFunction();
 				items.forEach((row) => {
 					cache!.set(String(row.slug).toLowerCase(), row);
+					// Also index by the display name so lookups work whether the
+					// caller passes a slug or a human-readable name (e.g. theorem).
+					if (row[type] && String(row[type]).toLowerCase() !== String(row.slug).toLowerCase()) {
+						cache!.set(String(row[type]).toLowerCase(), row);
+					}
 				});
 			})();
 			inFlight.set(type, inflight);

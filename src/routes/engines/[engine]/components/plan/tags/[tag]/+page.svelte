@@ -8,11 +8,10 @@ import {
 import type { Engine, Component, Tag } from '$lib/arena-types.js';
 
 	export let data: {
-	proofData: Array<{name: string, value: string, unit: string}>,
-	proofSummaryData: Array<{engine: Engine, version, proof: string, string, value: string, unit: string}>,
+	proofData: Array<{proof: string, value: string, unit: string, engine?: Engine, storage_variant?: string, rank: number}>,
+	proofSummaryData: Array<{engine: Engine, storage_variant: string, proof: string, value: string, unit: string, rank: number}>,
 	tag: Tag,
 	engine: Engine,
-	version?: string
 	component: Component
 };
 </script>

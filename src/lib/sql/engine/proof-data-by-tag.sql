@@ -1,7 +1,7 @@
 ﻿WITH raw AS (
     SELECT theorem_id
          , theorem.description
-         , theorem
+         , theorem.slug AS theorem
          , engine_id
          , E.slug AS engine_slug
          , proof

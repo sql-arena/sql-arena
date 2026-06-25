@@ -58,9 +58,9 @@ td.column-divider, th.column-divider {
 td.column-divider-soft, th.column-divider-soft {
 }
 
-table.data th.sub-header {
+table.data th.sub-header,
+table.data tr.sub-header th {
     color: var(--data-grid-sub-header-color);
-
 }
 
 /* Order of magnitude tables */

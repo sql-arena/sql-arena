@@ -1,7 +1,7 @@
 ﻿<script lang="ts">
 	import type { Engine, Component, Tag } from '$lib/arena-types.js';
 
-	export let engine: Engine;
+	export let engine: Engine | undefined = undefined;
 	export let component: Component;
 	export let tag: Tag;
 	if (!component) {

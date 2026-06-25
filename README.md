@@ -10,6 +10,7 @@ data-loading pipeline that turns contributed CSV files into a local DuckDB datab
 - `src/lib/db.ts`: the main read layer. It opens `data/dbprove.duckdb` in read-only mode, runs SQL from `src/lib/sql/`, enriches rows with linked objects, and loads markdown content.
 - `src/lib/sql/`: query files imported with `?raw`.
 - `src/content/markdown/`: theorem commentary and blog posts.
+  The individual theorem commentary files live here as slug-matched markdown files such as `tpch-q01.md`, `tpch-q11.md`, and `tpch-q12-q14.md`.
 - `etl/`: scripts and SQL used to rebuild `data/dbprove.duckdb` from raw `dbprove` result files.
 - `data/dbprove-results/`: git submodule containing contributed benchmark artifacts.
 - `scripts/fix-links.ts`: post-build rewrite so the static site works with relative links.
@@ -40,6 +41,17 @@ If `data/dbprove.duckdb` does not exist yet, run `npx tsx etl/load-dbprove.ts` b
 3. Route loaders call helpers in `src/lib/db.ts`.
 4. Those helpers execute SQL from `src/lib/sql/` and combine the result with markdown from `src/content/markdown/`.
 5. SvelteKit prerenders the final static pages.
+
+## Finding Commentary Markdown
+
+The per-theorem commentary markdown lives in `src/content/markdown/`.
+
+- Individual commentary is looked up by theorem slug, so `loadMarkdown(theorem.slug)` resolves to `src/content/markdown/<slug>.md`.
+- The theorem page loader does this in `src/routes/components/plan/theorems/[theorem]/+page.server.ts`.
+- Slugs come from the `theorem.slug` column populated in `etl/transform-proof.sql`.
+- In practice, the TPCH commentary files are the `tpch-*.md` files in `src/content/markdown/`.
+
+If you are trying to edit commentary for a theorem page, start by finding that theorem's slug and then open the matching markdown file in `src/content/markdown/`.
 
 ## Notes For Future Agents
 
