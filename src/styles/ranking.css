@@ -10,11 +10,15 @@
 .rank2 { /* 🥈 Silver */
     --star-color: rgb(220, 240, 255);     /* icy white-blue silver */
     --star-fill: rgba(200, 220, 255, 0.30);
+    width: 18px;
+    height: 18px;
 }
 
 .rank3 { /* 🥉 Bronze */
     --star-color: rgb(255, 180, 110);     /* bright orange-bronze */
     --star-fill: rgba(255, 160, 80, 0.30);
+    width: 13px;
+    height: 13px;
 }
 
 .rankNone {
@@ -26,5 +30,13 @@
     .rank {
         width: 10px;
         height: 10px;
+    }
+    .rank2 {
+        width: 8px;
+        height: 8px;
+    }
+    .rank3 {
+        width: 6px;
+        height: 6px;
     }
 }

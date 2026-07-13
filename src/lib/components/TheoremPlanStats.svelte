@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
+	import { ESTIMATE_CATEGORIES, operation_map } from '$lib/render-maps.js';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import type { Engine, MisEstimate, Tag, Theorem, Component } from '$lib/arena-types.js';
-	import { DataEngine, DataText, DataRank, LinkTheorem, LinkTag, EstimateMagnitudeGraph, DataRow } from '$lib/components';
+	import { EngineTier, DataText, DataRank, LinkTheorem, LinkTag, EstimateMagnitudeGraph, DataRow } from '$lib/components';
 
 	export let data:
 		Array<{
@@ -92,7 +92,7 @@
 		if (entry.engine) {
 			distinctEngines.add(entry.engine.slug + ':' + entry.engine.storage_variant);
 		}
-		const proofLower = entry.proof.toLowerCase();
+		const proofLower = operation_map.get(entry.proof) ?? entry.proof.toLowerCase();
 
 		if (entry.unit === "Rows") {
 			/* Extract the rankings */
@@ -116,7 +116,7 @@
 					ESTIMATE_CATEGORIES.map(cat => [cat, [] as MisEstimate[]])
 				) as RowEntry['mis_estimates'];
 			}
-			const op = parts[1].toLowerCase() as keyof NonNullable<RowEntry['mis_estimates']>;
+			const op = (operation_map.get(parts[1]) ?? parts[1].toLowerCase()) as keyof NonNullable<RowEntry['mis_estimates']>;
 			values.mis_estimates![op]?.push({ magnitude: m, count: c });
 		}
 	}
@@ -144,11 +144,11 @@
 		{/if}
 		<th class="sticky"><DataText bigValue="Scan"/></th>
 		<th class="sticky"><DataText bigValue="Seek"/></th>
-		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
+		<th class="sticky"><DataText bigValue="Join Probe"/></th>
 		<th class="sticky"><DataText bigValue="Sort"/></th>
-		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
-		<th class="sticky"><DataText bigValue="Aggregate" smallValue="Agg"/></th>
-		<th class="sticky"><DataText bigValue="Distribute" smallValue="Dist"/></th>
+		<th class="sticky"><DataText bigValue="Hash Build"/></th>
+		<th class="sticky"><DataText bigValue="Aggregate"/></th>
+		<th class="sticky"><DataText bigValue="Distribute"/></th>
 	</tr>
 	</thead>
 	{/if}
@@ -157,7 +157,7 @@
 
 	{#if grouping === "both" && (index === 0 || sortedEngineRow[index - 1][1].theorem !== data.theorem)}
 	<tr>
-		<th class="header-divider" colspan="8">
+		<th class="header-divider" colspan="8" id="theorem-{data.theorem!.slug}">
 				<LinkTheorem theorem="{data.theorem!}" component="{component}" />
 		</th>
 	</tr>
@@ -165,11 +165,11 @@
 		<th></th>
 		<th><DataText bigValue="Scan"/></th>
 		<th><DataText bigValue="Seek"/></th>
-		<th><DataText bigValue="Join Probe" smallValue="Join"/></th>
+		<th><DataText bigValue="Join Probe"/></th>
 		<th><DataText bigValue="Sort"/></th>
-		<th><DataText bigValue="Hash Build" smallValue="Hash"/></th>
-		<th><DataText bigValue="Aggregate" smallValue="Agg"/></th>
-		<th><DataText bigValue="Distribute" smallValue="Dist"/></th>
+		<th><DataText bigValue="Hash Build"/></th>
+		<th><DataText bigValue="Aggregate"/></th>
+		<th><DataText bigValue="Distribute"/></th>
 	</tr>
 	{/if}
 
@@ -180,10 +180,10 @@
 		{:else if grouping === "engine" || grouping === "both"}
 			{#if highlightEngine && highlightEngine.slug != data.engine!.slug}
 			<a href="/engines/{data.engine!.slug}/components/{component.slug}/tags/{tag?.slug}">
-				<DataEngine engine="{data.engine!}" />
+				<EngineTier engine="{data.engine!}" />
 			</a>
 			{:else}
-			<DataEngine engine="{data.engine!}" />
+			<EngineTier engine="{data.engine!}" />
 			{/if}
 		{:else}
 			<LinkTheorem theorem="{data.theorem!}" component="{component}" />

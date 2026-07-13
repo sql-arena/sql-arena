@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Engine } from '$lib/arena-types.js';
-	import {DataEngine, DataQueryPlan} from '$lib/components';
+	import {EngineTier, DataQueryPlan} from '$lib/components';
 	export let data: Array<{engine: Engine, plan: string}> = []
 </script>
 
@@ -15,7 +15,7 @@
 	<tbody>
 		{#each data as {engine, plan}}
 			<tr>
-				<td class="grouped"><DataEngine {engine}/></td>
+				<td class="grouped"><EngineTier {engine} /></td>
 				<td><DataQueryPlan plan="{plan}"/></td>
 			</tr>
 		{/each}

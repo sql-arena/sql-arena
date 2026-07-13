@@ -4,4 +4,4 @@
 
 	export let engine: Engine;
 </script>
-<img alt="{engine.engine} logo" class="engine-logo" src={getLogoDarkAsset(engine.engine)} />
+<img alt="{engine.engine}" title="{engine.engine}" class="engine-logo" src={getLogoDarkAsset(engine.engine)} />

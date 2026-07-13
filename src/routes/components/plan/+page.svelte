@@ -1,14 +1,20 @@
 ﻿<script lang="ts">
-	import {  EngineTier, TagPicker, DataText, DataRank } from '$lib/components';
-	import type { Component, Tag, Engine } from '$lib/arena-types';
-	import  { MAX_RANK } from '$lib/arena-types';
+	import { TagPicker, PlanRankTable } from '$lib/components';
+	import type { PlanRankRow } from '$lib/components/PlanRankTable.svelte';
+	import { ESTIMATE_CATEGORIES } from '$lib/render-maps.js';
+	import type { Component, Tag } from '$lib/arena-types';
+	import type { PlanScoreCell } from './+page.server';
 
 	export let data: {
 		tags: Array<{tag: Tag}>,
-		planScore: Array<{[key: string]: Engine[]}>,
+		planScore: PlanScoreCell[],
 		operators: string[],
 		component: Component
 	};
+
+	const planRows: PlanRankRow[] = data.planScore.map(score =>
+		Object.fromEntries(ESTIMATE_CATEGORIES.map(op => [op, (score[op] ?? []).map(e => ({ engine: e }))]))
+	);
 </script>
 
 <h1><a href="/components">Component</a> &mdash; Planner</h1>
@@ -23,51 +29,18 @@
 <h2>Query Planner &mdash; Leaderboard</h2>
 
 <article>
-
 	<p>
 		The Query plan quality is measured by the amount of operations that the database must
 		perform while executing the plan.
 	</p>
-
 	<p>Database Engines are ranked by running individual queries from various datasets.
 		The best scorer for each query and operation gets 5 points,
 		second best: 4, etc... If you are not in the top 5, you get zero points.
 		All scores per query are then added up to form the final score below.
 	</p>
-
 </article>
 
-<!-- TODO: This should probably be a component -->
-<table class="data">
-	<thead>
-	<tr>
-		<th>Rank</th>
-		<th class="sticky"><DataText bigValue="Scan"/></th>
-		<th class="sticky"><DataText bigValue="Seek"/></th>
-		<th class="sticky"><DataText bigValue="Join Probe" smallValue="Join"/></th>
-		<th class="sticky"><DataText bigValue="Sort"/></th>
-		<th class="sticky"><DataText bigValue="Hash Build" smallValue="Hash"/></th>
-		<th class="sticky"><DataText bigValue="Aggregate" smallValue="Agg"/></th>
-		<th class="sticky"><DataText bigValue="Distribute" smallValue="Dist"/></th>
-	</tr>
-	</thead>
-	<tbody>
-	{#each data.planScore as score, index}
-	<tr>
-		<td class="rank vcenter">{index + 1}<br>
-			<DataRank rank="{index + 1}" />
-		</td>
-		{#each data.operators as op}
-		<td class="vcenter">
-			{#each score[op] as engine}
-			<a href="/engines/{engine.slug}/components/plan/"><EngineTier engine="{engine}" /></a>
-			{/each}
-		</td>
-		{/each}
-	</tr>
-	{/each}
-	</tbody>
-</table>
+<PlanRankTable rows="{planRows}" component="{data.component}" />
 
 <h2>Explore Workloads</h2>
 <TagPicker component={data.component} tags={data.tags} />

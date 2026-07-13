@@ -39,10 +39,36 @@
     margin-top: 2px;
 }
 
+.data-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    container-type: size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto 0;
+}
+
+.engine-img-wrap {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+}
+
 .variant-icon {
-    height: 1.2em;
-    width: auto;
-    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: auto;
+    max-width: 24px;
 }
 
 .temp {

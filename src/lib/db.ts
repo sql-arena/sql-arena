@@ -223,15 +223,26 @@ export async function fetchPlanScores() {
 
 const caches: Map<string, Map<string, Row>> = new Map();
 const inFlight = new Map<string, Promise<void>>();
+let cacheMtime: number = 0;
+
+async function dbMtime(): Promise<number> {
+	try { return (await fs.stat(databasePath)).mtimeMs; } catch { return 0; }
+}
 
 async function resolveWithCache<T extends string>(
 	type: T,
 	key: string,
 	fetchFunction: () => Promise<Rows>
 ): Promise<Row> {
+	// Bust all caches if the database file has been rebuilt since last load.
+	const mtime = await dbMtime();
+	if (mtime !== cacheMtime) {
+		caches.clear();
+		cacheMtime = mtime;
+	}
+
 	let cache = caches.get(type);
 	if (!cache) {
-		console.log(`Constructing cache of type: ${type}`)
 		cache = new Map();
 		caches.set(type, cache);
 	}
@@ -240,19 +251,24 @@ async function resolveWithCache<T extends string>(
 		let inflight = inFlight.get(type);
 		if (!inflight) {
 			inflight = (async () => {
-				const items = await fetchFunction();
-				items.forEach((row) => {
-					cache!.set(String(row.slug).toLowerCase(), row);
-					// Also index by the display name so lookups work whether the
-					// caller passes a slug or a human-readable name (e.g. theorem).
-					if (row[type] && String(row[type]).toLowerCase() !== String(row.slug).toLowerCase()) {
-						cache!.set(String(row[type]).toLowerCase(), row);
-					}
-				});
+				try {
+					const items = await fetchFunction();
+					items.forEach((row) => {
+						cache!.set(String(row.slug).toLowerCase(), row);
+						// Also index by the display name so lookups work whether the
+						// caller passes a slug or a human-readable name (e.g. theorem).
+						if (row[type] && String(row[type]).toLowerCase() !== String(row.slug).toLowerCase()) {
+							cache!.set(String(row[type]).toLowerCase(), row);
+						}
+					});
+				} finally {
+					// Always remove the in-flight entry so a failed fetch is retried
+					// on the next request rather than permanently poisoning the slot.
+					inFlight.delete(type);
+				}
 			})();
 			inFlight.set(type, inflight);
 			await inflight;
-			inFlight.delete(type);
 		} else {
 			await inflight; // wait for the other one
 		}

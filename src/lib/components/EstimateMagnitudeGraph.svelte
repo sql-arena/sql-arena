@@ -33,7 +33,7 @@
 
 	const sumCount = (data?.reduce((s, d) => s + d.count, 0)) ?? 0;
 </script>
-<span class="sub-data"><DataText bigValue="Estimation Error" smallValue="Est Err"/></span>
+<span class="sub-data"><DataText bigValue="Estimation Error"/></span>
 <div class="bar-heat">
 {#if sumCount === 0}
 	<span class="temp no-data" style="min-width: 100%" title="No Nodes"></span>

@@ -33,5 +33,4 @@
 		}
 	})();
 </script>
-<span class="sub-data"><DataText bigValue="Row Operations" smallValue="Ops"/></span>
 <div class="big-value text-data">{bigValue}</div><div class="small-value">{smallValue}</div>
